@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src *">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.google-analytics.com https://{{ site.disqus }}.disqus.com; style-src 'self' 'unsafe-inline' https://*.disquscdn.com; child-src 'self' https://disqus.com; img-src *">
 <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
