@@ -29,3 +29,10 @@ task :bower do
   end
   sh bower, "install"
 end
+
+# rake test
+desc "Run html-proofer test"
+task :test do
+  require "html-proofer"
+  HTMLProofer.check_directory("./_site").run
+end
