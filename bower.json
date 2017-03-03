@@ -1,0 +1,8 @@
+{
+  "name": "xuc.me",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "katex": "^0.7.1",
+    "font-awesome": "^4.7.0"
+  }
+}
