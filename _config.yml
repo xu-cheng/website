@@ -1,0 +1,42 @@
+gems:
+  - jemoji
+  - jekyll-archives
+  - jekyll-assets
+  - jekyll-coffeescript
+  - jekyll-email-protect
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-mentions
+  - jekyll-relative-links
+  - jekyll/scholar
+  - jekyll-seo-tag
+  - jekyll-sitemap
+include:
+  - .well-known
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - bower.json
+  - bower_components
+  - node_modules
+  - package.json
+  - vendor
+
+url: https://xuc.me
+github:
+  username: xu-cheng
+twitter:
+  username: _xucheng_
+
+# jekyll-assets config
+assets:
+  assets:
+    - "fonts/*"
+  sources:
+    - bower_components/font-awesome
+    - bower_components/katex/dist
+    - bower_components
+# jekyll-feed config
+feed:
+  path: blog.xml
