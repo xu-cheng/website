@@ -13,4 +13,9 @@ gem "jekyll-relative-links"
 gem "jekyll-scholar"
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
+gem "rake"
 gem "uglifier"
+
+group :test do
+  gem "html-proofer"
+end
