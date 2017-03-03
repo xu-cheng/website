@@ -16,6 +16,7 @@ include:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Rakefile
   - README.md
   - bower.json
   - bower_components
