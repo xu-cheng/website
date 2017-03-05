@@ -1,5 +1,6 @@
 @import "bootstrap/scss/bootstrap";
-@import "font-awesome/scss/font-awesome";
+
+@import url(asset_path("font-awesome/css/font-awesome"));
 
 @import url(asset_path("katex/dist/katex"));
 
@@ -9,8 +10,28 @@ $hf-color: #ffffff;
 $hf-bg-color: #272935;
 $href-color: #da4939;
 
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
 body {
     font-family: $primary-font;
+}
+
+a {
+    text-decoration: none !important;
+    color: $href-color !important;
+    border-bottom: 1px solid transparent;
+
+    &:hover, &:active, &:focus {
+        @include transition(border-bottom-color 0.2s);
+
+        border-bottom-color: $href-color;
+    }
 }
 
 .container {
@@ -23,6 +44,7 @@ body {
     background: $hf-bg-color !important;
 
     .navbar-brand {
+        color: $hf-color !important;
         font-size: 20px;
         text-decoration: none;
     }
@@ -63,6 +85,75 @@ body {
 
     body {
         padding-top: 65px;
+    }
+}
+
+
+.footer {
+    font-family: $hf-font;
+    font-size: 13px;
+    color: $hf-color !important;
+    background: $hf-bg-color !important;
+    padding: 2rem 0;
+
+    h6 {
+        padding: 10px 0;
+        font-size: 20px;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 2em;
+            height: 2px;
+            overflow: hidden;
+            background: $hf-color;
+        }
+    }
+
+    .contact {
+        text-align: left;
+        padding: 0 0 10px 0;
+
+        li {
+            display: inline-block;
+
+            > a {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                border-radius: 0.25em;
+                border-bottom-color: transparent;
+                color: $hf-bg-color !important;
+                background-color: $hf-color;
+
+                @include transition(color 0.2s);
+                @include transition(background-color 0.2s);
+
+                &:hover {
+                    color: $hf-color !important;
+                    background-color: $href-color;
+                }
+
+                i {
+                    font-size: 16px;
+                    width: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer .col, .footer .contact {
+        text-align: center;
     }
 }
 
