@@ -26,22 +26,23 @@ exclude:
 
 name: XU CHENG
 url: https://xuc.me
-github:
-  username: xu-cheng
+permalink: /blog/:title/
 twitter:
   username: _xucheng_
 disqus: xuc
 google_analytics: UA-4293090-10
-
-permalink: /blog/:title/
 
 nav:
   - title: home
     url: /
   - title: blog
     url: /blog/
-  - title: contact
-    url: /contact/
+
+contact:
+  email: chengxu@comp.hkbu.edu.hk
+  gpg: https://keybase.io/xucheng/pgp_keys.asc
+  github: https://github.com/xu-cheng
+  twitter: https://twitter.com/_xucheng_
 
 # jekyll-assets config
 assets:
