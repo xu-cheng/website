@@ -1,5 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome/scss/font-awesome";
+
 @import url(asset_path("katex/dist/katex"));
 
 body {
@@ -9,6 +10,54 @@ body {
 .container {
     max-width: 950px;
 }
+
+.navbar {
+    background: #272935;
+
+    .navbar-brand {
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .nav-item {
+        margin-left: 20px;
+
+        &.active {
+            font-weight: 900;
+        }
+    }
+
+    .nav-link {
+        color: #da4939 !important;
+        font-size: 16px;
+
+        .link {
+            color: inherit;
+            text-decoration: none;
+            text-transform: capitalize;
+
+            &:hover {
+                border-bottom: 2px solid;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: $zindex-navbar;
+    }
+
+    body {
+        padding-top: 65px;
+    }
+}
+
 
 .equation {
     padding-bottom: 1rem;
