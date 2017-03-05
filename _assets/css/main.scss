@@ -18,6 +18,11 @@ $href-color: #da4939;
     transition: $args;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     font-family: $primary-font;
 }
@@ -90,6 +95,9 @@ a {
 
 
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     font-family: $hf-font;
     font-size: 13px;
     color: $hf-color !important;
