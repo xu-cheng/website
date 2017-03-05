@@ -24,6 +24,7 @@ exclude:
   - package.json
   - vendor
 
+name: XU CHENG
 url: https://xuc.me
 github:
   username: xu-cheng
@@ -31,6 +32,16 @@ twitter:
   username: _xucheng_
 disqus: xuc
 google_analytics: UA-4293090-10
+
+permalink: /blog/:title/
+
+nav:
+  - title: home
+    url: /
+  - title: blog
+    url: /blog/
+  - title: contact
+    url: /contact/
 
 # jekyll-assets config
 assets:
