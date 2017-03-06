@@ -1,8 +1,7 @@
+//=require font-awesome/css/font-awesome
+//=require katex/dist/katex
+
 @import "bootstrap/scss/bootstrap";
-
-@import url(asset_path("font-awesome/css/font-awesome"));
-
-@import url(asset_path("katex/dist/katex"));
 
 $primary-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $hf-font: "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
