@@ -39,6 +39,16 @@ a {
     }
 }
 
+a.btn {
+    color: black !important;
+    border-bottom: none;
+}
+
+a.btn-primary {
+    color: $hf-color !important;
+    border-bottom: none;
+}
+
 img.center {
     display: block;
     margin: 0 auto;
