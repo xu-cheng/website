@@ -27,8 +27,6 @@ exclude:
 name: XU CHENG
 url: https://xuc.me
 permalink: /blog/:title/
-twitter:
-  username: _xucheng_
 disqus: xuc
 google_analytics: UA-4293090-10
 
@@ -44,6 +42,9 @@ contact:
   github: https://github.com/xu-cheng
   twitter: https://twitter.com/_xucheng_
 
+# jekyll-archives config
+jekyll-archives:
+  enabled: []
 # jekyll-assets config
 assets:
   assets:
@@ -55,3 +56,6 @@ assets:
 # jekyll-feed config
 feed:
   path: blog.xml
+# jekyll-seo-tag config
+twitter:
+  username: _xucheng_
