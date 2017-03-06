@@ -27,9 +27,15 @@ exclude:
 
 name: XU CHENG
 url: https://xuc.me
-permalink: /blog/:title/
 disqus: xuc
 google_analytics: UA-4293090-10
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /blog/:title/
 
 nav:
   - title: home
