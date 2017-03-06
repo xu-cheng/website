@@ -101,6 +101,23 @@ a {
 .content {
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    h1, h2, h3, h4, h5, h6 {
+        &:before {
+            content: '#';
+            color: $href-color;
+            font-size: 0.85em;
+            padding-right: 0.15em;
+        }
+    }
+
+    h1, h2 {
+        &:after {
+            content: '';
+            display: block;
+            border: 0.5px solid $hf-bg-color;
+        }
+    }
 }
 
 .footer {
