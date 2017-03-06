@@ -71,9 +71,12 @@ a {
             text-decoration: none;
             text-transform: capitalize;
             padding-left: 2px;
+            border-bottom: 2px solid transparent;
 
-            &:hover {
-                border-bottom: 2px solid;
+            &:hover, &:active, &:focus {
+                @include transition(border-bottom-color 0.2s);
+
+                border-bottom-color: $href-color;
             }
         }
     }
