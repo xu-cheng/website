@@ -3,6 +3,16 @@ require "rake"
 
 BASE_DIR = Pathname.new(__FILE__).dirname
 
+class Pathname
+  def /(other)
+    self + other
+  end
+
+  def to_str
+    to_s
+  end
+end
+
 task :default => :'build-dev'
 
 # rake build
@@ -23,7 +33,7 @@ end
 desc "Install bower components"
 task :bower do
   if (BASE_DIR/"node_modules/.bin/bower").executable?
-    bower = (BASE_DIR/"node_modules/.bin/bower").to_s
+    bower = (BASE_DIR/"node_modules/.bin/bower")
   else
     bower = "bower"
   end
