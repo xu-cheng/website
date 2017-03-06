@@ -185,6 +185,10 @@ a {
     }
 }
 
+body {
+    padding-bottom: 200px;
+}
+
 @include media-breakpoint-down(md) {
     .footer .col, .footer .contact {
         text-align: center;
