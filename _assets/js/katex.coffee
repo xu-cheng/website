@@ -7,4 +7,4 @@ $ ->
     "<span class=\"inline-equation\"> #{katex.renderToString(tex)} </span>"
   $("script[type='math/tex; mode=display']").replaceWith ->
     tex = $(this).text()
-    "<div class=\"equation\"> #{katex.renderToString("\\displaystyle #{tex}")} </div>"
+    "<div class=\"equation\"> #{katex.renderToString(tex, displayMode: true)} </div>"
