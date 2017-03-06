@@ -139,16 +139,6 @@ img.center {
     .article-title {
         text-weight: bold;
     }
-
-    .article-header {
-        &:after {
-            content: '';
-            display: block;
-            border: 0.5px solid $hf-bg-color;
-        }
-
-        padding-bottom: 1.5rem;
-    }
 }
 
 .footer {
