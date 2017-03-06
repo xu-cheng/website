@@ -1,8 +1,8 @@
-//=require font-awesome/css/font-awesome
-//=require katex/dist/katex
-//=require syntax
-
 @import "bootstrap/scss/bootstrap";
+
+$fa-font-path: "fonts";
+
+@import "font-awesome/scss/font-awesome";
 
 $primary-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $hf-font: "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -216,6 +216,7 @@ body {
     }
 }
 
+@import url(asset_path("katex/dist/katex"));
 
 .equation {
     padding-bottom: 1rem;
@@ -223,3 +224,5 @@ body {
     text-align: center;
     font-size: 1.5em;
 }
+
+@import url(asset_path("syntax"));
