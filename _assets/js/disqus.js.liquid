@@ -1,3 +1,7 @@
+var disqus_config = function () {
+    this.page.url = $('meta[name=PAGE_URL]').attr("content");
+    this.page.identifier = $('meta[name=PAGE_ID]').attr("content");
+};
 (function() {
 var d = document, s = d.createElement('script');
 s.src = 'https://{{ site.disqus }}.disqus.com/embed.js';
