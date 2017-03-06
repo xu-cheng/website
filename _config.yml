@@ -13,6 +13,7 @@ gems:
   - jekyll-sitemap
 include:
   - .well-known
+  - _redirects
 exclude:
   - Gemfile
   - Gemfile.lock
