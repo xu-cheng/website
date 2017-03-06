@@ -14,7 +14,6 @@ gems:
 include:
   - .well-known
 exclude:
-  - _redirects
   - Gemfile
   - Gemfile.lock
   - Rakefile
