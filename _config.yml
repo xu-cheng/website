@@ -11,6 +11,7 @@ gems:
   - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
+  - sprockets-sass
 include:
   - .well-known
   - _redirects
