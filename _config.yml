@@ -57,6 +57,8 @@ assets:
   assets:
     - "fonts/*"
   digest: false
+  features:
+    integrity: true
   sources:
     - bower_components/font-awesome
     - bower_components/katex/dist
