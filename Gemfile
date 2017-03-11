@@ -14,6 +14,7 @@ gem "jekyll-scholar"
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "rake"
+gem "sass"
 gem "uglifier"
 
 group :test do

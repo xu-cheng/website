@@ -165,6 +165,7 @@ DEPENDENCIES
   jekyll-sitemap
   jemoji
   rake
+  sass
   uglifier
 
 BUNDLED WITH
