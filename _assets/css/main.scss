@@ -4,11 +4,13 @@ $fa-font-path: "fonts";
 
 @import "font-awesome/scss/font-awesome";
 
-$primary-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$hf-font: "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary-font: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$hf-font: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $hf-color: #ffffff;
 $hf-bg-color: #272935;
 $href-color: #da4939;
+
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
 
 @mixin transition($args...) {
     -webkit-transition: $args;
