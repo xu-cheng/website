@@ -224,7 +224,7 @@ body {
 }
 
 
-@import url(asset_path("katex/dist/katex"));
+@import "katex";
 
 .equation {
     padding-bottom: 1rem;
@@ -233,4 +233,4 @@ body {
     font-size: 1.5em;
 }
 
-@import url(asset_path("syntax"));
+@import "syntax";
