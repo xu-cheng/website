@@ -1,16 +1,15 @@
-@import "bootstrap/scss/bootstrap";
-
 $fa-font-path: "fonts";
+$font-family-sans-serif: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-family-serif: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+$font-family-monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$link-color: #da4939;
+$navbar-footer-bg: #272935;
+$navbar-footer-color: #ffffff;
 
+@import "bootstrap/scss/bootstrap";
 @import "font-awesome/scss/font-awesome";
 
-$primary-font: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$hf-font: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$hf-color: #ffffff;
-$hf-bg-color: #272935;
-$href-color: #da4939;
-
-@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Roboto+Mono");
 
 @mixin transition($args...) {
     -webkit-transition: $args;
@@ -25,29 +24,25 @@ html {
     min-height: 100%;
 }
 
-body {
-    font-family: $primary-font;
-}
-
 a {
     text-decoration: none !important;
-    color: $href-color !important;
+    color: $link-color !important;
     border-bottom: 1px solid transparent;
 
     &:hover, &:active, &:focus {
         @include transition(border-bottom-color 0.2s);
 
-        border-bottom-color: $href-color;
+        border-bottom-color: $link-color;
     }
 }
 
 a.btn {
-    color: black !important;
+    color: $black !important;
     border-bottom: none;
 }
 
 a.btn-primary {
-    color: $hf-color !important;
+    color: $white !important;
     border-bottom: none;
 }
 
@@ -62,12 +57,12 @@ img.center {
 }
 
 .navbar {
-    font-family: $hf-font;
-    color: $hf-color !important;
-    background: $hf-bg-color !important;
+    font-family: $font-family-monospace;
+    color: $navbar-footer-color !important;
+    background: $navbar-footer-bg !important;
 
     .navbar-brand {
-        color: $hf-color !important;
+        color: $navbar-footer-color !important;
         font-size: 20px;
         text-decoration: none;
         border-bottom: none;
@@ -82,7 +77,7 @@ img.center {
     }
 
     .nav-link {
-        color: $href-color !important;
+        color: $link-color !important;
         font-size: 16px;
 
         .link {
@@ -95,7 +90,7 @@ img.center {
             &:hover, &:active, &:focus {
                 @include transition(border-bottom-color 0.2s);
 
-                border-bottom-color: $href-color;
+                border-bottom-color: $link-color;
             }
         }
     }
@@ -124,7 +119,7 @@ img.center {
         h1, h2, h3, h4, h5, h6 {
             &:before {
                 content: '#';
-                color: $href-color;
+                color: $link-color;
                 font-size: 0.85em;
                 padding-right: 0.15em;
             }
@@ -134,7 +129,7 @@ img.center {
             &:after {
                 content: '';
                 display: block;
-                border: 0.5px solid $hf-bg-color;
+                border: 0.5px solid $navbar-footer-bg;
             }
         }
     }
@@ -148,10 +143,10 @@ img.center {
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-family: $hf-font;
+    font-family: $font-family-monospace;
     font-size: 13px;
-    color: $hf-color !important;
-    background: $hf-bg-color !important;
+    color: $navbar-footer-color !important;
+    background: $navbar-footer-bg !important;
     padding: 2rem 0;
 
     h6 {
@@ -166,7 +161,7 @@ img.center {
             width: 2em;
             height: 2px;
             overflow: hidden;
-            background: $hf-color;
+            background: $navbar-footer-color;
         }
     }
 
@@ -183,15 +178,15 @@ img.center {
                 height: 32px;
                 border-radius: 0.25em;
                 border-bottom-color: transparent;
-                color: $hf-bg-color !important;
-                background-color: $hf-color;
+                color: $navbar-footer-bg !important;
+                background-color: $navbar-footer-color;
 
                 @include transition(color 0.2s);
                 @include transition(background-color 0.2s);
 
                 &:hover {
-                    color: $hf-color !important;
-                    background-color: $href-color;
+                    color: $navbar-footer-color !important;
+                    background-color: $link-color;
                 }
 
                 i {
