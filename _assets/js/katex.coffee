@@ -3,8 +3,6 @@
 # render latex
 $ ->
   $("script[type='math/tex']").replaceWith ->
-    tex = $(this).text()
-    "<span class=\"inline-equation\"> #{katex.renderToString(tex)} </span>"
+    "<span class=\"inline-equation\">#{katex.renderToString($(this).text())}</span>"
   $("script[type='math/tex; mode=display']").replaceWith ->
-    tex = $(this).text()
-    "<div class=\"equation\"> #{katex.renderToString(tex, displayMode: true)} </div>"
+    "<div class=\"equation\">#{katex.renderToString($(this).text(), displayMode: true)}</div>"
