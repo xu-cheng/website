@@ -91,7 +91,7 @@ GEM
       citeproc-ruby (~> 1.0)
       csl-styles (~> 1.0)
       jekyll (~> 3.0)
-    jekyll-seo-tag (2.2.0)
+    jekyll-seo-tag (2.2.1)
       jekyll (~> 3.3)
     jekyll-sitemap (1.1.1)
       jekyll (~> 3.3)
