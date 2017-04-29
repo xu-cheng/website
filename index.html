@@ -7,7 +7,7 @@ description: XU Cheng's Homepage
 <div class="article">
     <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6">
-            {% img photo alt:"My Gravator" class:center %}
+            {% img photo srcset:'{{ "photo@2x.jpg" | asset_path }} 2x' alt:"My Gravator" class:center %}
         </div>
         <div class="col-lg-9 col-md-8 col-sm-6">
             <h2 id="about-me">About Me</h2>
