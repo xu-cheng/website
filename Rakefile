@@ -32,11 +32,8 @@ end
 # rake bower
 desc "Install bower components"
 task :bower do
-  if (BASE_DIR/"node_modules/.bin/bower").executable?
-    bower = (BASE_DIR/"node_modules/.bin/bower")
-  else
-    bower = "bower"
-  end
+  bower = BASE_DIR/"node_modules/.bin/bower"
+  bower = "bower" unless bower.executable?
   sh bower, "install"
 end
 
