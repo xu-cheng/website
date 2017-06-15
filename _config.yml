@@ -20,11 +20,10 @@ exclude:
   - Gemfile.lock
   - Rakefile
   - README.md
-  - bower.json
-  - bower_components
   - node_modules
   - package.json
   - vendor
+  - yarn.lock
 
 name: XU CHENG
 url: https://xuc.me
