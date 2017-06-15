@@ -1,5 +1,8 @@
 {
-    "dependencies": {
-        "bower": "^1.8.0"
-    }
+  "dependencies": {
+    "bootstrap-v4-dev": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "katex": "^0.7.1"
+  }
 }

@@ -61,9 +61,9 @@ assets:
   features:
     integrity: true
   sources:
-    - bower_components/font-awesome
-    - bower_components/katex/dist
-    - bower_components
+    - node_modules/font-awesome
+    - node_modules/katex/dist
+    - node_modules
 # jekyll-feed config
 feed:
   path: blog.xml
