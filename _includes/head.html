@@ -5,10 +5,8 @@
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 <meta name="PAGE_URL" content="{{ site.url }}{{ page.url | downcase }}">
 <meta name="PAGE_ID" content="{{ page.id }}">
-
 <title>{{ page.title }}</title>
-
 {% js main async %}
 {% css main %}
-{% feed_meta %}
-{% seo title=false %}
+{%- feed_meta -%}
+{%- seo title=false -%}
