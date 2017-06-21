@@ -12,7 +12,7 @@
         {% endif %}
         {{ post.tags | join: ',&nbsp;' }}
     {% endif %}
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <div class="excerpt">
         {{ post.excerpt | markdownify }}
     </div>
