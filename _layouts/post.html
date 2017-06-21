@@ -5,20 +5,20 @@ layout: default
 <h1 class="article-title">{{ page.title }}</h1>
 <i class="fa fa-calendar"></i>&nbsp;
 {{ page.date | date_to_long_string }}
-{% if page.tags.size > 0 %}
+{%- if page.tags.size > 0 -%}
     <span class="hidden-xs-down">&nbsp;|&nbsp;</span>
     <span class="hidden-sm-up"><br/></span>
-    {% if pag.tags.size == 1 %}
+    {%- if pag.tags.size == 1 -%}
         <i class="fa fa-tag"></i>
-    {% else %}
+    {%- else -%}
         <i class="fa fa-tags"></i>
-    {% endif %}
+    {%- endif -%}
     {{ page.tags | join: ',&nbsp;' }}
-{% endif %}
+{%- endif -%}
 <hr/>
 
 <article class="article">
     {{ content }}
 </article>
 
-{% include disqus.html %}
+{%- include disqus.html -%}

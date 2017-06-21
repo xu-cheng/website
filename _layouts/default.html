@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-{% include head.html %}
+{%- include head.html -%}
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse">
@@ -12,19 +12,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-main">
                 <ul class="navbar-nav ml-auto">
-                {% for nav in site.nav %}
-                    {% if nav.url == "/" and page.url == "/" %}
+                {%- for nav in site.nav -%}
+                    {%- if nav.url == "/" and page.url == "/" -%}
                     <li class="nav-item active">
-                    {% elsif nav.url != "/" and page.url contains nav.url %}
+                    {%- elsif nav.url != "/" and page.url contains nav.url -%}
                     <li class="nav-item active">
-                    {% else %}
+                    {%- else -%}
                     <li class="nav-item">
-                    {% endif %}
+                    {%- endif -%}
                         <div class="nav-link">
                             <span>/</span><a class="link" href="{{nav.url}}">{{nav.title}}</a>
                         </div>
                     </li>
-                {% endfor %}
+                {%- endfor -%}
                 </ul>
             </div>
         </div>
