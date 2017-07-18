@@ -1,0 +1,5 @@
+/*
+    Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com https://{{ site.disqus }}.disqus.com https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.disquscdn.com https://assets-cdn.github.com; child-src 'self' https://disqus.com; font-src 'self' https://fonts.gstatic.com; img-src *
+    Strict-Transport-Security: max-age=15768000; includeSubDomains; preload
+    X-Frame-Options: SAMEORIGIN
+    X-XSS-Protection: 1; mode=block
