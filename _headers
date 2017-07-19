@@ -1,5 +1,6 @@
 ---
 ---
+# global headers
 /*
     Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com https://disqus.com https://{{ site.disqus }}.disqus.com https://*.disquscdn.com https://gist.github.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.disquscdn.com https://assets-cdn.github.com; child-src 'self' https://disqus.com; font-src 'self' https://fonts.gstatic.com; img-src *
     Referrer-Policy: same-origin
@@ -7,3 +8,14 @@
     X-Content-Type-Options: nosniff
     X-Frame-Options: SAMEORIGIN
     X-XSS-Protection: 1; mode=block
+
+# HTTP/2 server push
+/
+    Link: </assets/main.css>; rel=preload; as=stylesheet
+    Link: </assets/main.js>; rel=preload; as=script
+    Link: </assets/photo.jpg>; rel=preload; as=image
+    Link: </assets/photo@2x.jpg>; rel=preload; as=image
+/blog/*
+    Link: </assets/main.css>; rel=preload; as=stylesheet
+    Link: </assets/main.js>; rel=preload; as=script
+    Link: </assets/disqus.js>; rel=preload; as=script
