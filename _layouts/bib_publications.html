@@ -1,0 +1,10 @@
+---
+---
+{{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' }}
+{%- if entry.type -%}
+&nbsp;<b>{{ entry.type }}</b>.
+{%- endif -%}
+{%- if entry.url -%}
+&nbsp;[<a href="{{ entry.url }}">PDF</a>]
+{%- endif -%}
+
