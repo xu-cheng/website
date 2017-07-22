@@ -69,6 +69,7 @@ feed:
   path: blog.xml
 # jekyll-scholar config
 scholar:
+  bibliography: publications
   style: ieee
   sort_by: year,month,day
   order: descending
