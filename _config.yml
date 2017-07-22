@@ -67,6 +67,12 @@ assets:
 # jekyll-feed config
 feed:
   path: blog.xml
+# jekyll-scholar config
+scholar:
+  style: ieee
+  sort_by: year,month,day
+  order: descending
+  bibliography_list_tag: ul
 # jekyll-seo-tag config
 twitter:
   username: _xucheng_
