@@ -90,7 +90,7 @@ img.center {
             color: inherit;
             text-decoration: none;
             text-transform: capitalize;
-            padding-left: 2px;
+            margin-left: 2px;
             border-bottom: 2px solid transparent;
 
             &:hover, &:active, &:focus {
@@ -112,7 +112,7 @@ img.center {
     }
 
     body {
-        padding-top: 65px;
+        margin-top: 65px;
     }
 }
 
@@ -127,7 +127,7 @@ img.center {
                 content: '#';
                 color: $link-color;
                 font-size: 0.85em;
-                padding-right: 0.15em;
+                margin-right: 0.15em;
             }
         }
 
@@ -211,7 +211,7 @@ img.center {
 }
 
 body {
-    padding-bottom: 200px;
+    margin-bottom: 200px;
 }
 
 @include media-breakpoint-down(md) {
@@ -220,7 +220,7 @@ body {
     }
 
     body {
-        padding-bottom: 250px;
+        margin-bottom: 250px;
     }
 }
 
@@ -228,8 +228,8 @@ body {
 @import "katex";
 
 .equation {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     text-align: center;
     font-size: 1.5em;
 }
