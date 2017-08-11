@@ -205,8 +205,20 @@ img.center {
         }
     }
 
-    .copyright {
+    @include media-breakpoint-down(sm) {
         text-align: center;
+
+        .copyright {
+            text-align: center;
+
+            > h6 {
+                display: none;
+            }
+        }
+
+        .contact {
+            display: none;
+        }
     }
 }
 
@@ -214,11 +226,7 @@ body {
     margin-bottom: 200px;
 }
 
-@include media-breakpoint-down(md) {
-    .footer .col, .footer .contact {
-        text-align: center;
-    }
-
+@include media-breakpoint-down(sm) {
     body {
         margin-bottom: 250px;
     }
