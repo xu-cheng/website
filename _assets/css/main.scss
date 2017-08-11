@@ -171,9 +171,23 @@ img.center {
         }
     }
 
+    .copyright {
+        @include make-col-ready;
+        @include make-col(6);
+
+        order: 1;
+    }
+
     .contact {
+        @include make-col-ready;
+        @include make-col(6);
+
+        order: 2;
         text-align: left;
-        padding: 0 0 10px 0;
+
+        ul {
+            padding: 0 0 10px 0;
+        }
 
         li {
             display: inline-block;
@@ -195,7 +209,7 @@ img.center {
                     background-color: $link-color;
                 }
 
-                i {
+                .fa {
                     font-size: 16px;
                     width: 32px;
                     line-height: 32px;
@@ -209,6 +223,9 @@ img.center {
         text-align: center;
 
         .copyright {
+            @include make-col(12);
+
+            order: 2;
             text-align: center;
 
             > h6 {
@@ -217,7 +234,10 @@ img.center {
         }
 
         .contact {
-            display: none;
+            @include make-col(12);
+
+            order: 1;
+            text-align: center;
         }
     }
 }
