@@ -37,16 +37,16 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col hidden-md-down">
+                <div class="col copyright">
                     <h6>Copyright</h6>
                     <p>
                     &copy;&nbsp;2014-{{ site.time | date: '%Y' }} by XU Cheng.<br>
                     Licensed under <a href="/LICENSE">CC-BY-NC-SA 4.0</a>.
                     </p>
                 </div>
-                <div class="col">
+                <div class="col contact">
                     <h6>Contact Me</h6>
-                    <ul class="contact">
+                    <ul>
                         <li><a itemprop="email" href="mailto:{{ site.contact.email | encode_email }}"><i class="fa fa-fw fa-envelope"></i></a></li>
                         <li><a itemprop="gpg" href="{{ site.contact.gpg }}"><i class="fa fa-fw fa-key"></i></a></li>
                         <li><a itemprop="github" href="{{ site.contact.github }}"><i class="fa fa-fw fa-github-alt"></i></a></li>
@@ -54,10 +54,6 @@
                     </ul>
                 </div>
             </div>
-            <p class="copyright hidden-lg-up">
-            &copy;&nbsp;2014-{{ site.time | date: '%Y' }} by XU Cheng.<br>
-            Licensed under <a href="/LICENSE">CC-BY-NC-SA 4.0</a>.
-            </p>
         </div>
     </footer>
 </body>
