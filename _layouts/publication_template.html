@@ -1,8 +1,8 @@
 ---
 ---
 {{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' }}
-{%- if entry.type -%}
-&nbsp;<b>{{ entry.type }}</b>.
+{%- if entry.note -%}
+&nbsp;<b>{{ entry.note }}</b>.
 {%- endif -%}
 {%- if entry.url -%}
 &nbsp;[<a href="{{ entry.url }}">PDF</a>]
