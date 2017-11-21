@@ -6,7 +6,7 @@
     Referrer-Policy: same-origin
     Strict-Transport-Security: max-age=15768000; includeSubDomains; preload
     X-Content-Type-Options: nosniff
-    X-Frame-Options: SAMEORIGIN
+    X-Frame-Options: DENY
     X-XSS-Protection: 1; mode=block
 
 # HTTP/2 server push
