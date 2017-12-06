@@ -7,7 +7,6 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-mentions
-  - jekyll-relative-links
   - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
