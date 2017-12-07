@@ -1,12 +1,10 @@
 plugins:
-  - jemoji
   - jekyll-archives
   - jekyll-assets
   - jekyll-coffeescript
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-gist
-  - jekyll-mentions
   - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
