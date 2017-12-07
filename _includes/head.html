@@ -4,7 +4,7 @@
 <meta name="PAGE_URL" content="{{ site.url }}{{ page.url | downcase }}">
 <meta name="PAGE_ID" content="{{ page.id }}">
 <title>{{ page.title }}</title>
-{% css main %}
-{% js main async %}
+{% asset main.css %}
+{% asset main.js async %}
 {% feed_meta %}
 {%- seo title=false -%}
