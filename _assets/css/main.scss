@@ -1,3 +1,6 @@
+//= require_self
+//= require katex/dist/katex
+
 $fa-font-path: "/assets/fonts";
 $font-family-sans-serif: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $font-family-serif: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
@@ -252,8 +255,6 @@ body {
     }
 }
 
-
-@import "katex";
 
 .equation {
     margin-bottom: 1rem;

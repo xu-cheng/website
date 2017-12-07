@@ -8,7 +8,6 @@ plugins:
   - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
-  - sprockets-sass
 include:
   - .well-known
   - _headers
@@ -52,15 +51,16 @@ jekyll-archives:
   enabled: []
 # jekyll-assets config
 assets:
-  assets:
-    - "fonts/*"
   digest: false
-  features:
-    integrity: true
   sources:
-    - node_modules/font-awesome
-    - node_modules/katex/dist
     - node_modules
+  raw_precompile:
+    - src: font-awesome/fonts/*
+      dst: fonts
+    - src: katex/dist/fonts/*
+      dst: fonts
+    - photo.jpg
+    - photo@2x.jpg
 # jekyll-feed config
 feed:
   path: blog.xml
