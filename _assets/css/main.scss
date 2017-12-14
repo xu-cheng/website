@@ -20,14 +20,6 @@ $navbar-footer-color: #ffffff;
 
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Roboto+Mono");
 
-@mixin transition($args...) {
-    -webkit-transition: $args;
-    -moz-transition: $args;
-    -ms-transition: $args;
-    -o-transition: $args;
-    transition: $args;
-}
-
 html {
     position: relative;
     min-height: 100%;
@@ -39,8 +31,7 @@ a {
     border-bottom: 1px solid transparent;
 
     &:hover, &:active, &:focus {
-        @include transition(border-bottom-color 0.2s);
-
+        transition: border-bottom-color 0.2s;
         border-bottom-color: $link-color;
     }
 }
@@ -97,8 +88,7 @@ img.center {
             border-bottom: 2px solid transparent;
 
             &:hover, &:active, &:focus {
-                @include transition(border-bottom-color 0.2s);
-
+                transition: border-bottom-color 0.2s;
                 border-bottom-color: $link-color;
             }
         }
@@ -203,9 +193,8 @@ img.center {
                 border-bottom-color: transparent;
                 color: $navbar-footer-bg !important;
                 background-color: $navbar-footer-color;
-
-                @include transition(color 0.2s);
-                @include transition(background-color 0.2s);
+                transition: color 0.2s;
+                transition: background-color 0.2s;
 
                 &:hover {
                     color: $navbar-footer-color !important;
