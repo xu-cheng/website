@@ -256,6 +256,23 @@ body {
 }
 
 
+.bibliography {
+    .abstract {
+        .card {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        .fa {
+            transition: .3s transform ease-in-out;
+        }
+
+        .collapsed .fa {
+            transform: rotate(180deg);
+        }
+    }
+}
+
 .equation {
     margin-bottom: 1rem;
     margin-top: 1rem;

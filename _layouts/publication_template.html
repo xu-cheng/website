@@ -7,4 +7,18 @@
 {%- if entry.url -%}
 &nbsp;[<a href="{{ entry.url }}">PDF</a>]
 {%- endif -%}
-
+{%- if entry.abstract -%}
+{%- capture abstract_id -%}abstract_{{ entry.key | replace: ':', '_' }}{%- endcapture -%}
+<div class="abstract">
+    <div id="{{ abstract_id }}_toggle">
+        <a class="collapsed" data-toggle="collapse" href="#{{ abstract_id }}" aria-expanded="false" aria-controls="{{ abstract_id }}">
+            View abstract <i class="fa fa-angle-up fa-lg"></i>
+        </a>
+    </div>
+    <div class="collapse" id="{{ abstract_id }}" aria-labelledby="{{ abstract_id }}_toggle">
+        <div class="card card-body">
+            <p class="card-text">{{ entry.abstract }}</p>
+        </div>
+    </div>
+</div>
+{%- endif -%}
