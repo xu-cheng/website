@@ -1,17 +1,4 @@
-require "pathname"
 require "rake"
-
-BASE_DIR = Pathname.new(__FILE__).dirname
-
-class Pathname
-  def /(other)
-    self + other
-  end
-
-  def to_str
-    to_s
-  end
-end
 
 task :default => :'build-dev'
 
@@ -39,8 +26,5 @@ end
 desc "Run html-proofer test"
 task :test do
   sh "bundle", "exec", "htmlproofer",
-     "--check-external-hash",
-     "--check-opengraph",
-     "--check-html",
-     "./_site"
+    "--check-external-hash", "--check-opengraph", "--check-html", "./_site"
 end
