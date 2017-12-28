@@ -38,11 +38,9 @@ end
 # rake test
 desc "Run html-proofer test"
 task :test do
-  require "html-proofer"
-  opts = {
-    check_external_hash: true,
-    check_opengraph: true,
-    check_html: true,
-  }
-  HTMLProofer.check_directory("./_site", opts).run
+  sh "bundle", "exec", "htmlproofer",
+     "--check-external-hash",
+     "--check-opengraph",
+     "--check-html",
+     "./_site"
 end
