@@ -58,8 +58,6 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 3)
       safe_yaml (~> 1.0)
-    jekyll-archives (2.1.1)
-      jekyll (>= 2.4)
     jekyll-assets (3.0.5)
       activesupport (~> 5.0)
       execjs (~> 2.7)
@@ -151,7 +149,6 @@ PLATFORMS
 DEPENDENCIES
   html-proofer
   jekyll
-  jekyll-archives
   jekyll-assets
   jekyll-coffeescript
   jekyll-email-protect

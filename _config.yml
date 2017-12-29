@@ -1,5 +1,4 @@
 plugins:
-  - jekyll-archives
   - jekyll-assets
   - jekyll-coffeescript
   - jekyll-email-protect
@@ -46,9 +45,6 @@ contact:
   github: https://github.com/xu-cheng
   twitter: https://twitter.com/_xucheng_
 
-# jekyll-archives config
-jekyll-archives:
-  enabled: []
 # jekyll-assets config
 assets:
   digest: false
