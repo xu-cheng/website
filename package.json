@@ -2,7 +2,7 @@
   "dependencies": {
     "bootstrap": "next",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.0",
     "katex": "^0.8.3",
     "popper.js": "^1.12.9"
   }
