@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "bootstrap": "next",
+    "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.0",
     "katex": "^0.8.3",
