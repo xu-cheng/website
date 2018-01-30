@@ -6,62 +6,65 @@ I hereby claim:
 
   * I am an admin of https://xuc.me
   * I am xucheng (https://keybase.io/xucheng) on keybase.
-  * I have a public key with fingerprint CCE0 112A 1CCD E168 5DBA  86C4 C2A3 860F A0B4 59CE
+  * I have a public key with fingerprint 0C60 744C 59EF 7255 8FD0  702A 8794 B5D7 A3C6 7F70
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "0101e52cf6f475f505b221150e79716c853f6eb1bf06ab78bedba84116d41e90b1340a",
-            "fingerprint": "cce0112a1ccde1685dba86c4c2a3860fa0b459ce",
-            "host": "keybase.io",
-            "key_id": "c2a3860fa0b459ce",
-            "kid": "0101e52cf6f475f505b221150e79716c853f6eb1bf06ab78bedba84116d41e90b1340a",
-            "uid": "af1af5f22f311c0fc01e53b64c487e00",
-            "username": "xucheng"
-        },
-        "revoke": {
-            "sig_ids": [
-                "ab8de3e7cba15a24f16a5ce28593a3dc5d734c283bbfe275a529e036f5cbd4650f"
-            ]
-        },
-        "service": {
-            "hostname": "xuc.me",
-            "protocol": "https:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "0101e52cf6f475f505b221150e79716c853f6eb1bf06ab78bedba84116d41e90b1340a",
+      "fingerprint": "0c60744c59ef72558fd0702a8794b5d7a3c67f70",
+      "host": "keybase.io",
+      "key_id": "8794b5d7a3c67f70",
+      "kid": "01165845762054a006e84a684a259bcd52396e9f83f35286f9b7011ee7dab4fb70eb0a",
+      "uid": "af1af5f22f311c0fc01e53b64c487e00",
+      "username": "xucheng"
     },
-    "ctime": 1458731821,
-    "expire_in": 157680000,
-    "prev": "176874b896a0ab8b4ccac3f3e53c952b9c7b611295c11542c72f72b1de63641d",
-    "seqno": 28,
-    "tag": "signature"
+    "merkle_root": {
+      "ctime": 1517304962,
+      "hash_meta": "0be7e0038622ee3028a44154d149e7291dea0e0fcfe0a6d78f273c511188af18",
+      "seqno": 2004059
+    },
+    "revoke": {
+      "sig_ids": [
+        "6e93da67cf863cd07e6782db72439cf5fe0750dc04c3233c82cbbefa575d484b0f"
+      ]
+    },
+    "service": {
+      "hostname": "xuc.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1517305042,
+  "expire_in": 157680000,
+  "prev": "0cb1cd8bdb58148e8098a48cdc71ddc76f4fd77b5f92b4fc28cb29831eee8bf6",
+  "seqno": 38,
+  "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
 
-owGtUl1oXEUY3c2mCd22SakKQROkI/QhjWFm7p25966tYFGoEERaiJRQNjNzZ5Lr
-Zu/d7N1sNoa85KGk2oZWLUiNMVQjhmj6b2npnwFtEomF0JQi5DHBWEStRJSS6twV
-8cVH52WYj3POd77zzbEtiVgyPv3RodqxCwe+jX+zymOtD/p7+wEP3D6Q6gcZWb5k
-lyvDQjrjuSAFIIJIEiwUVaZFFIGEY4wQgdJyLESFTQxFJUdcQcq4ZXPpcmabCFHX
-RNKBHBkmZKAJKM/vkPlc3vMLWlYICRHCDAnhSkRtErGoMAVmhk2hYpCbxBFSEzuD
-MGJoc5yFstkLdE0/0mV7/4H/n333lOWYQkwRhbEyEBJQiUjd4NQUpm1JCCNgKPM+
-y0qNLvWITul3gIEmkJfFICOjWEOvQ3sOQaoNMG670pCW4AwRhk2FKCNCYps4BjNc
-QVzL0FHYBudKYoswgh0JDaqI4K5JCVTgoNbWDYueKItHIf3bvDkbBZHLB4VABF26
-1lko5MJU5KfQl4tAvZKnw6m/+Wnu+a7ejqYUZT70Ah+kkIaKghcJIpPYloFsjJqA
-LOW8vEx7EYJY1Ib6RI1kUWsiXbBMbjuUQT0hN4VgwlCGDko4BHNHWJzqpTtE6EWY
-WFhYWZgjV1KDmsgF0UTdfgBS2NZGWYfW1KH5rNCTl2AgeTheXxmLJ2NVGyqifxtL
-btz6z2feW1X9aOd779dPT34/t3VkYUd2rXvz2vN7n6l7YTxcfHOBLR5l8+ZTm27v
-9tOnR8IzE4lXbww1vH2v+HTy7Ne5X+dWZmvWR5LZP94ZqCvdXHl2+LuapjHlbG/Z
-M3rl+HVsTF9qvl/yX1p9cHj89ZkN80OT00d+DH+Y/S3+1f6WS58dwe5r52+Ntt0Y
-fvfTfb+/sjN34Y1SYvB88hP04Zcz4dG19n13fpn6/DLOJh4+2VtfPdz8+ODdwavn
-djxX+XOD/WJjxa31j89sX3pr6dTtO5VZUJooPrH72ji43r5w+QC4mKip/uLP/S8P
-NV6pW97V/ljrzMPug5nZhqGrH2xsv79pmzr56OTyRO2pE2M/3fwL
-=UbPo
+owFtk7mLFEEUh2d1BZ1FNHEDQcTOhGWpu6rHBQPRxEjxWBQd6ni108xu99jdswe7
+G2lgJCtuLuhfIBgaCIqJeIBoIGLmhRobCOLrwQPBhu7qKt7xe997tbFza2v75J2b
+ey63777fGHv8ybXODWberCauCCtJZzXpw2iB+QBV3e1nIekkhBIKkvmootAySiId
+Y5RKAjrVVHkjeVTgqItEWaeNg+CsEZSqICikxFEuiE2mkpjlc1AOyiyvm7BeES2E
+lylEzaQ0MRBNmDU6FU4GbblXOmqCjr2iajxQnLMVTGcFnuGmO5L3H/vfuqmSRkit
+GJHCEqLACKvwZTJ1PkjGUwVpNDxyyYyKqdPoA6CDdSLiBtxI93AUzkZqo4yMRU6p
+J9E3VLhTwgujgTR5hxWUuV0AtF4e+h7kc8n6VLIAZX8eumVR1A1bX2eNBZVUcyJS
+xbA+W/W6C1DbRrWDJho3ijEATpixQlApAhUpaJbSAJYApo9ArAraRKa5l5RSY1Ci
+QRkVXMqLpMMIEUSmqKCExaIPTfIqm0NqVdI5n2DpPNwfWKV9NIp7pA9KGxacZoKn
+HmsFoiUJngjPGefeMO8cRCu1DMIIR2JyYb1JVy5mfhS+adRfANP4M5UMyqIufDGP
+Z726HlSdhkm9MmiMlsB1f7l3XZYHHBD0WISyyoocGaHlP7gkEYgLlgdZCd2sscDu
+GoJPkwcWR2PlqA/GBScNFQYMSZGg8cFrGvCDQxyD1k7GlGGXPTPesdRw7DsYF9Vf
+ftygTjuHMZFabuthCcl6++pwvDW5vbVv8sD44Sdfv138du3K7PHvT3/fqW1bmgvV
+au/Y/edkW+vHweenBh+uf941ceZGd3Np4tjJ14/e7T1iD73a01nZfPFg/1jr6adb
+/ujD07df3X27doLvmji7dv6Mu9d78HL23LMvH2faPwE=
+=Rii9
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -69,4 +72,5 @@ appending to this document.
 
 View my publicly-auditable identity here: https://keybase.io/xucheng
 
-=============================================================
+==================================================================
+
