@@ -41,7 +41,7 @@ nav:
 
 contact:
   email: chengxu@comp.hkbu.edu.hk
-  gpg: https://keybase.io/xucheng/pgp_keys.asc
+  gpg: /.well-known/pgp_keys.asc
   github: https://github.com/xu-cheng
   twitter: https://twitter.com/_xucheng_
 
