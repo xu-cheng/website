@@ -116,19 +116,23 @@ img.center {
 
     .article {
         h1, h2, h3, h4, h5, h6 {
-            &:before {
-                content: '#';
-                color: $link-color;
-                font-size: 0.85em;
-                margin-right: 0.15em;
+            &.article-heading {
+                &:before {
+                    content: '#';
+                    color: $link-color;
+                    font-size: 0.85em;
+                    margin-right: 0.15em;
+                }
             }
         }
 
         h1, h2 {
-            &:after {
-                content: '';
-                display: block;
-                border: 0.5px solid $navbar-footer-bg;
+            &.article-heading {
+                &:after {
+                    content: '';
+                    display: block;
+                    border: 0.5px solid $navbar-footer-bg;
+                }
             }
         }
     }
