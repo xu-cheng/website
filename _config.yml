@@ -67,6 +67,7 @@ scholar:
   sort_by: year,month,day
   order: descending
   bibliography_list_tag: ul
+  bibtex_filters: boldface
 # jekyll-seo-tag config
 twitter:
   username: _xucheng_
