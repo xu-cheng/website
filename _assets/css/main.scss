@@ -27,6 +27,9 @@ html {
 
 a {
     text-decoration: none !important;
+}
+
+a :not(.badge):not(.btn) {
     color: $link-color !important;
     border-bottom: 1px solid transparent;
 
@@ -34,16 +37,6 @@ a {
         transition: border-bottom-color 0.2s;
         border-bottom-color: $link-color;
     }
-}
-
-a.btn {
-    color: $black !important;
-    border-bottom: none;
-}
-
-a.btn-primary {
-    color: $white !important;
-    border-bottom: none;
 }
 
 img.center {
