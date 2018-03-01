@@ -2,10 +2,17 @@
 ---
 {{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' }}
 {%- if entry.note -%}
-&nbsp;<b>{{ entry.note }}</b>.
-{%- endif -%}
-{%- if entry.url -%}
-&nbsp;[<a href="{{ entry.url }}">PDF</a>]
+    {%- if entry.url -%}
+        &nbsp;<b>{{ entry.note }}</b>.&nbsp;[<a href="{{ entry.url }}">PDF</a>]
+    {%- else -%}
+        &nbsp;<b>{{ entry.note }}, accepted to appear</b>.
+    {%- endif -%}
+{%- else -%}
+    {%- if entry.url -%}
+        &nbsp;[<a href="{{ entry.url }}">PDF</a>]
+    {%- else -%}
+        &nbsp;<b>Accepted to appear</b>.
+    {%- endif -%}
 {%- endif -%}
 {%- if entry.abstract -%}
 {%- capture abstract_id -%}abstract:{{ entry.key }}{%- endcapture -%}
