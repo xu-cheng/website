@@ -11,7 +11,7 @@ gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "rake"
 gem "sass"
-gem "sprockets", "~> 4.0.beta"
+gem "sprockets", "~> 4.0.beta7"
 gem "uglifier"
 
 group :test do
