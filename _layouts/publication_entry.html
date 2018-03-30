@@ -25,7 +25,9 @@
     </div>
     <div class="collapse" id="{{ abstract_id }}" aria-labelledby="{{ toggle_id }}">
         <div class="card card-body">
-            <p class="card-text">{{ entry.abstract }}</p>
+            <p class="card-text">
+                {{ entry.abstract | inline_mathify | markdownify }}
+            </p>
         </div>
     </div>
 </div>
