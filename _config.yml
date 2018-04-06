@@ -1,6 +1,5 @@
 plugins:
   - jekyll-assets
-  - jekyll-coffeescript
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-gist
