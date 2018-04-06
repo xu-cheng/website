@@ -3,16 +3,20 @@
 {{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' }}
 {%- if entry.note -%}
     {%- if entry.url -%}
-        &nbsp;<b>{{ entry.note }}</b>.&nbsp;[<a href="{{ entry.url }}">PDF</a>]
+        &#32;<b>{{ entry.note }}</b>.
+        &#32;[<a href="{{ entry.url }}">pdf</a>]
     {%- else -%}
-        &nbsp;<b>{{ entry.note }}, accepted to appear</b>.
+        &#32;<b>{{ entry.note }}, accepted to appear</b>.
     {%- endif -%}
 {%- else -%}
     {%- if entry.url -%}
-        &nbsp;[<a href="{{ entry.url }}">PDF</a>]
+        &#32;[<a href="{{ entry.url }}">pdf</a>]
     {%- else -%}
-        &nbsp;<b>Accepted to appear</b>.
+        &#32;<b>Accepted to appear</b>.
     {%- endif -%}
+{%- endif -%}
+{%- if entry.slides -%}
+    &#32;[<a href="{{ entry.slides }}">slides</a>]
 {%- endif -%}
 {%- if entry.abstract -%}
 {%- capture abstract_id -%}abstract:{{ entry.key }}{%- endcapture -%}
