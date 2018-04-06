@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "jekyll-assets"
-gem "jekyll-coffeescript"
 gem "jekyll-email-protect"
 gem "jekyll-feed"
 gem "jekyll-gist"
