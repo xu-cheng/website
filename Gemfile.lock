@@ -111,6 +111,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     octokit (4.8.0)
       sawyer (~> 0.8.0, >= 0.5.3)
+    pandoc-ruby (2.0.2)
     parallel (1.12.1)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
@@ -156,6 +157,7 @@ DEPENDENCIES
   jekyll-scholar
   jekyll-seo-tag
   jekyll-sitemap
+  pandoc-ruby
   rake
   sass
   sprockets (~> 4.0.beta7)

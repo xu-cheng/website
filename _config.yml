@@ -6,6 +6,7 @@ plugins:
   - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
+  - pandoc-ruby
 include:
   - .well-known
   - _headers
@@ -66,7 +67,7 @@ scholar:
   sort_by: year,month,day
   order: descending
   bibliography_list_tag: ul
-  bibtex_filters: boldface
+  bibtex_filters: pandoc
 # jekyll-seo-tag config
 twitter:
   username: _xucheng_
