@@ -1,11 +1,16 @@
 require "bibtex"
+require "pandoc-ruby"
 
-class Boldface < BibTeX::Filter
+class Pandoc < BibTeX::Filter
   def apply(value)
-    # Use of \g<1> pattern back-reference to allow for capturing nested {} groups.
-    # The first (outermost) capture of $1 is used.
-    value.to_s.gsub(/\\textbf(\{(?:[^{}]|\g<1>)*\})/) {
-      "<b>#{$1[1..-2]}</b>"
-    }
+    html = PandocRuby.convert(value.to_s, :gladtex, from: :latex, to: :html)
+    if html.scan("<p>").size == 1
+      html.gsub!(%r{</?p>}, "")
+    end
+    html.gsub!('<EQ ENV="math">', '<script type="math/tex">')
+    html.gsub!('<EQ ENV="displaymath">', '<script type="math/tex; mode=display">')
+    html.gsub!('</EQ>', '</script>')
+    html.strip!
+    html
   end
 end

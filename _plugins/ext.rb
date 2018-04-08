@@ -16,12 +16,6 @@ module ExtraTextFilters
   def regex_replace(input, regex, replacement = ''.freeze)
     input.to_s.gsub(Regexp.new(regex.to_s), replacement.to_s)
   end
-
-  # convert `$ inline eqn $` to `$$ inline eqn $$`, so kramdown
-  # can properly format the equation.
-  def inline_mathify(input)
-    input.to_s.gsub(/ \$([^$]+)\$/, " $$\\1$$")
-  end
 end
 
 Liquid::Template.register_filter(ExtraTextFilters)
