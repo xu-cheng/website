@@ -18,6 +18,9 @@
 {%- if entry.slides -%}
     &#32;[<a href="{{ entry.slides }}">slides</a>]
 {%- endif -%}
+{%- if entry.poster -%}
+    &#32;[<a href="{{ entry.poster }}">poster</a>]
+{%- endif -%}
 {%- if entry.abstract -%}
 {%- capture abstract_id -%}abstract:{{ entry.key }}{%- endcapture -%}
 {%- capture toggle_id -%}toggle:{{ entry.key }}{%- endcapture -%}
