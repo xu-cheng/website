@@ -26,7 +26,7 @@
 {%- capture toggle_id -%}toggle:{{ entry.key }}{%- endcapture -%}
 <div class="abstract">
     <div id="{{ toggle_id }}">
-        <a class="collapsed" data-toggle="collapse" href="#{{ abstract_id }}" aria-expanded="false" aria-controls="{{ abstract_id }}">
+        <a class="collapsed" data-toggle="collapse" href="#{{ abstract_id | jq_escape }}" aria-expanded="false" aria-controls="{{ abstract_id }}">
             View abstract <i class="fa fa-angle-up fa-lg"></i>
         </a>
     </div>
