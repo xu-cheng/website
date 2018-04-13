@@ -1,4 +1,5 @@
 require "liquid"
+require "jekyll"
 
 module ExtraTextFilters
   def regex_remove_first(input, regex)
@@ -19,6 +20,16 @@ module ExtraTextFilters
 
   def jq_escape(input)
     input.to_s.gsub(/(:|\.|\[|\]|,|=|@)/, "\\\\\\1")
+  end
+
+  def strip_site_url(input)
+    url = input.to_s
+    site_url = @context.registers[:site].config["url"]
+    if site_url
+      site_url = site_url.sub(%r{^https?://}, "").sub(%r{/$}, "")
+      url.sub!(%r{^https?://#{Regexp.escape(site_url)}/}, "/")
+    end
+    url
   end
 end
 
