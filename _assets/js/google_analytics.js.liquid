@@ -6,4 +6,38 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', '{{ site.google_analytics }}', 'auto');
 ga('require', 'displayfeatures');
 ga('send', 'pageview');
+
+// report download events
+$(function() {
+    $("a").each(function() {
+        var href = $(this).attr("href");
+        if (href) {
+            if (href.match(/^\/file\//)) {
+                $(this).click(function() {
+                    ga('send', 'event', {
+                        eventCategory: 'internal_file',
+                        eventAction: 'click',
+                        eventLabel: href
+                    });
+                });
+            } else if (href.match(/\.pdf$/)) {
+                $(this).click(function() {
+                    ga('send', 'event', {
+                        eventCategory: 'external_pdf',
+                        eventAction: 'click',
+                        eventLabel: href
+                    });
+                });
+            } else if (href.match(/doi\.org/)) {
+                $(this).click(function() {
+                    ga('send', 'event', {
+                        eventCategory: 'external_doi',
+                        eventAction: 'click',
+                        eventLabel: href
+                    });
+                });
+            }
+        }
+    });
+});
 {%- endif -%}
