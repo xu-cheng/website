@@ -1,140 +1,69 @@
 /* Ref: https://github.com/jwarby/jekyll-pygments-themes */
-.highlight code, .highlight pre {
-color:#fdce93;
-background-color:#3f3f3f;
-}
+.highlight pre { background-color: #272822; }
+.highlight .hll { background-color: #272822; }
+.highlight .c { color: #75715e } /* Comment */
+.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .k { color: #66d9ef } /* Keyword */
+.highlight .l { color: #ae81ff } /* Literal */
+.highlight .n { color: #f8f8f2 } /* Name */
+.highlight .o { color: #f92672 } /* Operator */
+.highlight .p { color: #f8f8f2 } /* Punctuation */
+.highlight .cm { color: #75715e } /* Comment.Multiline */
+.highlight .cp { color: #75715e } /* Comment.Preproc */
+.highlight .c1 { color: #75715e } /* Comment.Single */
+.highlight .cs { color: #75715e } /* Comment.Special */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .kc { color: #66d9ef } /* Keyword.Constant */
+.highlight .kd { color: #66d9ef } /* Keyword.Declaration */
+.highlight .kn { color: #f92672 } /* Keyword.Namespace */
+.highlight .kp { color: #66d9ef } /* Keyword.Pseudo */
+.highlight .kr { color: #66d9ef } /* Keyword.Reserved */
+.highlight .kt { color: #66d9ef } /* Keyword.Type */
+.highlight .ld { color: #e6db74 } /* Literal.Date */
+.highlight .m { color: #ae81ff } /* Literal.Number */
+.highlight .s { color: #e6db74 } /* Literal.String */
+.highlight .na { color: #a6e22e } /* Name.Attribute */
+.highlight .nb { color: #f8f8f2 } /* Name.Builtin */
+.highlight .nc { color: #a6e22e } /* Name.Class */
+.highlight .no { color: #66d9ef } /* Name.Constant */
+.highlight .nd { color: #a6e22e } /* Name.Decorator */
+.highlight .ni { color: #f8f8f2 } /* Name.Entity */
+.highlight .ne { color: #a6e22e } /* Name.Exception */
+.highlight .nf { color: #a6e22e } /* Name.Function */
+.highlight .nl { color: #f8f8f2 } /* Name.Label */
+.highlight .nn { color: #f8f8f2 } /* Name.Namespace */
+.highlight .nx { color: #a6e22e } /* Name.Other */
+.highlight .py { color: #f8f8f2 } /* Name.Property */
+.highlight .nt { color: #f92672 } /* Name.Tag */
+.highlight .nv { color: #f8f8f2 } /* Name.Variable */
+.highlight .ow { color: #f92672 } /* Operator.Word */
+.highlight .w { color: #f8f8f2 } /* Text.Whitespace */
+.highlight .mf { color: #ae81ff } /* Literal.Number.Float */
+.highlight .mh { color: #ae81ff } /* Literal.Number.Hex */
+.highlight .mi { color: #ae81ff } /* Literal.Number.Integer */
+.highlight .mo { color: #ae81ff } /* Literal.Number.Oct */
+.highlight .sb { color: #e6db74 } /* Literal.String.Backtick */
+.highlight .sc { color: #e6db74 } /* Literal.String.Char */
+.highlight .sd { color: #e6db74 } /* Literal.String.Doc */
+.highlight .s2 { color: #e6db74 } /* Literal.String.Double */
+.highlight .se { color: #ae81ff } /* Literal.String.Escape */
+.highlight .sh { color: #e6db74 } /* Literal.String.Heredoc */
+.highlight .si { color: #e6db74 } /* Literal.String.Interpol */
+.highlight .sx { color: #e6db74 } /* Literal.String.Other */
+.highlight .sr { color: #e6db74 } /* Literal.String.Regex */
+.highlight .s1 { color: #e6db74 } /* Literal.String.Single */
+.highlight .ss { color: #e6db74 } /* Literal.String.Symbol */
+.highlight .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #f8f8f2 } /* Name.Variable.Class */
+.highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
+.highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+.highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 
-.highlight .hll {
-background-color:#222;
-}
-
-.highlight .err {
-color:#e37170;
-background-color:#3d3535;
-}
-
-.highlight .k {
-color:#f0dfaf;
-}
-
-.highlight .p {
-color:#41706f;
-}
-
-.highlight .cs {
-color:#cd0000;
-font-weight:700;
-}
-
-.highlight .gd {
-color:#cd0000;
-}
-
-.highlight .ge {
-color:#ccc;
-font-style:italic;
-}
-
-.highlight .gr {
-color:red;
-}
-
-.highlight .go {
-color:gray;
-}
-
-.highlight .gs {
-color:#ccc;
-font-weight:700;
-}
-
-.highlight .gu {
-color:purple;
-font-weight:700;
-}
-
-.highlight .gt {
-color:#0040D0;
-}
-
-.highlight .kc {
-color:#dca3a3;
-}
-
-.highlight .kd {
-color:#ffff86;
-}
-
-.highlight .kn {
-color:#dfaf8f;
-font-weight:700;
-}
-
-.highlight .kp {
-color:#cdcf99;
-}
-
-.highlight .kr {
-color:#cdcd00;
-}
-
-.highlight .ni {
-color:#c28182;
-}
-
-.highlight .ne {
-color:#c3bf9f;
-font-weight:700;
-}
-
-.highlight .nn {
-color:#8fbede;
-}
-
-.highlight .vi {
-color:#ffffc7;
-}
-
-.highlight .c,.preview-zenburn .highlight .g,.preview-zenburn .highlight .cm,.preview-zenburn .highlight .cp,.preview-zenburn .highlight .c1 {
-color:#7f9f7f;
-}
-
-.highlight .l,.preview-zenburn .highlight .x,.preview-zenburn .highlight .no,.preview-zenburn .highlight .nd,.preview-zenburn .highlight .nl,.preview-zenburn .highlight .nx,.preview-zenburn .highlight .py,.preview-zenburn .highlight .w {
-color:#ccc;
-}
-
-.highlight .n,.preview-zenburn .highlight .nv,.preview-zenburn .highlight .vg {
-color:#dcdccc;
-}
-
-.highlight .o,.preview-zenburn .highlight .ow {
-color:#f0efd0;
-}
-
-.highlight .gh,.preview-zenburn .highlight .gp {
-color:#dcdccc;
-font-weight:700;
-}
-
-.highlight .gi,.preview-zenburn .highlight .kt {
-color:#00cd00;
-}
-
-.highlight .ld,.preview-zenburn .highlight .s,.preview-zenburn .highlight .sb,.preview-zenburn .highlight .sc,.preview-zenburn .highlight .sd,.preview-zenburn .highlight .s2,.preview-zenburn .highlight .se,.preview-zenburn .highlight .sh,.preview-zenburn .highlight .si,.preview-zenburn .highlight .sx,.preview-zenburn .highlight .sr,.preview-zenburn .highlight .s1,.preview-zenburn .highlight .ss {
-color:#cc9393;
-}
-
-.highlight .m,.preview-zenburn .highlight .mf,.preview-zenburn .highlight .mh,.preview-zenburn .highlight .mi,.preview-zenburn .highlight .mo,.preview-zenburn .highlight .il {
-color:#8cd0d3;
-}
-
-.highlight .na,.preview-zenburn .highlight .nt {
-color:#9ac39f;
-}
-
-.highlight .nb,.preview-zenburn .highlight .nc,.preview-zenburn .highlight .nf,.preview-zenburn .highlight .bp,.preview-zenburn .highlight .vc {
-color:#efef8f;
-}
+.highlight .gh { } /* Generic Heading & Diff Header */
+.highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
+.highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
+.highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
 /* Ref: http://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html */
 .highlight .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
