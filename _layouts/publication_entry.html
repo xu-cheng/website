@@ -2,18 +2,11 @@
 ---
 {{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' }}
 {%- if entry.note -%}
-    {%- if entry.url -%}
-        &#32;<b>{{ entry.note }}</b>.
-        &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]
-    {%- else -%}
-        &#32;<b>{{ entry.note }}, accepted to appear</b>.
-    {%- endif -%}
-{%- else -%}
-    {%- if entry.url -%}
-        &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]
-    {%- else -%}
-        &#32;<b>Accepted to appear</b>.
-    {%- endif -%}
+    &#32;<b>{{ entry.note }}</b>.
+{%- endif -%}
+&#32;[<a href="/publication/{{ entry.key | replace: ':', '/' }}/">detail</a>]
+{%- if entry.url -%}
+    &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]
 {%- endif -%}
 {%- if entry.slides -%}
     &#32;[<a href="{{ entry.slides | strip_site_url }}">slides</a>]
@@ -21,21 +14,4 @@
 {%- if entry.poster -%}
     &#32;[<a href="{{ entry.poster | strip_site_url }}">poster</a>]
 {%- endif -%}
-{%- if entry.abstract -%}
-{%- capture abstract_id -%}abstract:{{ entry.key }}{%- endcapture -%}
-{%- capture toggle_id -%}toggle:{{ entry.key }}{%- endcapture -%}
-<div class="abstract">
-    <div id="{{ toggle_id }}">
-        <a class="collapsed" data-toggle="collapse" href="#{{ abstract_id | jq_escape }}" aria-expanded="false" aria-controls="{{ abstract_id }}">
-            View abstract <i class="fa fa-angle-up fa-lg"></i>
-        </a>
-    </div>
-    <div class="collapse" id="{{ abstract_id }}" aria-labelledby="{{ toggle_id }}">
-        <div class="card card-body">
-            <div class="card-text">
-                {{ entry.abstract }}
-            </div>
-        </div>
-    </div>
-</div>
-{%- endif -%}
+

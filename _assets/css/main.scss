@@ -250,19 +250,43 @@ body {
 }
 
 
-.bibliography {
-    .abstract {
-        .card {
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-        }
+.pub-authors {
+    font-size: large;
+}
 
-        .fa {
-            transition: .3s transform ease-in-out;
-        }
+.pub-heading {
+    font-weight: bold;
+}
 
-        .collapsed .fa {
-            transform: rotate(180deg);
+.pub-abstract {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.pub-bibtex {
+    background-color: #f7f7f9;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.pub-venue-journal, .pub-venue-conf {
+    font-style: italic;
+}
+
+.pub-info {
+    margin-bottom: 5px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.pub-links {
+    .btn {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0px;
         }
     }
 }
