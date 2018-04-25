@@ -19,3 +19,6 @@
     Link: </assets/main.css>; rel=preload; as=style
     Link: </assets/main.js>; rel=preload; as=script
     Link: </assets/disqus.js>; rel=preload; as=script
+/publication/*
+    Link: </assets/main.css>; rel=preload; as=style
+    Link: </assets/main.js>; rel=preload; as=script
