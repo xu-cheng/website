@@ -22,7 +22,7 @@ smtp_conn.enable_tls
 smtp_conn.start Socket.gethostname, "<username>", "<password>", "login"
 
 Mail.defaults do
-  delivery_method :smtp_connection, { :connection => smtp_conn }
+  delivery_method :smtp_connection, connection: smtp_conn
 end
 {% endhighlight %}
 
@@ -35,7 +35,7 @@ mail = Mail.new do
   to       'to@example.com'
   subject  '<subject>'
   body     '<body>'
-  add_file filename: 'some_attchment.txt', content: File.read('/path/to/attachment.txt')
+  add_file filename: 'some_attachment.txt', content: File.read('/path/to/attachment.txt')
 end
 
 # check the email
