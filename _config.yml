@@ -68,6 +68,15 @@ scholar:
   order: descending
   bibliography_list_tag: ul
   bibtex_filters: pandoc
+  use_raw_bibtex_entry: false
+  bibtex_skip_fields:
+    - abstract
+    - author+an
+    - month_numeric
+    - note
+    - poster
+    - slides
+    - url
 # jekyll-seo-tag config
 twitter:
   username: _xucheng_

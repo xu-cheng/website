@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<h1 class="article-title">{{ page.entry.title }}</h1>
+<div class="pub-authors">{% publication_authors %}</div>
+<hr/>
+
+<article class="article">
+    <h3 class="pub-heading">Abstract</h3>
+    <div class="pub-abstract">{{ page.entry.abstract }}</div>
+
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">Type</div>
+        <div class="col-md-10">{% publication_type %}</div>
+    </div>
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">Publication</div>
+        <div class="col-md-10">{% publication_venue %}</div>
+    </div>
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">Date</div>
+        <div class="col-md-10">{% publication_date %}</div>
+    </div>
+{%- if page.entry.note -%}
+    {%- if page.entry.url -%}
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">Note</div>
+        <div class="col-md-10">{{ page.entry.note }}</div>
+    </div>
+    {%- else -%}
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">Note</div>
+        <div class="col-md-10">{{ page.entry.note }}, accepted to appear</div>
+    </div>
+    {%- endif -%}
+{%- else -%}
+    {%- unless page.entry.url -%}
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">Note</div>
+        <div class="col-md-10">Accepted to appear</div>
+    </div>
+    {%- endunless -%}
+{%- endif -%}
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">Links</div>
+        <div class="col-md-10 pub-links">
+            {%- if page.entry.url -%}
+            <a class="btn btn-outline-link-color btn-sm" role="button"
+                href="{{ page.entry.url | strip_site_url }}">PDF</a>
+            {%- endif -%}
+            {%- if page.entry.slides -%}
+            <a class="btn btn-outline-link-color btn-sm" role="button"
+                href="{{ page.entry.slides | strip_site_url }}">Slides</a>
+            {%- endif -%}
+            {%- if page.entry.poster -%}
+            <a class="btn btn-outline-link-color btn-sm" role="button"
+                href="{{ page.entry.poster | strip_site_url }}">Poster</a>
+            {%- endif -%}
+            {%- capture cite_id -%}cite:{{ page.entry.key }}{%- endcapture -%}
+            {%- capture cite_btn_id -%}cite_btn:{{ page.entry.key }}{%- endcapture -%}
+            {%- capture bibtex_id -%}bibtex:{{ page.entry.key }}{%- endcapture -%}
+            {%- capture bibtex_btn_id -%}bibtex_btn:{{ page.entry.key }}{%- endcapture -%}
+            <a class="btn btn-outline-link-color btn-sm" role="button" data-toggle="modal"
+                href="#{{ cite_id | jq_escape }}" id="{{ cite_btn_id }}">Cite</a>
+
+            <div class="modal fade" id="{{ cite_id }}" tabindex="-1" role="dialog"
+                aria-labelledby="{{ cite_btn_id }}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Cite</h5>
+                            <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <textarea class="form-control" id="{{ bibtex_id }}"
+                                    rows="{% publication_bibtex_lines %}"
+                                    readonly>{% publication_bibtex %}</textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-link-color"
+                                id="{{ bibtex_btn_id }}">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
