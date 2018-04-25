@@ -39,6 +39,14 @@ a:not(.contact-entry):not(.badge):not(.btn):not(.navbar-brand) {
     }
 }
 
+.btn-link-color {
+    @include button-variant($link-color, $link-color);
+}
+
+.btn-outline-link-color {
+    @include button-outline-variant($link-color);
+}
+
 img.center {
     display: block;
     margin: 0 auto;
