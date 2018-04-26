@@ -22,6 +22,12 @@ layout: default
         <div class="col-md-2 pub-heading">Date</div>
         <div class="col-md-10">{% publication_date %}</div>
     </div>
+{%- if page.entry.doi -%}
+    <div class="row pub-info">
+        <div class="col-md-2 pub-heading">DOI</div>
+        <div class="col-md-10">{{ page.entry.doi }}</div>
+    </div>
+{%- endif -%}
 {%- if page.entry.note -%}
     {%- if page.entry.url -%}
     <div class="row pub-info">
