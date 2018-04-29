@@ -2,14 +2,23 @@
 
 // render latex
 $(function() {
-    $("span.math.inline").replaceWith(function() {
-        var tex = $(this).text().replace(/^\\\(/, "").replace(/\\\)$/, "");
-        return katex.renderToString(tex);
-    });
-    $("span.math.display").replaceWith(function() {
-        var tex = $(this).text().replace(/^\\\[/, "").replace(/\\\]$/, "");
+    $("span.math").replaceWith(function() {
+        var tex = $(this).text();
+        var displayMode;
+        if ($(this).hasClass("inline")) {
+            displayMode = false;
+        } else if ($(this).hasClass("display")) {
+            displayMode = true;
+        } else {
+            displayMode = tex.startWith("\\[");
+        }
+        if (displayMode) {
+            tex = tex.replace(/^\\\[/, "").replace(/\\\]$/, "");
+        } else {
+            tex = tex.replace(/^\\\(/, "").replace(/\\\)$/, "");
+        }
         return katex.renderToString(tex, {
-            displayMode: true
+            displayMode: displayMode
         });
     });
     $("script[type='math/tex']").replaceWith(function() {
