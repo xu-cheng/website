@@ -8,6 +8,9 @@
 {%- if entry.url -%}
     &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]
 {%- endif -%}
+{%- if entry.preprint -%}
+    &#32;[<a href="{{ entry.preprint | strip_site_url }}">preprint</a>]
+{%- endif -%}
 {%- if entry.slides -%}
     &#32;[<a href="{{ entry.slides | strip_site_url }}">slides</a>]
 {%- endif -%}

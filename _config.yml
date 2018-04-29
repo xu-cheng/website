@@ -75,6 +75,7 @@ scholar:
     - month_numeric
     - note
     - poster
+    - preprint
     - slides
     - url
 # jekyll-seo-tag config

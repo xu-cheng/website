@@ -55,6 +55,10 @@ layout: default
             <a class="btn btn-outline-link-color btn-sm" role="button"
                 href="{{ page.entry.url | strip_site_url }}">PDF</a>
             {%- endif -%}
+            {%- if page.entry.preprint -%}
+            <a class="btn btn-outline-link-color btn-sm" role="button"
+                href="{{ page.entry.preprint | strip_site_url }}">Preprint</a>
+            {%- endif -%}
             {%- if page.entry.slides -%}
             <a class="btn btn-outline-link-color btn-sm" role="button"
                 href="{{ page.entry.slides | strip_site_url }}">Slides</a>
