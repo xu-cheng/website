@@ -10,7 +10,7 @@ $(function() {
         } else if ($(this).hasClass("display")) {
             displayMode = true;
         } else {
-            displayMode = tex.startWith("\\[");
+            displayMode = tex.startsWith("\\[");
         }
         if (displayMode) {
             tex = tex.replace(/^\\\[/, "").replace(/\\\]$/, "");
