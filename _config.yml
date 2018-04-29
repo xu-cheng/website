@@ -72,10 +72,10 @@ scholar:
   bibtex_skip_fields:
     - abstract
     - author+an
+    - eprint
     - month_numeric
     - note
     - poster
-    - preprint
     - slides
     - url
 # jekyll-seo-tag config
