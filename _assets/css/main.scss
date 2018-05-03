@@ -12,6 +12,7 @@ $font-size-h4: 1.4rem;
 $font-size-h5: 1.2rem;
 $font-size-h6: 1rem;
 $link-color: #da4939;
+$link-color-dark: #c23324;
 $navbar-footer-bg: #272935;
 $navbar-footer-color: #ffffff;
 
@@ -72,25 +73,28 @@ img.center {
     .nav-item {
         margin-left: 20px;
 
+        .nav-link {
+            color: $link-color !important;
+        }
+
         &.active {
-            font-weight: 900;
+            .nav-link {
+                color: $link-color-dark !important;
+            }
         }
     }
 
     .nav-link {
-        color: $link-color !important;
         font-size: 16px;
 
-        .link {
-            color: inherit;
-            text-decoration: none;
+        a {
+            color: inherit !important;
             text-transform: capitalize;
             margin-left: 2px;
-            border-bottom: 2px solid transparent;
+            border-bottom: 2px solid transparent !important;
 
             &:hover, &:active, &:focus {
-                transition: border-bottom-color 0.2s;
-                border-bottom-color: $link-color;
+                border-bottom-color: inherit !important;
             }
         }
     }
