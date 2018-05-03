@@ -202,7 +202,7 @@ img.center {
                 transition: background-color 0.2s;
 
                 &:hover {
-                    color: $navbar-footer-color !important;
+                    color: $navbar-footer-color;
                     background-color: $link-color;
                 }
 
