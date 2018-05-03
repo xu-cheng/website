@@ -38,6 +38,8 @@ nav:
     url: /
   - title: blog
     url: /blog/
+  - title: CV
+    url: /file/cv.pdf
 
 contact:
   email: chengxu@comp.hkbu.edu.hk
