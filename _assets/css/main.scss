@@ -30,7 +30,7 @@ a {
 }
 
 a:not(.contact-entry):not(.badge):not(.btn):not(.navbar-brand) {
-    color: $link-color !important;
+    color: $link-color;
     border-bottom: 1px solid transparent;
 
     &:hover, &:active, &:focus {
@@ -59,11 +59,11 @@ img.center {
 
 .navbar {
     font-family: $font-family-monospace;
-    color: $navbar-footer-color !important;
-    background: $navbar-footer-bg !important;
+    color: $navbar-footer-color;
+    background: $navbar-footer-bg;
 
     .navbar-brand {
-        color: $navbar-footer-color !important;
+        color: $navbar-footer-color;
         font-size: 20px;
         text-decoration: none;
         border-bottom: none;
@@ -149,8 +149,8 @@ img.center {
     width: 100%;
     font-family: $font-family-monospace;
     font-size: 13px;
-    color: $navbar-footer-color !important;
-    background: $navbar-footer-bg !important;
+    color: $navbar-footer-color;
+    background: $navbar-footer-bg;
     padding: 2rem 0;
 
     h6 {
@@ -196,7 +196,7 @@ img.center {
                 height: 32px;
                 border-radius: 0.25em;
                 border-bottom-color: transparent;
-                color: $navbar-footer-bg !important;
+                color: $navbar-footer-bg;
                 background-color: $navbar-footer-color;
                 transition: color 0.2s;
                 transition: background-color 0.2s;
