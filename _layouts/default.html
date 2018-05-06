@@ -1,7 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-{%- include head.html -%}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{%- if layout.has_disqus or page.has_disqus -%}
+<meta name="DISQUS_PAGE_URL" content="{{ site.url }}{{ page.url | downcase }}">
+<meta name="DISQUS_PAGE_ID" content="{{ page.id }}">
+{%- endif -%}
+<title>{{ page.title }}</title>
+{% asset main.css %}
+{% asset main.js async %}
+{% feed_meta %}
+{%- seo title=false -%}
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
