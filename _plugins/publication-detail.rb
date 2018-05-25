@@ -125,15 +125,8 @@ module PublicationDetailTags
   class PublicationBibTeX < Liquid::Tag
     def render(context)
       entry = context["entry"] || context["page"]["entry"]
-      bibtex = entry["bibtex"]
+      bibtex = entry["bibtex"].strip
       bibtex.gsub(/ \(\\textbf(\{(?:[^{}]|\g<1>)*\})\)/, "")
-    end
-  end
-
-  class PublicationBibTeXLines < Liquid::Tag
-    def render(context)
-      entry = context["entry"] || context["page"]["entry"]
-      entry["bibtex"].split("\n").size
     end
   end
 end
@@ -143,5 +136,4 @@ Liquid::Template.register_tag("publication_date", PublicationDetailTags::Publica
 Liquid::Template.register_tag("publication_venue", PublicationDetailTags::PublicationVenue)
 Liquid::Template.register_tag("publication_type", PublicationDetailTags::PublicationType)
 Liquid::Template.register_tag("publication_bibtex", PublicationDetailTags::PublicationBibTeX)
-Liquid::Template.register_tag("publication_bibtex_lines", PublicationDetailTags::PublicationBibTeXLines)
 

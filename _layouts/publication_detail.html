@@ -71,6 +71,7 @@ layout: default
             {%- capture cite_btn_id -%}cite_btn:{{ page.entry.key }}{%- endcapture -%}
             {%- capture bibtex_id -%}bibtex:{{ page.entry.key }}{%- endcapture -%}
             {%- capture bibtex_btn_id -%}bibtex_btn:{{ page.entry.key }}{%- endcapture -%}
+            {%- capture bibtex -%}{% publication_bibtex %}{%- endcapture -%}
             <a class="btn btn-outline-link-color btn-sm" role="button" data-toggle="modal"
                 href="#{{ cite_id | jq_escape }}" id="{{ cite_btn_id }}">Cite</a>
 
@@ -87,9 +88,9 @@ layout: default
                         </div>
                         <div class="modal-body">
                             <form>
-                                <textarea class="form-control" id="{{ bibtex_id }}"
-                                    rows="{% publication_bibtex_lines %}"
-                                    readonly>{% publication_bibtex %}</textarea>
+                                <textarea class="form-control pub-bibtex" id="{{ bibtex_id }}"
+                                    rows="{{ bibtex | newline_to_br | split: '<br />' | size }}"
+                                    readonly>{{ bibtex }}</textarea>
                             </form>
                         </div>
                         <div class="modal-footer">
