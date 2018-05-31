@@ -1,10 +1,10 @@
 ---
 ---
-{{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' }}
+{%- capture anchor -%}“<a href="/publication/{{ entry.key | replace: ':', '/' }}/">{%- endcapture -%}
+{{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' | replace_first: '“', anchor | replace_first: ',”', '</a>,”' }}
 {%- if entry.note -%}
     &#32;<b>{{ entry.note }}</b>.
 {%- endif -%}
-&#32;[<a href="/publication/{{ entry.key | replace: ':', '/' }}/">detail</a>]
 {%- if entry.url -%}
     &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]
 {%- endif -%}
