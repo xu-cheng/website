@@ -116,7 +116,7 @@ GEM
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.2)
-    rack (2.0.4)
+    rack (2.0.5)
     rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -132,7 +132,7 @@ GEM
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
-    sprockets (4.0.0.beta7)
+    sprockets (4.0.0.beta8)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     thread_safe (0.3.6)
@@ -160,7 +160,7 @@ DEPENDENCIES
   pandoc-ruby
   rake
   sass
-  sprockets (~> 4.0.beta7)
+  sprockets (~> 4.0.beta8)
   uglifier
 
 BUNDLED WITH
