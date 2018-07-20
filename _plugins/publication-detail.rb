@@ -22,8 +22,15 @@ class PublicationDetail < Jekyll::Page
 
     data.merge!(reference_data(entry))
     data["permalink"] = @dir
-    data["title"] = entry.title if entry.title
+    data["title"] = strip_html(data["entry"]["title"]) if data["entry"]["title"]
     data["id"] = entry.key if entry.key
+  end
+
+  def strip_html(input)
+    input.to_s.gsub(/<script.*?<\/script>/m, "")
+              .gsub(/<!--.*?-->/m, "")
+              .gsub(/<style.*?<\/style>/m, "")
+              .gsub(/<.*?>/m, "")
   end
 end
 
