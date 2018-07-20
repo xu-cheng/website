@@ -129,6 +129,9 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (1.12.1)
+      ffi (~> 1.9.6)
+      sass (>= 3.3.0)
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
@@ -159,9 +162,9 @@ DEPENDENCIES
   jekyll-sitemap
   pandoc-ruby
   rake
-  sass
+  sassc
   sprockets (~> 4.0.beta8)
   uglifier
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

@@ -10,7 +10,7 @@ gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "pandoc-ruby"
 gem "rake"
-gem "sass"
+gem "sassc"
 gem "sprockets", "~> 4.0.beta8"
 gem "uglifier"
 
