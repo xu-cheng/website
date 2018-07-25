@@ -38,10 +38,10 @@ Here's the final result of rendered equation in below. Also you can do whatever 
 $$ P(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma ^2}} $$
 
 
- [jekyll-doc]: http://jekyllrb.com/docs/plugins/
- [mathjax]: http://www.mathjax.org
- [mathjax-with-jekyll]: http://gastonsanchez.com/visually-enforced/opinion/2014/02/16/Mathjax-with-jekyll/
- [katex]: http://khan.github.io/KaTeX/
- [katex-vs-mathjax]: http://jsperf.com/katex-vs-mathjax
- [jekyll-and-katex-willdrevo]: http://web.archive.org/web/20170117172154/http://willdrevo.com/latex-equation-rendering-in-javascript-with-jekyll-and-katex/
- [katex-a-new-way]: http://www.intmath.com/blog/mathematics/katex-a-new-way-to-display-math-on-the-web-9445
+ [jekyll-doc]: https://jekyllrb.com/docs/plugins/
+ [mathjax]: https://www.mathjax.org
+ [mathjax-with-jekyll]: https://gastonsanchez.com/visually-enforced/opinion/2014/02/16/Mathjax-with-jekyll/
+ [katex]: https://khan.github.io/KaTeX/
+ [katex-vs-mathjax]: https://jsperf.com/katex-vs-mathjax
+ [jekyll-and-katex-willdrevo]: https://web.archive.org/web/20170117172154/http://willdrevo.com/latex-equation-rendering-in-javascript-with-jekyll-and-katex/
+ [katex-a-new-way]: https://www.intmath.com/blog/mathematics/katex-a-new-way-to-display-math-on-the-web-9445

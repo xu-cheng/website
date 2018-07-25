@@ -6,7 +6,7 @@ category:
 tags: ["Homebrew"]
 ---
 
-Recently, I have been heavily involved to [Homebrew](http://brew.sh)'s development. Homebrew itself offers an interactive
+Recently, I have been heavily involved to [Homebrew](https://brew.sh)'s development. Homebrew itself offers an interactive
 ruby shell, which can be handy for the development. You can use such tool by invoking `brew irb` in the shell. And as what its
 name sounds, this tool is based on irb.
 
@@ -53,6 +53,6 @@ end
 I found using `HOMEBREW_LIBRARY_PATH` to locate Homebrew library path is a better idea.
 This can be useful if you have multi Homebrew in your system.
 
- [pry]: http://pryrepl.org
- [pry-top-5]: http://www.bignerdranch.com/blog/my-top-5-pry-features/
+ [pry]: https://pryrepl.org
+ [pry-top-5]: https://www.bignerdranch.com/blog/my-top-5-pry-features/
  [pry-plugin]: https://github.com/pry/pry/wiki/Available-plugins
