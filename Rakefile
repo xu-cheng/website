@@ -31,5 +31,6 @@ task :test do
      "--check-external-hash",
      "--check-opengraph",
      "--check-html",
+     "--url-ignore=/hust.edu.cn/",
      "./_site"
 end
