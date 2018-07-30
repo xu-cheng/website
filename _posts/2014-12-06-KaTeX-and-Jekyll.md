@@ -17,7 +17,7 @@ The most popular way to render LaTeX within Jekyll is using [MathJaX][mathjax]. 
 
 Recently, I came across a new project [KaTeX][katex]. It's fast as you can see the comparison below in which KaTeX is on the left and MathJax is on the right. There's also a benchmark available [here][katex-vs-mathjax].
 
-<center><img src="https://raw.githubusercontent.com/Khan/KaTeX/gh-pages/katex-comparison.gif" width="80%" alt="KaTeX vs Mathjax"/></center>
+<center><img src="https://raw.githubusercontent.com/Khan/KaTeX/cae400581080ac317fda57b8b6ae6c7834a9ea93/img/katex-comparison.gif" width="80%" alt="KaTeX vs Mathjax"/></center>
 
 So how to make KaTeX work in the Jekyll? [Will Drevo][jekyll-and-katex-willdrevo] offers a comprehensive manual to make it work. However, it requires us to write LaTeX code inside HTML `div` block. And I found [this blog][katex-a-new-way] to explain how to use KaTeX with JavaScript. Combining both of these works, and with some extra effort, I find the approach to use KaTeX seamlessly inside Jekyll.
 
