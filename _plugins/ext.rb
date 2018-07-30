@@ -1,20 +1,22 @@
+# frozen_string_literal: true
+
 require "liquid"
 require "jekyll"
 
 module ExtraTextFilters
   def regex_remove_first(input, regex)
-    input.to_s.sub(Regexp.new(regex), ''.freeze)
+    input.to_s.sub(Regexp.new(regex), "")
   end
 
   def regex_remove(input, regex)
-    input.to_s.gsub(Regexp.new(regex), ''.freeze)
+    input.to_s.gsub(Regexp.new(regex), "")
   end
 
-  def regex_replace_first(input, regex, replacement = ''.freeze)
+  def regex_replace_first(input, regex, replacement = "")
     input.to_s.sub(Regexp.new(regex.to_s), replacement.to_s)
   end
 
-  def regex_replace(input, regex, replacement = ''.freeze)
+  def regex_replace(input, regex, replacement = "")
     input.to_s.gsub(Regexp.new(regex.to_s), replacement.to_s)
   end
 

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require "date"
 require "jekyll"
 require "jekyll/scholar"
 
 def publication_detail_permalink(entry)
-  "/publication/#{entry.key.sub(":","/")}/"
+  "/publication/#{entry.key.sub(":", "/")}/"
 end
 
 class PublicationDetail < Jekyll::Page
@@ -28,9 +30,9 @@ class PublicationDetail < Jekyll::Page
 
   def strip_html(input)
     input.to_s.gsub(/<script.*?<\/script>/m, "")
-              .gsub(/<!--.*?-->/m, "")
-              .gsub(/<style.*?<\/style>/m, "")
-              .gsub(/<.*?>/m, "")
+         .gsub(/<!--.*?-->/m, "")
+         .gsub(/<style.*?<\/style>/m, "")
+         .gsub(/<.*?>/m, "")
   end
 end
 
@@ -53,7 +55,8 @@ class PublicationDetailGenerator < Jekyll::Generator
 
       site.pages << detail
 
-      site.regenerator.add_dependency site.in_source_dir(detail.path), bibtex_path
+      site.regenerator.add_dependency site.in_source_dir(detail.path),
+                                      bibtex_path
     end
   end
 end
@@ -143,4 +146,3 @@ Liquid::Template.register_tag("publication_date", PublicationDetailTags::Publica
 Liquid::Template.register_tag("publication_venue", PublicationDetailTags::PublicationVenue)
 Liquid::Template.register_tag("publication_type", PublicationDetailTags::PublicationType)
 Liquid::Template.register_tag("publication_bibtex", PublicationDetailTags::PublicationBibTeX)
-
