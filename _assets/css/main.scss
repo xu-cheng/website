@@ -12,9 +12,12 @@ $font-size-h4: 1.4rem;
 $font-size-h5: 1.2rem;
 $font-size-h6: 1rem;
 $link-color: #da4939;
+$link-hover-color: $link-color;
+$link-hover-decoration: none;
 $link-color-dark: #c23324;
 $navbar-footer-bg: #272935;
 $navbar-footer-color: #ffffff;
+$primary: $link-color;
 
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome/scss/font-awesome";
@@ -26,26 +29,13 @@ html {
     min-height: 100%;
 }
 
-a {
-    text-decoration: none !important;
-}
-
 a:not(.contact-entry):not(.badge):not(.btn):not(.navbar-brand) {
-    color: $link-color;
     border-bottom: 1px solid transparent;
 
     &:hover, &:active, &:focus {
         transition: border-bottom-color 0.2s;
         border-bottom-color: $link-color;
     }
-}
-
-.btn-link-color {
-    @include button-variant($link-color, $link-color);
-}
-
-.btn-outline-link-color {
-    @include button-outline-variant($link-color);
 }
 
 img.center {

@@ -52,19 +52,19 @@ layout: default
         <div class="col-md-2 pub-heading">Links</div>
         <div class="col-md-10 pub-links">
             {%- if page.entry.url -%}
-            <a class="btn btn-outline-link-color btn-sm" role="button"
+            <a class="btn btn-outline-primary btn-sm" role="button"
                 href="{{ page.entry.url | strip_site_url }}">PDF</a>
             {%- endif -%}
             {%- if page.entry.eprint -%}
-            <a class="btn btn-outline-link-color btn-sm" role="button"
+            <a class="btn btn-outline-primary btn-sm" role="button"
                 href="{{ page.entry.eprint | strip_site_url }}">ePrint</a>
             {%- endif -%}
             {%- if page.entry.slides -%}
-            <a class="btn btn-outline-link-color btn-sm" role="button"
+            <a class="btn btn-outline-primary btn-sm" role="button"
                 href="{{ page.entry.slides | strip_site_url }}">Slides</a>
             {%- endif -%}
             {%- if page.entry.poster -%}
-            <a class="btn btn-outline-link-color btn-sm" role="button"
+            <a class="btn btn-outline-primary btn-sm" role="button"
                 href="{{ page.entry.poster | strip_site_url }}">Poster</a>
             {%- endif -%}
             {%- capture cite_id -%}cite:{{ page.entry.key }}{%- endcapture -%}
@@ -72,7 +72,7 @@ layout: default
             {%- capture bibtex_id -%}bibtex:{{ page.entry.key }}{%- endcapture -%}
             {%- capture bibtex_btn_id -%}bibtex_btn:{{ page.entry.key }}{%- endcapture -%}
             {%- capture bibtex -%}{% publication_bibtex %}{%- endcapture -%}
-            <a class="btn btn-outline-link-color btn-sm" role="button" data-toggle="modal"
+            <a class="btn btn-outline-primary btn-sm" role="button" data-toggle="modal"
                 href="#{{ cite_id | jq_escape }}" id="{{ cite_btn_id }}">Cite</a>
 
             <div class="modal fade" id="{{ cite_id }}" tabindex="-1" role="dialog"
@@ -96,7 +96,7 @@ layout: default
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary"
                                 data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-link-color"
+                            <button type="button" class="btn btn-primary"
                                 id="{{ bibtex_btn_id }}">Copy</button>
                         </div>
                     </div>
