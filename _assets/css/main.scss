@@ -51,7 +51,7 @@ img.center {
 .navbar {
     font-family: $font-family-monospace;
     color: $navbar-footer-color;
-    background: $navbar-footer-bg;
+    background-color: $navbar-footer-bg;
 
     .navbar-brand {
         color: $navbar-footer-color;
@@ -148,7 +148,7 @@ img.center {
     font-family: $font-family-monospace;
     font-size: 13px;
     color: $navbar-footer-color;
-    background: $navbar-footer-bg;
+    background-color: $navbar-footer-bg;
     padding: 2rem 0;
 
     h6 {
@@ -163,7 +163,7 @@ img.center {
             width: 2em;
             height: 2px;
             overflow: hidden;
-            background: $navbar-footer-color;
+            background-color: $navbar-footer-color;
         }
     }
 
