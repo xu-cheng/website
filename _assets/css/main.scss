@@ -13,7 +13,6 @@ $font-size-h5: 1.2rem;
 $font-size-h6: 1rem;
 $link-color: #da4939;
 $link-hover-color: $link-color;
-$link-hover-decoration: none;
 $link-color-dark: #c23324;
 $navbar-footer-bg: #272935;
 $navbar-footer-color: #ffffff;
@@ -27,15 +26,6 @@ $primary: $link-color;
 html {
     position: relative;
     min-height: 100%;
-}
-
-a:not(.contact-entry):not(.badge):not(.btn):not(.navbar-brand) {
-    border-bottom: 1px solid transparent;
-
-    &:hover, &:active, &:focus {
-        transition: border-bottom-color 0.2s;
-        border-bottom-color: currentColor;
-    }
 }
 
 img.center {
@@ -56,8 +46,6 @@ img.center {
     .navbar-brand {
         color: $navbar-footer-color;
         font-size: 20px;
-        text-decoration: none;
-        border-bottom: none;
     }
 
     .nav-item {
@@ -81,7 +69,6 @@ img.center {
             color: inherit !important;
             text-transform: capitalize;
             margin-left: 2px;
-            border-bottom: 2px solid transparent !important;
         }
     }
 }
@@ -189,7 +176,6 @@ img.center {
                 width: 32px;
                 height: 32px;
                 border-radius: 0.25em;
-                border-bottom-color: transparent;
                 color: $navbar-footer-bg;
                 background-color: $navbar-footer-color;
                 transition: color 0.2s;
@@ -198,6 +184,7 @@ img.center {
                 &:hover {
                     color: $navbar-footer-color;
                     background-color: $link-color;
+                    text-decoration: none;
                 }
 
                 .fa {
