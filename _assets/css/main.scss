@@ -34,7 +34,7 @@ a:not(.contact-entry):not(.badge):not(.btn):not(.navbar-brand) {
 
     &:hover, &:active, &:focus {
         transition: border-bottom-color 0.2s;
-        border-bottom-color: inherit;
+        border-bottom-color: currentColor;
     }
 }
 
