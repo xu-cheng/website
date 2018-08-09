@@ -34,7 +34,7 @@ a:not(.contact-entry):not(.badge):not(.btn):not(.navbar-brand) {
 
     &:hover, &:active, &:focus {
         transition: border-bottom-color 0.2s;
-        border-bottom-color: $link-color;
+        border-bottom-color: inherit;
     }
 }
 
@@ -82,10 +82,6 @@ img.center {
             text-transform: capitalize;
             margin-left: 2px;
             border-bottom: 2px solid transparent !important;
-
-            &:hover, &:active, &:focus {
-                border-bottom-color: inherit !important;
-            }
         }
     }
 }
