@@ -5,7 +5,7 @@ require "jekyll"
 require "jekyll/scholar"
 
 def publication_detail_permalink(entry)
-  "/publication/#{entry.key.sub(":", "/")}/"
+  "/publication/#{entry.key.sub(":", "/")}/".downcase
 end
 
 class PublicationDetail < Jekyll::Page
