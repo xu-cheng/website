@@ -84,3 +84,13 @@ scholar:
 # jekyll-seo-tag config
 twitter:
   username: _xucheng_
+social:
+  name: Cheng Xu
+  links:
+    - https://twitter.com/_xucheng_
+    - https://www.linkedin.com/in/xu-cheng
+    - https://github.com/xu-cheng
+    - https://keybase.io/xucheng
+webmaster_verifications:
+  google: Wv-QPWOMpVz05kAMZf2O-BNmHE609G9uW2kdAmKoIsI
+
