@@ -20,6 +20,11 @@ module ExtraTextFilters
     input.to_s.gsub(Regexp.new(regex.to_s), replacement.to_s)
   end
 
+  def regex_matching(input, regex)
+    return false if regex.nil? || regex.to_s.empty?
+    input.to_s.match?(Regexp.new(regex.to_s))
+  end
+
   def jq_escape(input)
     input.to_s.gsub(/(:|\.|\[|\]|,|=|@)/, "\\\\\\1")
   end

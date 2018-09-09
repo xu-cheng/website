@@ -36,8 +36,10 @@ defaults:
 nav:
   - title: home
     url: /
+    active_regex: '^/$'
   - title: blog
     url: /blog/
+    active_regex: '^/blog/.*$'
   - title: CV
     url: /file/cv.pdf
 

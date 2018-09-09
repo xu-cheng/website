@@ -23,9 +23,8 @@
             <div class="collapse navbar-collapse" id="navbar-main">
                 <ul class="navbar-nav ml-auto">
                 {%- for nav in site.nav -%}
-                    {%- if nav.url == "/" and page.url == "/" -%}
-                    <li class="nav-item active">
-                    {%- elsif nav.url != "/" and page.url contains nav.url -%}
+                    {%- assign is_active = page.url | regex_matching: nav.active_regex -%}
+                    {%- if is_active -%}
                     <li class="nav-item active">
                     {%- else -%}
                     <li class="nav-item">
