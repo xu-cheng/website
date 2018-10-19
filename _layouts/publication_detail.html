@@ -28,16 +28,16 @@ layout: default
         <div class="col-md-10">{{ page.entry.doi }}</div>
     </div>
 {%- endif -%}
-{%- if page.entry.note -%}
+{%- if page.entry.addendum -%}
     {%- if page.entry.url -%}
     <div class="row pub-info">
         <div class="col-md-2 pub-heading">Note</div>
-        <div class="col-md-10">{{ page.entry.note }}</div>
+        <div class="col-md-10">{{ page.entry.addendum }}</div>
     </div>
     {%- else -%}
     <div class="row pub-info">
         <div class="col-md-2 pub-heading">Note</div>
-        <div class="col-md-10">{{ page.entry.note }}, accepted to appear</div>
+        <div class="col-md-10">{{ page.entry.addendum }}, accepted to appear</div>
     </div>
     {%- endif -%}
 {%- else -%}

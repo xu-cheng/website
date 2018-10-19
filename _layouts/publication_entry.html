@@ -2,8 +2,8 @@
 ---
 {%- capture anchor -%}“<a href="/publication/{{ entry.key | replace: ':', '/' | downcase }}/">{%- endcapture -%}
 {{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' | replace_first: '“', anchor | replace_first: ',”', '</a>,”' }}
-{%- if entry.note -%}
-    &#32;<b>{{ entry.note }}</b>.
+{%- if entry.addendum -%}
+    &#32;<b>{{ entry.addendum }}</b>.
 {%- endif -%}
 {%- if entry.url -%}
     &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]

@@ -76,10 +76,10 @@ scholar:
   use_raw_bibtex_entry: false
   bibtex_skip_fields:
     - abstract
+    - addendum
     - author+an
     - eprint
     - month_numeric
-    - note
     - poster
     - slides
     - url
