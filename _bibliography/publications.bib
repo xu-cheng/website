@@ -124,3 +124,18 @@
     addendum = {Full Paper},
     abstract = {With the prevalence of location-based services and geo-functioned devices, the trend of spatial data outsourcing is rising. In the data outsourcing scenario, result integrity must be ensured by means of a query authentication scheme. However, most of the existing studies are confined to a centralized environment. In this paper, we investigate the query authentication problem in distributed environments and focus on the $k$ nearest neighbor (kNN) query, which is widely used in spatial data analytics. We design a new distributed spatial authenticated data structure (ADS), distributed MR-tree, to facilitate efficient kNN processing. Furthermore, we propose a basic algorithm to process authenticated kNN queries based on the new ADS. Apart from the results, some verification objects are generated to guarantee the results’ integrity. We also design two optimized algorithms to reduce the size of verification objects as well as the verification cost. Our experiments validate the good performance of the proposed techniques in terms of query cost, communication overhead, and verification time.},
 }
+
+@inproceedings{SIGMOD19:vchain,
+    author = {Xu, Cheng
+              and Zhang, Ce
+              and Xu, Jianliang},
+    author+an = {1=highlight},
+    title = {vChain: Enabling Verifiable Boolean Range Queries over Blockchain Databases},
+    booktitle = {Proceedings of the 2019 International Conference on Management of Data (\textbf{SIGMOD'19})},
+    year = {2019},
+    month = {6},
+    eprint = {https://xuc.me/file/paper/SIGMOD19.pdf},
+    address = {Amsterdam, Netherlands},
+    addendum = {Full Paper},
+    abstract = {Blockchains have recently been under the spotlight due to the boom of cryptocurrencies and decentralized applications. There is an increasing demand for querying the data stored in a blockchain database. To ensure query integrity, the user can maintain the entire blockchain database and query the data locally. However, this approach is not economic, if not infeasible, because of the blockchain's huge data size and considerable maintenance costs. In this paper, we take the first step toward investigating the problem of verifiable query processing over blockchain databases. We propose a novel framework, called vChain, that alleviates the storage and computing costs of the user and employs verifiable queries to guarantee the results' integrity. To support verifiable Boolean range queries, we propose an accumulator-based authenticated data structure that enables dynamic aggregation over arbitrary query attributes. Two new indexes are further developed to aggregate intra-block and inter-block data records for efficient query verification. We also propose an inverted prefix tree structure to accelerate the processing of a large number of subscription queries simultaneously. Security analysis and empirical study validate the robustness and practicality of the proposed techniques.},
+}
