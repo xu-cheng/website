@@ -15,10 +15,3 @@
     Link: </assets/main.js>; rel=preload; as=script
     Link: </assets/photo.jpg>; rel=preload; as=image
     Link: </assets/photo@2x.jpg>; rel=preload; as=image
-/blog/*
-    Link: </assets/main.css>; rel=preload; as=style
-    Link: </assets/main.js>; rel=preload; as=script
-    Link: </assets/disqus.js>; rel=preload; as=script
-/publication/*
-    Link: </assets/main.css>; rel=preload; as=style
-    Link: </assets/main.js>; rel=preload; as=script
