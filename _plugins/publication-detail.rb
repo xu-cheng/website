@@ -91,9 +91,9 @@ module PublicationDetailTags
       month = Date::MONTHNAMES[month.to_i] if month
       year = entry["year"]
       if year && month && day
-        "#{day} #{month}, #{year}"
+        "#{month} #{day}, #{year}"
       elsif year && month
-        "#{month}, #{year}"
+        "#{month} #{year}"
       elsif year
         year
       else
