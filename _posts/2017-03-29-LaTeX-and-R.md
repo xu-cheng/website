@@ -48,7 +48,7 @@ For me, it works nicely under vim with the [vimtex plugin][vimtex]. Just name th
 
  [knitr]: https://yihui.name/knitr/
  [r]: https://www.r-project.org
- [anaconda]: https://www.continuum.io/downloads
+ [anaconda]: https://www.anaconda.com/download/
  [knitr-editor]: https://yihui.name/knitr/demo/editors/
  [latexmk]: https://www.ctan.org/pkg/latexmk/
  [vimtex]: https://github.com/lervag/vimtex/
