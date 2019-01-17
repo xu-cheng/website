@@ -28,9 +28,11 @@ end
 desc "Run html-proofer test"
 task :test do
   sh "bundle", "exec", "htmlproofer",
+     "--allow-hash-href",
      "--check-external-hash",
      "--check-opengraph",
      "--check-html",
-     "--url-ignore=/hust.edu.cn/",
+     "--check-img-http",
+     "--url-swap", "\\\\\\::\\:",
      "./_site"
 end
