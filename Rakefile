@@ -33,6 +33,7 @@ task :test do
      "--check-opengraph",
      "--check-html",
      "--check-img-http",
-     "--url-swap", "\\\\\\::\\:",
+     "--url-swap=\\\\\\::\\:",
+     "--url-ignore=/hust.edu.cn/",
      "./_site"
 end
