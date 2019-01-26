@@ -55,17 +55,17 @@ layout: default
             <a class="btn btn-outline-primary btn-sm" role="button"
                 href="{{ page.entry.url | strip_site_url }}">PDF</a>
             {%- endif -%}
-            {%- if page.entry.eprint -%}
+            {%- if page.entry.eprint_url -%}
             <a class="btn btn-outline-primary btn-sm" role="button"
-                href="{{ page.entry.eprint | strip_site_url }}">ePrint</a>
+                href="{{ page.entry.eprint_url | strip_site_url }}">ePrint</a>
             {%- endif -%}
-            {%- if page.entry.slides -%}
+            {%- if page.entry.slides_url -%}
             <a class="btn btn-outline-primary btn-sm" role="button"
-                href="{{ page.entry.slides | strip_site_url }}">Slides</a>
+                href="{{ page.entry.slides_url | strip_site_url }}">Slides</a>
             {%- endif -%}
-            {%- if page.entry.poster -%}
+            {%- if page.entry.poster_url -%}
             <a class="btn btn-outline-primary btn-sm" role="button"
-                href="{{ page.entry.poster | strip_site_url }}">Poster</a>
+                href="{{ page.entry.poster_url | strip_site_url }}">Poster</a>
             {%- endif -%}
             {%- capture cite_id -%}cite:{{ page.entry.key }}{%- endcapture -%}
             {%- capture cite_btn_id -%}cite_btn:{{ page.entry.key }}{%- endcapture -%}

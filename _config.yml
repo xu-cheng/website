@@ -76,11 +76,10 @@ scholar:
   bibtex_skip_fields:
     - abstract
     - addendum
-    - author+an
-    - eprint
+    - eprint_url
     - month_numeric
-    - poster
-    - slides
+    - poster_url
+    - slides_url
     - url
 # jekyll-seo-tag config
 twitter:

@@ -8,13 +8,13 @@
 {%- if entry.url -%}
     &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]
 {%- endif -%}
-{%- if entry.eprint -%}
-    &#32;[<a href="{{ entry.eprint | strip_site_url }}">eprint</a>]
+{%- if entry.eprint_url -%}
+    &#32;[<a href="{{ entry.eprint_url | strip_site_url }}">eprint</a>]
 {%- endif -%}
-{%- if entry.slides -%}
-    &#32;[<a href="{{ entry.slides | strip_site_url }}">slides</a>]
+{%- if entry.slides_url -%}
+    &#32;[<a href="{{ entry.slides_url | strip_site_url }}">slides</a>]
 {%- endif -%}
 {%- if entry.poster -%}
-    &#32;[<a href="{{ entry.poster | strip_site_url }}">poster</a>]
+    &#32;[<a href="{{ entry.poster_url | strip_site_url }}">poster</a>]
 {%- endif -%}
 
