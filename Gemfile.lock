@@ -151,6 +151,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  execjs
   html-proofer
   jekyll
   jekyll-assets
@@ -160,6 +161,7 @@ DEPENDENCIES
   jekyll-scholar
   jekyll-seo-tag
   jekyll-sitemap
+  nokogiri
   pandoc-ruby
   rake
   sassc
@@ -167,4 +169,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.16.2
+   1.17.2

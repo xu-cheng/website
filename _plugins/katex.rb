@@ -1,0 +1,50 @@
+# frozen_string_literal: true
+
+require "execjs"
+require "jekyll"
+require "nokogiri"
+require "pathname"
+
+module KaTeX
+  module_function
+
+  KATEX_JS = Pathname.new("#{__FILE__}/../../node_modules/katex/dist/katex.js")
+                     .expand_path
+  KATEX = ExecJS.compile(KATEX_JS.read)
+
+  def render_equation(tex, display_mode)
+    KATEX.call "katex.renderToString", tex, displayMode: display_mode
+  end
+
+  def render_html(input)
+    html = Nokogiri::HTML.fragment(input)
+    html.css("span.math").each do |node|
+      tex = node.content
+      display_mode = tex.start_with? '\['
+      if display_mode
+        tex.gsub!(/^\\\[/, "")
+        tex.gsub!(/\\\]$/, "")
+      else
+        tex.gsub!(/^\\\(/, "")
+        tex.gsub!(/\\\)$/, "")
+      end
+      node.replace render_equation(tex, display_mode)
+    end
+    html.css("script").each do |node|
+      if node["type"] == "math/tex"
+        node.replace render_equation(node.content, false)
+      elsif node["type"] == "math/tex; mode=display"
+        node.replace render_equation(node.content, true)
+      end
+    end
+    html.to_html
+  end
+end
+
+Jekyll::Hooks.register :pages, :post_render do |page|
+  page.output = KaTeX.render_html(page.output) if page.html?
+end
+
+Jekyll::Hooks.register :posts, :post_render do |post|
+  post.output = KaTeX.render_html(post.output)
+end
