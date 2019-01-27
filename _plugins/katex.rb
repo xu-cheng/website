@@ -16,8 +16,7 @@ module KaTeX
     KATEX.call "katex.renderToString", tex, displayMode: display_mode
   end
 
-  def render_html(input)
-    html = Nokogiri::HTML.fragment(input)
+  def render_html(html)
     html.css("span.math").each do |node|
       tex = node.content
       display_mode = tex.start_with? '\['
@@ -39,12 +38,22 @@ module KaTeX
     end
     html.to_html
   end
+
+  def render_html_page(input)
+    html = Nokogiri::HTML(input)
+    render_html(html)
+  end
+
+  def render_html_fragment(input)
+    html = Nokogiri::HTML.fragment(input)
+    render_html(html)
+  end
 end
 
 Jekyll::Hooks.register :pages, :post_render do |page|
-  page.output = KaTeX.render_html(page.output) if page.html?
+  page.output = KaTeX.render_html_page(page.output) if page.html?
 end
 
 Jekyll::Hooks.register :posts, :post_render do |post|
-  post.output = KaTeX.render_html(post.output)
+  post.output = KaTeX.render_html_page(post.output)
 end
