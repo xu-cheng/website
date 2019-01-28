@@ -6,7 +6,6 @@ plugins:
   - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
-  - pandoc-ruby
 include:
   - .well-known
   - _headers

@@ -2,29 +2,35 @@
 
 require "rake"
 
-task default: :'build-dev'
+task default: "build-dev"
 
-# rake build
 desc "Build the site (production)"
-task build: :yarn do
+task build: "deps:all" do
   ENV["JEKYLL_ENV"] = "production"
   sh "bundle", "exec", "jekyll", "build"
 end
 
-# rake build-dev
 desc "Build the site (development)"
-task 'build-dev': :yarn do
+task "build-dev": "deps:all" do
   ENV["JEKYLL_ENV"] = "development"
   sh "bundle", "exec", "jekyll", "build"
 end
 
-# rake yarn
-desc "Install front-end dependencies"
-task :yarn do
-  sh "yarn"
+namespace :deps do
+  desc "Install all dependencies"
+  task all: %w[bundle yarn]
+
+  desc "Install ruby dependencies"
+  task :bundle do
+    sh "bundle"
+  end
+
+  desc "Install yarn dependencies"
+  task :yarn do
+    sh "yarn"
+  end
 end
 
-# rake test
 desc "Run html-proofer test"
 task :test do
   sh "bundle", "exec", "htmlproofer",
