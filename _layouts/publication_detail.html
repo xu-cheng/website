@@ -67,13 +67,13 @@ layout: default
             <a class="btn btn-outline-primary btn-sm" role="button"
                 href="{{ page.entry.poster_url | strip_site_url }}">Poster</a>
             {%- endif -%}
-            {%- capture cite_id -%}cite:{{ page.entry.key }}{%- endcapture -%}
-            {%- capture cite_btn_id -%}cite_btn:{{ page.entry.key }}{%- endcapture -%}
-            {%- capture bibtex_id -%}bibtex:{{ page.entry.key }}{%- endcapture -%}
-            {%- capture bibtex_btn_id -%}bibtex_btn:{{ page.entry.key }}{%- endcapture -%}
+            {%- capture cite_id -%}cite_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
+            {%- capture cite_btn_id -%}cite_btn_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
+            {%- capture bibtex_id -%}bibtex_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
+            {%- capture bibtex_btn_id -%}bibtex_btn_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
             {%- capture bibtex -%}{% publication_bibtex %}{%- endcapture -%}
             <a class="btn btn-outline-primary btn-sm" role="button" data-toggle="modal"
-                href="#{{ cite_id | jq_escape }}" id="{{ cite_btn_id }}">Cite</a>
+                href="#{{ cite_id }}" id="{{ cite_btn_id }}">Cite</a>
 
             <div class="modal fade" id="{{ cite_id }}" tabindex="-1" role="dialog"
                 aria-labelledby="{{ cite_btn_id }}" aria-hidden="true">
