@@ -25,10 +25,6 @@ module ExtraTextFilters
     input.to_s.match?(Regexp.new(regex.to_s))
   end
 
-  def jq_escape(input)
-    input.to_s.gsub(/(:|\.|\[|\]|,|=|@)/, "\\\\\\1")
-  end
-
   def strip_site_url(input)
     url = input.to_s
     site_url = @context.registers[:site].config["url"]
