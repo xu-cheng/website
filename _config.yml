@@ -75,6 +75,7 @@ scholar:
   bibtex_skip_fields:
     - abstract
     - addendum
+    - author+an
     - eprint_url
     - month_numeric
     - poster_url
