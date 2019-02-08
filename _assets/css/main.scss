@@ -241,6 +241,10 @@ body {
 
 .pub-abstract {
     padding-bottom: 1rem;
+
+    span {
+        white-space: nowrap;
+    }
 }
 
 .pub-bibtex {
