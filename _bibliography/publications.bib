@@ -156,3 +156,36 @@
     addendum = {Demo Paper},
     abstract = {With the proliferation of cloud computing and data-as-a-service (DaaS), more and more organizations and individuals outsource their data to a third-party service provider. While enjoying the benefits of cloud-based data outsourcing, the data owners are at the risk of losing control of data integrity and access management. In this demonstration, we present a system called vABS, which enables verifiable Attribute-Based Search over shared cloud data. The vABS system adopts the common DaaS architecture, in which the server provides search services to users on behalf of data owners. By employing a novel zero-knowledge approach proposed in our prior work, vABS not only provides users with good search experiences, but also supports authenticated query processing with fine-grained access control, which is crucial to many high-security applications.},
 }
+
+@inproceedings{ICDE19:imageproof,
+    author = {Guo, Shangwei
+              and Xu, Jianliang
+              and Zhang, Ce
+              and Xu, Cheng
+              and Xiang, Tao},
+    author+an = {4=highlight},
+    title = {ImageProof: Enabling Authentication for Large-Scale Image Retrieval},
+    booktitle = {Proceedings of the 35th IEEE International Conference on Data Engineering (\textbf{ICDE '19})},
+    year = {2019},
+    month = {4},
+    address = {Macau SAR, China},
+    addendum = {Full Paper},
+    abstract = {With the explosive growth of online images and the popularity of search engines, a great demand has arisen for small and medium-sized enterprises to build and outsource large-scale image retrieval systems to cloud platforms. While reducing storage and retrieval burdens, enterprises are at risk of facing untrusted cloud service providers. In this paper, we take the first step in studying the problem of query authentication for large-scale image retrieval. Due to the large size of image files, the main challenges are to (i) design efficient authenticated data structures (ADSs) and (ii) balance search, communication, and verification complexities. To address these challenges, we propose two novel ADSs, the Merkle randomized k-d tree and the Merkle inverted index with cuckoo filters, to ensure the integrity of query results in each step of image retrieval. For each ADS, we develop corresponding search and verification algorithms on the basis of a series of systemic design strategies. Furthermore, we put together the ADSs and algorithms to design the final authentication scheme for image retrieval, which we name ImageProof. We also propose several optimization techniques to improve the performance of the proposed ImageProof scheme. Security analysis and extensive experiments are performed to show the robustness and efficiency of ImageProof.},
+}
+
+@inproceedings{ICDE19:gem2-tree,
+    author = {Zhang, Ce
+              and Xu, Cheng
+              and Xu, Jianliang
+              and Tang, Yuzhe
+              and Choi, Byron},
+    author+an = {2=highlight},
+    title = {GEM^2-Tree: A Gas-Efficient Structure for Authenticated Range Queries in Blockchain},
+    booktitle = {Proceedings of the 35th IEEE International Conference on Data Engineering (\textbf{ICDE '19})},
+    year = {2019},
+    month = {4},
+    address = {Macau SAR, China},
+    addendum = {Full Paper},
+    abstract = {Blockchain technology has attracted much attention due to the great success of the cryptocurrencies. Owing to its immutability property and consensus protocol, blockchain offers a new solution for trusted storage and computation services. To scale up the services, prior research has suggested a hybrid storage architecture, where only small meta-data are stored on-chain and the raw data are outsourced to off-chain storage. To protect data integrity, a cryptographic proof can be constructed online for queries over the data stored in the system. However, the previous schemes only support simple key-value queries. In this paper, we take the first step toward studying authenticated range queries in the hybrid-storage blockchain. The key challenge lies in how to design an authenticated data structure (ADS) that can be efficiently maintained by the blockchain, in which a unique \emph{gas} cost model is employed. By analyzing the performance of the existing techniques, we propose a novel ADS, called GEM$^2$-tree, which is not only gas-efficient but also effective in supporting authenticated queries. To further reduce the ADS maintenance cost without sacrificing much the query performance, we also propose an optimized structure, GEM$^{2*}$-tree, by designing a two-level index structure. Theoretical analysis and empirical evaluation validate the performance of the proposed ADSs.},
+}
+
