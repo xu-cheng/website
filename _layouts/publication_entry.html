@@ -3,17 +3,17 @@
 {%- capture anchor -%}“<a href="/publication/{{ entry.key | replace: ':', '/' | downcase }}/">{%- endcapture -%}
 {{ reference | regex_remove_first: '\[\d+\]' | replace_first: 'C. Xu', '<b>C. Xu</b>' | replace_first: '“', anchor | replace_first: ',”', '</a>,”' }}
 {%- if entry.addendum -%}
-    &#32;<b>{{ entry.addendum }}</b>.
+    &#32;<span class="addendum">{{ entry.addendum }}</span>.
 {%- endif -%}
 {%- if entry.url -%}
-    &#32;[<a href="{{ entry.url | strip_site_url }}">pdf</a>]
+    &#32;<span>[<a href="{{ entry.url | strip_site_url }}">pdf</a>]</span>
 {%- endif -%}
 {%- if entry.eprint_url -%}
-    &#32;[<a href="{{ entry.eprint_url | strip_site_url }}">eprint</a>]
+    &#32;<span>[<a href="{{ entry.eprint_url | strip_site_url }}">eprint</a>]</span>
 {%- endif -%}
 {%- if entry.slides_url -%}
-    &#32;[<a href="{{ entry.slides_url | strip_site_url }}">slides</a>]
+    &#32;<span>[<a href="{{ entry.slides_url | strip_site_url }}">slides</a>]</span>
 {%- endif -%}
 {%- if entry.poster_url -%}
-    &#32;[<a href="{{ entry.poster_url | strip_site_url }}">poster</a>]
+    &#32;<span>[<a href="{{ entry.poster_url | strip_site_url }}">poster</a>]</span>
 {%- endif -%}
