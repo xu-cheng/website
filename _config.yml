@@ -15,6 +15,7 @@ exclude:
   - Gemfile.lock
   - Rakefile
   - README.md
+  - netlify.toml
   - node_modules
   - package.json
   - vendor

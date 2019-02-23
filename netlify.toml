@@ -1,0 +1,7 @@
+[build]
+command = "rake build"
+publish = "_site/"
+
+[build.environment]
+RUBY_VERSION = "2.4.3"
+YARN_VERSION = "1.13.0"
