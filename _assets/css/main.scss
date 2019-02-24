@@ -83,10 +83,32 @@ html {
 }
 
 
-img.avatar {
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
+.bio {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+    .avatar {
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    }
+
+    .profile {
+        .name {
+            font-size: 1.8em;
+        }
+
+        .title {
+            font-size: 1.5em;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+    }
 }
 
 .content {
