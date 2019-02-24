@@ -1,70 +1,66 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{%- if layout.has_disqus or page.has_disqus -%}
-<meta name="DISQUS_PAGE_URL" content="{{ site.url }}{{ page.url | downcase }}">
-<meta name="DISQUS_PAGE_ID" content="{{ page.id }}">
-{%- endif -%}
-<title>{{ page.title }}</title>
-{% asset main.css %}
-{% asset main.js async %}
-{% feed_meta %}
-{%- seo title=false -%}
-</head>
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">{{ site.name }}</a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-main">
-                <ul class="navbar-nav ml-auto">
-                {%- for nav in site.nav -%}
-                    {%- assign is_active = page.url | regex_matching: nav.active_regex -%}
-                    {%- if is_active -%}
-                    <li class="nav-item active">
-                    {%- else -%}
-                    <li class="nav-item">
-                    {%- endif -%}
-                        <div class="nav-link">
-                            <span>/</span><a href="{{nav.url}}">{{nav.title}}</a>
-                        </div>
-                    </li>
-                {%- endfor -%}
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container content">
-{{ content }}
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="copyright">
-                    <h6>Copyright</h6>
-                    <p>
-                    &copy;&nbsp;2014-{{ site.time | date: '%Y' }} by Cheng XU.<br>
-                    Licensed under <a href="/LICENSE">CC-BY-NC-SA 4.0</a>.
-                    </p>
-                </div>
-                <div class="contact">
-                    <h6>Contact Me</h6>
-                    <ul>
-                        <li><a class="contact-entry" itemprop="email" href="mailto:{{ site.contact.email | encode_email }}"><i class="fa fa-fw fa-envelope"></i></a></li>
-                        <li><a class="contact-entry" itemprop="gpg" href="{{ site.contact.gpg }}"><i class="fa fa-fw fa-key"></i></a></li>
-                        <li><a class="contact-entry" itemprop="github" href="{{ site.contact.github }}"><i class="fa fa-fw fa-github-alt"></i></a></li>
-                        <li><a class="contact-entry" itemprop="linkedin" href="{{ site.contact.linkedin }}"><i class="fa fa-fw fa-linkedin"></i></a></li>
-                        <li><a class="contact-entry" itemprop="twitter" href="{{ site.contact.twitter }}"><i class="fa fa-fw fa-twitter"></i></a></li>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {%- if layout.has_disqus or page.has_disqus -%}
+        <meta name="DISQUS_PAGE_URL" content="{{ site.url }}{{ page.url | downcase }}">
+        <meta name="DISQUS_PAGE_ID" content="{{ page.id }}">
+        {%- endif -%}
+        <title>{{ page.title }}</title>
+        {% asset main.css %}
+        {% asset main.js async %}
+        {% feed_meta %}
+        {%- seo title=false -%}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">{{ site.name }}</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-main">
+                    <ul class="navbar-nav ml-auto">
+                        {%- for nav in site.nav -%}
+                        {%- assign is_active = page.url | regex_matching: nav.active_regex -%}
+                        <li class="nav-item{% if is_active %} active{% endif %}">
+                            <div class="nav-link">
+                                <span>/</span><a href="{{nav.url}}">{{nav.title}}</a>
+                            </div>
+                        </li>
+                        {%- endfor -%}
                     </ul>
                 </div>
             </div>
+        </nav>
+
+        <div class="container content">
+            {{ content }}
         </div>
-    </footer>
-</body>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="copyright">
+                        <h6>Copyright</h6>
+                        <p>
+                            &copy;&nbsp;2014-{{ site.time | date: '%Y' }} by Cheng XU.<br>
+                            Licensed under <a href="/LICENSE">CC-BY-NC-SA 4.0</a>.
+                        </p>
+                    </div>
+                    <div class="contact">
+                        <h6>Contact Me</h6>
+                        <ul>
+                            <li><a class="contact-entry" itemprop="email" href="mailto:{{ site.contact.email | encode_email }}"><i class="fa fa-fw fa-envelope"></i></a></li>
+                            <li><a class="contact-entry" itemprop="gpg" href="{{ site.contact.gpg }}"><i class="fa fa-fw fa-key"></i></a></li>
+                            <li><a class="contact-entry" itemprop="github" href="{{ site.contact.github }}"><i class="fa fa-fw fa-github-alt"></i></a></li>
+                            <li><a class="contact-entry" itemprop="linkedin" href="{{ site.contact.linkedin }}"><i class="fa fa-fw fa-linkedin"></i></a></li>
+                            <li><a class="contact-entry" itemprop="twitter" href="{{ site.contact.twitter }}"><i class="fa fa-fw fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
