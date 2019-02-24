@@ -28,11 +28,6 @@ html {
     min-height: 100%;
 }
 
-img.center {
-    display: block;
-    margin: 0 auto;
-}
-
 .container {
     min-width: 320px;
     max-width: 950px;
@@ -87,6 +82,12 @@ img.center {
     }
 }
 
+
+img.avatar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
 
 .content {
     padding-top: 1rem;
