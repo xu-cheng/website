@@ -75,7 +75,7 @@ GEM
     jekyll-email-protect (1.1.0)
     jekyll-feed (0.12.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-gist (1.6.0)
+    jekyll-gist (1.5.0)
       octokit (~> 4.2)
     jekyll-sanity (1.2.0)
       jekyll (~> 3.1)
