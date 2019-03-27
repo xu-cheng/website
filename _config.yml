@@ -56,6 +56,10 @@ assets:
   sources:
     - node_modules
   raw_precompile:
+    - src: roboto-*.woff
+      dst: fonts
+    - src: roboto-*.woff2
+      dst: fonts
     - src: font-awesome/fonts/*
       dst: fonts
     - src: katex/dist/fonts/*

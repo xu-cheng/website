@@ -11,6 +11,7 @@ $font-size-h3: 1.6rem;
 $font-size-h4: 1.4rem;
 $font-size-h5: 1.2rem;
 $font-size-h6: 1rem;
+$headings-font-weight: 400;
 $link-color: #da4939;
 $link-hover-color: $link-color;
 $link-color-dark: #c23324;
@@ -20,8 +21,7 @@ $primary: $link-color;
 
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome/scss/font-awesome";
-
-@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Roboto+Mono");
+@import "fonts";
 
 html {
     position: relative;
@@ -140,10 +140,6 @@ html {
 
     .article-heading-badge {
         font-size: 0.6em;
-    }
-
-    .article-title {
-        text-weight: bold;
     }
 }
 
@@ -265,7 +261,7 @@ body {
 }
 
 .pub-heading {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .pub-abstract {
