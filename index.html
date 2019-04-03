@@ -46,4 +46,20 @@ description: Cheng XU's Homepage
     </h2>
 
     {% bibliography --template publication_entry %}
+
+    <h2 class="article-heading" id="talks">Talks</h2>
+
+    <ul>
+        {%- assign talks = site.data.talks | sort: 'date' | reverse -%}
+        {%- for talk in talks -%}
+        <li>
+            <span>
+                {{ talk.title }}, <i>{{ talk.venue }}</i>, {{ talk.location }}, {{ talk.date | date: '%b. %d, %Y' }}.
+            </span>
+            {%- if talk.slides -%}
+            &#32;<span>[<a href="{{ talk.slides | strip_site_url }}">slides</a>]</span>
+            {%- endif -%}
+        </li>
+        {%- endfor -%}
+    </ul>
 </div>
