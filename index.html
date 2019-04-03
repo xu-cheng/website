@@ -54,7 +54,7 @@ description: Cheng XU's Homepage
         {%- for talk in talks -%}
         <li>
             <span>
-                {{ talk.title }}, <i>{{ talk.venue }}</i>, {{ talk.location }}, {{ talk.date | date: '%b. %d, %Y' }}.
+                {{ talk.title }}, <i>{{ talk.venue }}</i>, {{ talk.location }}, {{ talk.date | date: '%b. %-d, %Y' }}.
             </span>
             {%- if talk.url -%}
             &#32;<span>[<a href="{{ talk.url | strip_site_url }}">link</a>]</span>
