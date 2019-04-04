@@ -49,13 +49,21 @@ description: Cheng XU's Homepage
 
     <h2 class="article-heading" id="talks">Talks</h2>
 
-    <ul>
+    <ul class="talks">
         {%- assign talks = site.data.talks | sort: 'date' | reverse -%}
         {%- for talk in talks -%}
         <li>
             <span>
-                {{ talk.title }}, <i>{{ talk.venue }}</i>, {{ talk.location }}, {{ talk.date | date: '%b. %-d, %Y' }}.
+                {{ talk.title }}, <i>{{ talk.venue }}</i>, {{ talk.location }},&#32;
+                {%- if talk.date_day_unknown -%}
+                {{ talk.date | date: '%b. %Y' }}
+                {%- else -%}
+                {{ talk.date | date: '%b. %-d, %Y' }}
+                {%- endif -%}.
             </span>
+            {%- if talk.note -%}
+            &#32;<span class="note">({{ talk.note }})</span>
+            {%- endif -%}
             {%- if talk.url -%}
             &#32;<span>[<a href="{{ talk.url | strip_site_url }}">link</a>]</span>
             {%- endif -%}
