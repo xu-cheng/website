@@ -14,12 +14,3 @@
   date: 2019-04-08
   url: https://blockchain.comp.hkbu.edu.hk/blockdm2019/
   slides: /file/slides/BlockDM19.pdf
-- title: >-
-    vChain: Enabling Verifiable Boolean Range Queries over Blockchain Databases
-  venue: >-
-    2019 ACM SIGMOD International Conference on Management of Data
-  location: Amsterdam, Netherlands
-  date: 2019-07-01
-  date_day_unknown: true
-  note: Upcoming
-  url: https://sigmod2019.org
