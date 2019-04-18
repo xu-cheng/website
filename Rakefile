@@ -1,19 +1,35 @@
 # frozen_string_literal: true
 
+require "date"
+require "fileutils"
+require "pathname"
 require "rake"
+require "shellwords"
 
 task default: "build-dev"
 
 desc "Build the site (production)"
-task build: "deps:all" do
+task build: %w[deps:all fix-mod-time] do
   ENV["JEKYLL_ENV"] = "production"
   sh "bundle", "exec", "jekyll", "build"
 end
 
 desc "Build the site (development)"
-task "build-dev": "deps:all" do
+task "build-dev": %w[deps:all fix-mod-time] do
   ENV["JEKYLL_ENV"] = "development"
   sh "bundle", "exec", "jekyll", "build"
+end
+
+desc "Fix mod time for files in /file/ folder"
+task "fix-mod-time" do
+  root_dir = Pathname.new(__FILE__.to_s).dirname
+  Pathname.glob("#{root_dir}/file/**/*") do |file|
+    next unless file.file?
+
+    author_date = `git log -1 --format="%aI" -- #{file.to_s.shellescape}`.strip
+    date = DateTime.iso8601(author_date).to_time
+    FileUtils::Verbose.touch file.to_s, mtime: date
+  end
 end
 
 namespace :deps do
