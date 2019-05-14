@@ -22,8 +22,7 @@ end
 
 desc "Fix mod time for files in /file/ folder"
 task "fix-mod-time" do
-  root_dir = Pathname.new(__FILE__.to_s).dirname
-  Pathname.glob("#{root_dir}/file/**/*") do |file|
+  Pathname.glob("#{__dir__}/file/**/*") do |file|
     next unless file.file?
 
     author_date = `git log -1 --format="%aI" -- #{file.to_s.shellescape}`.strip
