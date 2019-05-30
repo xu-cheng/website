@@ -72,7 +72,7 @@ layout: default
             {%- capture bibtex_id -%}bibtex_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
             {%- capture bibtex_btn_id -%}bibtex_btn_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
             {%- capture bibtex -%}{% publication_bibtex %}{%- endcapture -%}
-            <a class="btn btn-outline-primary btn-sm" role="button" data-toggle="modal"
+            <a class="btn btn-outline-primary btn-sm hidenoscript" role="button" data-toggle="modal"
                 href="#{{ cite_id }}" id="{{ cite_btn_id }}">Cite</a>
 
             <div class="modal fade" id="{{ cite_id }}" tabindex="-1" role="dialog"
@@ -104,5 +104,12 @@ layout: default
             </div>
         </div>
     </div>
+
+    <noscript>
+        <div class="my-3"></div>
+        <div class="alert alert-warning" role="alert">
+            Please enable JavaScript to view the <a href="http://www.bibtex.org">BibTeX</a>.
+        </div>
+    </noscript>
 </article>
 

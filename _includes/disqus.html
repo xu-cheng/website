@@ -2,7 +2,12 @@
 {%- if layout.has_disqus or page.has_disqus -%}
 <div id="disqus_thread"></div>
 {% asset disqus.js async %}
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>
+    <div class="my-3"></div>
+    <div class="alert alert-warning" role="alert">
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </div>
+</noscript>
 {%- endif -%}
 {%- endif -%}
 

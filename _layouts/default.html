@@ -9,6 +9,7 @@
         {%- endif -%}
         <title>{{ page.title }}</title>
         {% asset main.css %}
+        <noscript>{% asset noscript.css %}</noscript>
         {% asset main.js async %}
         {% feed_meta %}
         {%- seo title=false -%}
