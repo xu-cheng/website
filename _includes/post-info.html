@@ -2,7 +2,7 @@
 <i class="fa fa-calendar"></i>&nbsp;
 {{ post.date | date_to_long_string }}
 {%- if post.tags.size > 0 -%}
-    <span class="d-none d-sm-inline">&#9474;</span>
+    <span class="d-none d-sm-inline">&nbsp;&nbsp;&#9474;&nbsp;</span>
     <span class="d-inline d-sm-none"><br/></span>
     {%- if post.tags.size == 1 -%}
         <i class="fa fa-tag"></i>
