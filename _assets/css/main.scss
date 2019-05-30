@@ -137,10 +137,6 @@ html {
             }
         }
     }
-
-    .article-heading-badge {
-        font-size: 0.6em;
-    }
 }
 
 .footer {
@@ -322,6 +318,12 @@ body {
     -moz-user-select: all;
     -webkit-user-select: all;
     -ms-user-select: all;
+}
+
+@for $i from 1 to 10 {
+    .font-size-0#{$i} {
+        font-size: 0em + $i / 10;
+    }
 }
 
 @import "syntax";

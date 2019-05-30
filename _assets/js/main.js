@@ -4,8 +4,3 @@
 //= require ./katex
 //= require ./publication
 //= require ./google_analytics
-
-// enable tooltip
-$(function() {
-    $('[data-toggle="tooltip"]').tooltip()
-})
