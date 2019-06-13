@@ -6,17 +6,10 @@ require "pathname"
 require "rake"
 require "shellwords"
 
-task default: "build-dev"
+task default: "build"
 
-desc "Build the site (production)"
+desc "Build the site"
 task build: %w[deps:all fix-mod-time] do
-  ENV["JEKYLL_ENV"] = "production"
-  sh "bundle", "exec", "jekyll", "build"
-end
-
-desc "Build the site (development)"
-task "build-dev": %w[deps:all fix-mod-time] do
-  ENV["JEKYLL_ENV"] = "development"
   sh "bundle", "exec", "jekyll", "build"
 end
 
