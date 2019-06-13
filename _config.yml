@@ -31,7 +31,7 @@ defaults:
       path: ""
       type: posts
     values:
-      permalink: /blog/:title/
+      permalink: /blog/:slug/
 
 nav:
   - title: home
