@@ -78,7 +78,15 @@ html {
     }
 
     body {
-        margin-top: 65px;
+        padding-top: 65px;
+    }
+
+    // Ref: https://stackoverflow.com/a/28824157
+    :target::before {
+        content: "";
+        display: block;
+        height: 65px;
+        margin-top: -65px;
     }
 }
 
