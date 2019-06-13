@@ -55,5 +55,6 @@ task :test do
      "--check-html",
      "--check-img-http",
      "--url-ignore=/hust.edu.cn/",
+     "--http-status-ignore=999",
      "./_site"
 end
