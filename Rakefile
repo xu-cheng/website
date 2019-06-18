@@ -2,9 +2,11 @@
 
 require "date"
 require "fileutils"
+require "json"
 require "pathname"
 require "rake"
 require "shellwords"
+require "yaml"
 
 task default: "build"
 
@@ -41,13 +43,21 @@ end
 
 desc "Run html-proofer test"
 task :test do
+  typhoeus_config = {
+    connecttimeout: 300,
+    timeout: 0,
+  }
+  site_url = YAML.safe_load(File.read("#{__dir__}/_config.yml"))["url"]
+  raw_site_url = site_url.sub(/^https?:\/\//, "").sub(/\/$/, "")
   sh "bundle", "exec", "htmlproofer",
      "--allow-hash-href",
      "--check-external-hash",
      "--check-opengraph",
      "--check-html",
      "--check-img-http",
+     "--url-swap=https?\\://#{raw_site_url}/:/",
      "--url-ignore=/hust.edu.cn/",
-     "--http-status-ignore=999",
+     "--http-status-ignore=0,999",
+     "--typhoeus-config=#{JSON.dump(typhoeus_config)}",
      "./_site"
 end
