@@ -13,7 +13,7 @@ gem "nokogiri"
 gem "pandoc-ruby"
 gem "rake"
 gem "sassc"
-gem "sprockets", "~> 4.0.beta8"
+gem "sprockets", "~> 4.0.beta9"
 gem "uglifier"
 
 group :test do
