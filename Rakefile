@@ -55,7 +55,7 @@ task :test do
      "--check-opengraph",
      "--check-html",
      "--check-img-http",
-     "--url-swap=https?\\://#{raw_site_url}/:/",
+     "--url-swap=https?\\://#{Regexp.escape raw_site_url}/:/",
      "--url-ignore=/hust.edu.cn/",
      "--http-status-ignore=0,999",
      "--typhoeus-config=#{JSON.dump(typhoeus_config)}",
