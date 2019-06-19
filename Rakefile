@@ -57,7 +57,7 @@ task :test do
      "--check-img-http",
      "--url-swap=https?\\://#{Regexp.escape raw_site_url}/:/",
      "--url-ignore=/hust.edu.cn/",
-     "--http-status-ignore=0,999",
+     "--http-status-ignore=0,429,999",
      "--typhoeus-config=#{JSON.dump(typhoeus_config)}",
      "./_site"
 end
