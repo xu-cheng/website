@@ -85,3 +85,5 @@ Finally, this figure can be used in beamer with its animations functioning as no
 
 \end{document}
 {% endhighlight %}
+
+**Note**: In order to use `mode=build`, you need to pass `-shell-escape` flag to the LaTeX compiler. Further, for `latexmk` users, `mode=buildnew` is preferred than `mode=build`. Otherwise, `latexmk` could be stuck in a loop of compiling the files repeatedly.
