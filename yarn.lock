@@ -22,10 +22,10 @@ jquery@^3.4.1:
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
-katex@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.11.0.tgz#9a870f37dd9a5c90446277754bfc98f905c04bbc"
-  integrity sha512-RQsU3HSMjLW9AdPpi2zaBwM123goCbUcUbBJfmjcAdA982RgtEUNMmrf+3y8anGjgJLantcNLa/VSK73xztQBg==
+katex@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.11.1.tgz#df30ca40c565c9df01a466a00d53e079e84ffaa2"
+  integrity sha512-5oANDICCTX0NqYIyAiFCCwjQ7ERu3DQG2JFHLbYOf+fXaMoH8eg/zOq5WSYJsKMi/QebW+Eh3gSM+oss1H/bww==
   dependencies:
     commander "^2.19.0"
 
