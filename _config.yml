@@ -3,9 +3,9 @@ plugins:
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-gist
-  - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll/scholar
 include:
   - .well-known
   - _headers
@@ -13,8 +13,8 @@ include:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - Rakefile
   - README.md
+  - Rakefile
   - netlify.toml
   - node_modules
   - package.json
