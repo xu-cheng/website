@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 // copy citation
 $(function() {
     $("button[id^=bibtex_btn_]").each(function() {

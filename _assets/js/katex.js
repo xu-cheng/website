@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 // copy LaTeX equation
 $(document).on("copy", function(event) {
     event = event.originalEvent;
