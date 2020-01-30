@@ -1,5 +1,4 @@
 plugins:
-  - jekyll-assets
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-gist
@@ -49,22 +48,6 @@ contact:
   linkedin: https://linkedin.com/in/xu-cheng
   twitter: https://twitter.com/_xucheng_
 
-# jekyll-assets config
-assets:
-  digest: false
-  sources:
-    - node_modules
-  raw_precompile:
-    - src: roboto-*.woff
-      dst: fonts
-    - src: roboto-*.woff2
-      dst: fonts
-    - src: font-awesome/fonts/*
-      dst: fonts
-    - src: katex/dist/fonts/*
-      dst: fonts
-    - photo.jpg
-    - photo@2x.jpg
 # jekyll-feed config
 feed:
   path: blog.xml

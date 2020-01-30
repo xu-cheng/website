@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 gem "execjs"
 gem "jekyll"
-gem "jekyll-assets"
 gem "jekyll-email-protect"
 gem "jekyll-feed"
 gem "jekyll-gist"
@@ -12,9 +11,6 @@ gem "jekyll-sitemap"
 gem "nokogiri"
 gem "pandoc-ruby"
 gem "rake"
-gem "sassc"
-gem "sprockets", "~> 4.0.beta8"
-gem "uglifier"
 
 group :test do
   gem "html-proofer"
