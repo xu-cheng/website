@@ -1,7 +1,3 @@
-//= require_self
-//= require katex/dist/katex
-
-$fa-font-path: "/assets/fonts";
 $font-family-sans-serif: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $font-family-serif: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -19,9 +15,10 @@ $navbar-footer-bg: #272935;
 $navbar-footer-color: #ffffff;
 $primary: $link-color;
 
-@import "bootstrap/scss/bootstrap";
-@import "font-awesome/scss/font-awesome";
+@import "~bootstrap/scss/bootstrap";
 @import "fonts";
+@import "~katex/dist/katex";
+@import "~font-awesome/scss/font-awesome";
 
 html {
     position: relative;
