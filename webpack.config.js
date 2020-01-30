@@ -6,7 +6,12 @@ module.exports = {
     mode: is_prod ? 'production' : 'development',
     entry: {
         'main': [
-            './_assets/js/main.js',
+            './node_modules/jquery/dist/jquery.js',
+            './node_modules/popper.js/dist/popper.js',
+            './node_modules/bootstrap/dist/js/bootstrap.js',
+            './_assets/js/katex.js',
+            './_assets/js/publication.js',
+            './_assets/js/google_analytics.js',
         ],
         'disqus': [
             './_assets/js/disqus.js',
