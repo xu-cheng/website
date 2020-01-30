@@ -37,3 +37,18 @@ module ExtraTextFilters
 end
 
 Liquid::Template.register_filter(ExtraTextFilters)
+
+class SRIHash < Liquid::Tag
+  def initialize(tag_name, path, tokens)
+      super
+      @path = path.strip
+  end
+
+  def render(context)
+    root_path = context.registers[:site].config["source"]
+    data = File.read File.join(root_path, @path)
+    "sha256-#{Digest::SHA256.base64digest data}"
+  end
+end
+
+Liquid::Template.register_tag("sri_hash", SRIHash)

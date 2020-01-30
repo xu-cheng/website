@@ -20,6 +20,10 @@ module.exports = {
             './_assets/css/main.scss',
             './_assets/css/noscript.scss',
         ],
+        'image': [
+            './_assets/img/photo.jpg',
+            './_assets/img/photo@2x.jpg',
+        ],
     },
     output: {
         path: path.resolve(__dirname, 'assets'),
@@ -67,6 +71,16 @@ module.exports = {
                     name: '[name].[ext]',
                     outputPath: 'fonts/',
                     publicPath: '/assets/fonts/',
+                },
+            }, ],
+        }, {
+            test: /\.jpg$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    esModule: false,
+                    name: '[name].[ext]',
+                    publicPath: '/assets/',
                 },
             }, ],
         }, ],
