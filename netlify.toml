@@ -4,6 +4,7 @@ publish = "_site/"
 
 [build.environment]
 # https://github.com/netlify/build-image/blob/xenial/included_software.md
+NODE_VERSION = "10"
 RUBY_VERSION = "2.6.2"
 YARN_VERSION = "1.13.0"
 
