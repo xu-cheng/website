@@ -19,12 +19,11 @@ exclude:
   - node_modules
   - package.json
   - vendor
+  - webpack.config.js
   - yarn.lock
 
 name: CHENG XU
 url: https://xuc.me
-disqus: xuc
-google_analytics: UA-4293090-10
 
 defaults:
   - scope:
