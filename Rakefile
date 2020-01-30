@@ -38,6 +38,7 @@ namespace :deps do
   desc "Install yarn dependencies"
   task :yarn do
     sh "yarn"
+    sh "yarn", "build"
   end
 end
 
