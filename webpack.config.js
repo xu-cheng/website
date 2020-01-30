@@ -2,7 +2,7 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const path = require('path');
 const is_prod = process.env.JEKYLL_ENV === 'production';
 
-module.exports = {
+var config = {
     mode: is_prod ? 'production' : 'development',
     entry: {
         'main': [
@@ -88,4 +88,11 @@ module.exports = {
     plugins: [
         new FixStyleOnlyEntriesPlugin(),
     ],
+};
+
+module.exports = (env, argv) => {
+    if (!is_prod) {
+        config.devtool = 'source-map';
+    }
+    return config;
 };
