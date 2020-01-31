@@ -12,8 +12,6 @@ var config = {
             './_assets/js/katex.js',
             './_assets/js/publication.js',
             './_assets/js/google_analytics.js',
-        ],
-        'disqus': [
             './_assets/js/disqus.js',
         ],
         'style': [
