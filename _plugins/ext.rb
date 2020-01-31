@@ -45,9 +45,10 @@ class SRIHash < Liquid::Tag
   end
 
   def render(context)
-    root_path = context.registers[:site].config["source"]
-    data = File.read File.join(root_path, @path)
-    "sha256-#{Digest::SHA256.base64digest data}"
+    site = context.registers[:site]
+    path = File.join(site.config["source"], @path)
+    site.regenerator.add_dependency context.registers[:page]["path"], path
+    "sha256-#{Digest::SHA256.base64digest File.read(path)}"
   end
 end
 
