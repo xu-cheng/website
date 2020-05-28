@@ -9,23 +9,19 @@ def publication_detail_permalink(entry)
 end
 
 class PublicationDetail < Jekyll::Page
-  include Jekyll::Scholar::Utilities
-
-  def initialize(site, base, entry)
+  def initialize(site, base, dir, entry_data)
     @site = site
     @base = base
-    @dir = publication_detail_permalink(entry)
+    @dir = dir
     @name = "index.html"
 
-    @config = Jekyll::Scholar.defaults.merge(site.config["scholar"] || {})
+    self.process(@name)
+    self.read_yaml(File.join(base, "_layouts"), "publication_detail.html")
 
-    process(@name)
-    read_yaml(File.join(base, "_layouts"), "publication_detail.html")
-
-    data.merge!(reference_data(entry))
-    data["permalink"] = @dir
-    data["title"] = strip_html(data["entry"]["title"]) if data["entry"]["title"]
-    data["id"] = entry.key if entry.key
+    self.data.merge!(entry_data)
+    self.data["permalink"] = dir
+    self.data["title"] = strip_html(self.data["entry"]["title"]) if self.data["entry"]["title"]
+    self.data["id"] = self.data["entry"]["key"]
   end
 
   def strip_html(input)
@@ -49,7 +45,7 @@ class PublicationDetailGenerator < Jekyll::Generator
     @config = Jekyll::Scholar.defaults.merge(site.config["scholar"] || {})
 
     entries.each do |entry|
-      detail = PublicationDetail.new(site, site.source, entry)
+      detail = PublicationDetail.new(site, site.source, publication_detail_permalink(entry), reference_data(entry))
       detail.render(site.layouts, site.site_payload)
       detail.write(site.dest)
 
