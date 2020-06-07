@@ -67,6 +67,7 @@ scholar:
     - month_numeric
     - poster_url
     - slides_url
+    - video_url
     - url
 # jekyll-seo-tag config
 twitter:

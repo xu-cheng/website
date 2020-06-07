@@ -67,6 +67,10 @@ layout: default
             <a class="btn btn-outline-primary btn-sm" role="button"
                 href="{{ page.entry.poster_url | strip_site_url }}">Poster</a>
             {%- endif -%}
+            {%- if page.entry.video_url -%}
+            <a class="btn btn-outline-primary btn-sm" role="button"
+                href="{{ page.entry.video_url | strip_site_url }}">Video</a>
+            {%- endif -%}
             {%- capture cite_id -%}cite_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
             {%- capture cite_btn_id -%}cite_btn_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
             {%- capture bibtex_id -%}bibtex_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
