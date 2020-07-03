@@ -48,6 +48,9 @@ contact:
   linkedin: https://linkedin.com/in/xu-cheng
   twitter: https://twitter.com/_xucheng_
 
+kramdown:
+  math_engine: no
+
 # jekyll-feed config
 feed:
   path: blog.xml

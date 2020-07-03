@@ -29,12 +29,17 @@ module KaTeX
       end
       node.replace render_equation(tex, display_mode)
     end
-    html.css("script").each do |node|
-      if node["type"] == "math/tex"
-        node.replace render_equation(node.content, false)
-      elsif node["type"] == "math/tex; mode=display"
-        node.replace render_equation(node.content, true)
+    html.css(".kdmath").each do |node|
+      tex = node.content
+      display_mode = tex.start_with? '$$'
+      if display_mode
+        tex.gsub!(/^\$\$/, "")
+        tex.gsub!(/\$\$$/, "")
+      else
+        tex.gsub!(/^\$/, "")
+        tex.gsub!(/\$$/, "")
       end
+      node.replace render_equation(tex, display_mode)
     end
     html.to_html
   end
