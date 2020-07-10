@@ -54,7 +54,7 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
     jekyll-email-protect (1.1.0)
-    jekyll-feed (0.14.0)
+    jekyll-feed (0.15.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
@@ -71,7 +71,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    kramdown (2.2.1)
+    kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
