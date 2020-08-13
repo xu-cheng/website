@@ -15,7 +15,7 @@ So as a Ph.D. student who studies in Computer Science, using LaTeX to render the
 
 The most popular way to render LaTeX within Jekyll is using [MathJaX][mathjax]. There are lots of blogs (e.g. [this][mathjax-with-jekyll]) to show you how to configure it. But MathJaX has a huge shortage on rendering speed. It's slow, not for a bit, but so slow that you can see the web page refreshing itself.
 
-Recently, I came across a new project [KaTeX][katex]. It's fast as you can see the comparison below in which KaTeX is on the left and MathJax is on the right. There's also a benchmark available [here][katex-vs-mathjax].
+Recently, I came across a new project [KaTeX][katex]. It's fast as you can see the comparison below in which KaTeX is on the left and MathJax is on the right.
 
 <center><img src="https://raw.githubusercontent.com/Khan/KaTeX/cae400581080ac317fda57b8b6ae6c7834a9ea93/img/katex-comparison.gif" width="80%" alt="KaTeX vs Mathjax"/></center>
 
@@ -42,6 +42,5 @@ $$ P(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma ^2}} $$
  [mathjax]: https://www.mathjax.org
  [mathjax-with-jekyll]: https://www.gastonsanchez.com/visually-enforced/opinion/2014/02/16/Mathjax-with-jekyll/
  [katex]: https://khan.github.io/KaTeX/
- [katex-vs-mathjax]: https://jsperf.com/katex-vs-mathjax
  [jekyll-and-katex-willdrevo]: https://web.archive.org/web/20170117172154/http://willdrevo.com/latex-equation-rendering-in-javascript-with-jekyll-and-katex/
  [katex-a-new-way]: https://www.intmath.com/blog/mathematics/katex-a-new-way-to-display-math-on-the-web-9445
