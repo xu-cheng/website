@@ -258,3 +258,24 @@
     addendum = {Demo Paper},
     abstract = {This demonstration presents vChain, a blockchain system that ensures query integrity. With the proliferation of blockchain applications and services, there has been an increasing demand for querying the data stored in a blockchain database. However, existing solutions either are at the risk of losing query integrity, or require users to maintain a full copy of the blockchain database. In comparison, by employing a novel verifiable query processing framework, vChain enables a lightweight user to authenticate the query results returned from a potentially untrusted service provider. We demonstrate its verifiable query operations, usability, and performance with visualization for better insights. We also showcase how users can detect falsified results in the case that the service provider is compromised.},
 }
+
+@inproceedings{Middleware20:GRuB,
+    author = {Li, Kai
+              and Tang, Yuzhe
+              and Yuan, Zhehu
+              and Xu, Cheng
+              and Xu, Jianliang
+              and Zhang, Qi},
+    author+an = {4=highlight},
+    title = {Cost-Effective Data Feeds to Blockchains via Workload-Adaptive Data Replication},
+    booktitle = {Proceedings of the 21st International Middleware Conference (\textbf{Middleware '20})},
+    year = {2020},
+    month = {12},
+    address = {Delft, Netherlands},
+    addendum = {Full Paper},
+    abstract = {Feeding external data to a blockchain, a.k.a. data feed, is an essential task to enable blockchain interoperability and support emerging cross-domain applications, notably stablecoins. Given the data-intensive feeds in real life (e.g.,~high-frequency price updates) and the high cost in using blockchain, namely Gas, it is imperative to reduce the Gas cost of data feeds. Motivated by the constant-changing workloads in finance and other applications, this work focuses on designing a \emph{dynamic, workload-aware} approach for cost effectiveness in Gas. This design space is understudied in the existing blockchain research which has so far focused on static data placement.
+
+This work presents GRuB, a cost-effective data feed that dynamically replicates data between the blockchain and an off-chain cloud storage. GRuB's data replication is workload-adaptive by monitoring the current workload and making online decisions w.r.t.~data replication. A series of online algorithms are proposed that achieves the bounded worst-case cost in blockchain's Gas. GRuB runs the decision-making components on the untrusted cloud off-chain for lower Gas costs, and employs a security protocol to authenticate the data transferred between the blockchain and cloud. The overall GRuB system can autonomously achieve low Gas costs with changing workloads.
+
+We built a GRuB prototype functional with Ethereum and Google LevelDB, and supported real applications in stablecoins. Under real workloads collected from the Ethereum contract-call history and mixed workloads of YCSB, we systematically evaluate GRuB's cost which shows a saving of Gas by 10\% \~{} 74\%, with comparison to the baselines of static data-placement.},
+}
