@@ -57,7 +57,7 @@ feed:
 # jekyll-scholar config
 scholar:
   bibliography: publications
-  style: ieee
+  style: _bibliography/ieee.csl
   sort_by: year,month,day
   order: descending
   bibliography_list_tag: ul
