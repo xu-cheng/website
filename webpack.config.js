@@ -1,4 +1,3 @@
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const path = require('path');
 const is_prod = process.env.JEKYLL_ENV === 'production';
 
@@ -83,9 +82,6 @@ var config = {
             }, ],
         }, ],
     },
-    plugins: [
-        new FixStyleOnlyEntriesPlugin(),
-    ],
 };
 
 module.exports = (env, argv) => {
