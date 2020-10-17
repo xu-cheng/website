@@ -67,11 +67,12 @@ scholar:
     - addendum
     - author+an
     - eprint_url
+    - keywords
     - month_numeric
     - poster_url
     - slides_url
-    - video_url
     - url
+    - video_url
 # jekyll-seo-tag config
 twitter:
   username: _xucheng_
