@@ -10,7 +10,7 @@
     "css-loader": "^5.0.0",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^5.0.0",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "^10.0.5",
     "webpack": "^5.3.2",
