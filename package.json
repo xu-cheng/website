@@ -12,7 +12,7 @@
     "file-loader": "^6.2.0",
     "node-sass": "^5.0.0",
     "resolve-url-loader": "^3.1.2",
-    "sass-loader": "^10.0.5",
+    "sass-loader": "^10.1.0",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0"
   },
