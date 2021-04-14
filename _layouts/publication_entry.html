@@ -20,3 +20,6 @@
 {%- if entry.video_url -%}
     &#32;<span>[<a href="{{ entry.video_url | strip_site_url }}">video</a>]</span>
 {%- endif -%}
+{%- if entry.code_url -%}
+    &#32;<span>[<a href="{{ entry.code_url | strip_site_url }}">code</a>]</span>
+{%- endif -%}

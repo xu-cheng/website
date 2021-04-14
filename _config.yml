@@ -66,6 +66,7 @@ scholar:
     - abstract
     - addendum
     - author+an
+    - code_url
     - eprint_url
     - keywords
     - month_numeric
