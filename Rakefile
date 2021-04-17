@@ -47,9 +47,6 @@ task :test do
   typhoeus_config = {
     connecttimeout: 300,
     timeout: 0,
-    headers: {
-      "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15",
-    },
   }
   site_url = YAML.safe_load(File.read("#{__dir__}/_config.yml"))["url"]
   raw_site_url = site_url.sub(/^https?:\/\//, "").sub(/\/$/, "")
