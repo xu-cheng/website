@@ -11,7 +11,9 @@ gem "jekyll-sitemap"
 gem "nokogiri"
 gem "pandoc-ruby"
 gem "rake"
+gem "webrick"
 
 group :test do
   gem "html-proofer"
 end
+
