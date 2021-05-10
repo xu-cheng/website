@@ -6,7 +6,7 @@ var config = {
     entry: {
         'main': [
             './node_modules/jquery/dist/jquery.js',
-            './node_modules/popper.js/dist/popper.js',
+            './node_modules/@popperjs/core/dist/umd/popper.js',
             './node_modules/bootstrap/dist/js/bootstrap.js',
             './_assets/js/katex.js',
             './_assets/js/publication.js',

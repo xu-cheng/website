@@ -80,7 +80,7 @@ layout: default
             {%- capture bibtex_id -%}bibtex_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
             {%- capture bibtex_btn_id -%}bibtex_btn_{{ page.entry.key | replace: ':', '_' }}{%- endcapture -%}
             {%- capture bibtex -%}{% publication_bibtex %}{%- endcapture -%}
-            <a class="btn btn-outline-primary btn-sm hidenoscript" role="button" data-toggle="modal"
+            <a class="btn btn-outline-primary btn-sm hidenoscript" role="button" data-bs-toggle="modal"
                 href="#{{ cite_id }}" id="{{ cite_btn_id }}">Cite</a>
 
             <div class="modal fade" id="{{ cite_id }}" tabindex="-1" role="dialog"
@@ -89,9 +89,8 @@ layout: default
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Cite</h5>
-                            <button type="button" class="close" data-dismiss="modal"
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">

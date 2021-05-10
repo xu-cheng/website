@@ -18,11 +18,11 @@
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">{{ site.name }}</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-main">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-main">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ms-auto">
                         {%- for nav in site.nav -%}
                         {%- assign is_active = page.url | regex_matching: nav.active_regex -%}
                         <li class="nav-item{% if is_active %} active{% endif %}">
@@ -44,14 +44,14 @@
             <div class="container">
                 <div class="row">
                     <div class="copyright">
-                        <h6>Copyright</h6>
+                        <h6 class="header">Copyright</h6>
                         <p>
                             &copy;&nbsp;2014-{{ site.time | date: '%Y' }} by Cheng XU.<br>
                             Licensed under <a href="/LICENSE">CC-BY-NC-SA 4.0</a>.
                         </p>
                     </div>
                     <div class="contact">
-                        <h6>Contact Me</h6>
+                        <h6 class="header">Contact Me</h6>
                         <ul>
                             <li><a class="contact-entry" itemprop="email" href="mailto:{{ site.contact.email | encode_email }}"><i class="fa fa-fw fa-envelope"></i></a></li>
                             <li><a class="contact-entry" itemprop="gpg" href="{{ site.contact.gpg }}"><i class="fa fa-fw fa-key"></i></a></li>

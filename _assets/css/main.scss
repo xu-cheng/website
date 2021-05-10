@@ -9,11 +9,14 @@ $font-size-h5: 1.2rem;
 $font-size-h6: 1rem;
 $headings-font-weight: 400;
 $link-color: #da4939;
+$link-decoration: none;
 $link-hover-color: $link-color;
+$link-hover-decoration: underline;
 $link-color-dark: #c23324;
 $navbar-footer-bg: #272935;
 $navbar-footer-color: #ffffff;
 $primary: $link-color;
+$min-contrast-ratio: 3;
 
 @import "~bootstrap/scss/bootstrap";
 @import "fonts";
@@ -154,7 +157,7 @@ html {
     background-color: $navbar-footer-bg;
     padding: 2rem 0;
 
-    h6 {
+    .header {
         padding: 10px 0;
         font-size: 20px;
         text-transform: uppercase;
@@ -174,6 +177,7 @@ html {
         @include make-col-ready;
         @include make-col(6);
 
+        position: relative;
         order: 1;
     }
 
@@ -181,6 +185,7 @@ html {
         @include make-col-ready;
         @include make-col(6);
 
+        position: relative;
         order: 2;
         text-align: left;
 
