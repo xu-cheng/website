@@ -1,23 +1,34 @@
-import $ from 'jquery';
-
 // copy LaTeX equation
-$(document).on("copy", function(event) {
-    event = event.originalEvent;
-    var selection = window.getSelection();
-    if (selection.isCollapsed) { return; }
-    var fragment = $(selection.getRangeAt(0).cloneContents());
-    if (!fragment.find(".katex, .katex-equation")) { return; }
-    var html = fragment.clone();
-    html.find(".katex-mathml").remove();
-    event.clipboardData.setData("text/html", $("<div>").append(html).get(0).innerHTML);
-    var text = fragment;
-    text.find(".katex-html").remove();
-    text.find(".katex-display .katex-mathml").replaceWith(function() {
-        return "\\[" + $(this).find("annotation").text() + "\\]";
+document.addEventListener("copy", (event) => {
+    const selection = window.getSelection();
+    if (selection.isCollapsed) {
+        return;
+    }
+    const fragment = selection.getRangeAt(0).cloneContents();
+    if (!fragment.querySelector(".katex, .katex-equation")) {
+        return;
+    }
+
+    let html = fragment.cloneNode(true);
+    html.querySelectorAll(".katex-mathml").forEach((el) => {
+        el.remove();
     });
-    text.find(".katex-mathml").replaceWith(function() {
-        return "\\(" + $(this).find("annotation").text() + "\\)";
+    html = Array.prototype.map.call(html.childNodes,
+        (el) => el.outerHTML || el.textContent).join("");
+    event.clipboardData.setData("text/html", html);
+
+    let text = fragment;
+    text.querySelectorAll(".katex-html").forEach((el) => {
+        el.remove();
     });
-    event.clipboardData.setData("text/plain", text.get(0).textContent);
+    text.querySelectorAll(".katex-display .katex-mathml").forEach((el) => {
+        const tex = el.querySelector("annotation").textContent;
+        el.replaceWith(`\\[${tex}\\]`);
+    });
+    text.querySelectorAll(".katex-mathml").forEach((el) => {
+        const tex = el.querySelector("annotation").textContent;
+        el.replaceWith(`\\(${tex}\\)`);
+    });
+    event.clipboardData.setData("text/plain", text.textContent);
     event.preventDefault();
 });

@@ -10,7 +10,7 @@
         <title>{{ page.title }}</title>
         <link rel="stylesheet" type="text/css" href="/assets/main.css" integrity="{% sri_hash assets/main.css %}" crossorigin="anonymous">
         <noscript><link rel="stylesheet" type="text/css" href="/assets/noscript.css" integrity="{% sri_hash assets/noscript.css %}" crossorigin="anonymous"></noscript>
-        <script async type="text/javascript" src="/assets/main.js" integrity="{% sri_hash assets/main.js %}" crossorigin="anonymous"></script>
+        <script defer type="text/javascript" src="/assets/main.js" integrity="{% sri_hash assets/main.js %}" crossorigin="anonymous"></script>
         {% feed_meta %}
         {%- seo title=false -%}
     </head>

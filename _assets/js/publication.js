@@ -1,14 +1,10 @@
-import $ from 'jquery';
-
 // copy citation
-$(function() {
-    $("button[id^=bibtex_btn_]").each(function() {
-        var id = $(this).attr("id");
-        $(this).click(function() {
-            var textarea_id = id.replace(/^bibtex_btn/, "bibtex");
-            var textarea = $("textarea[id=" + $.escapeSelector(textarea_id) + "]");
-            textarea.select();
-            document.execCommand('copy');
-        });
+document.querySelectorAll("button[id^=bibtex_btn_]").forEach((button) => {
+    const id = button.id;
+    button.addEventListener("click", (e) => {
+        const textarea_id = id.replace(/^bibtex_btn/, "bibtex");
+        const textarea = document.querySelector(`textarea[id=${CSS.escape(textarea_id)}]`);
+        textarea.select();
+        document.execCommand('copy');
     });
 });

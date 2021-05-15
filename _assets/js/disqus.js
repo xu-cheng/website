@@ -1,16 +1,12 @@
-import $ from 'jquery';
+if (document.querySelector("#disqus_thread")) {
+    window.disqus_config = function() {
+        this.page.url = document.querySelector('meta[name="DISQUS_PAGE_URL"]').content;
+        this.page.identifier = document.querySelector('meta[name="DISQUS_PAGE_ID"]').content;
+    };
 
-$(function() {
-    if($("#disqus_thread").length) {
-        window.disqus_config = function () {
-            this.page.url = $('meta[name=DISQUS_PAGE_URL]').attr("content");
-            this.page.identifier = $('meta[name=DISQUS_PAGE_ID]').attr("content");
-        };
-
-        var d = document, s = d.createElement('script');
-        s.src = 'https://xuc.disqus.com/embed.js';
-        s.async = 1;
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    }
-});
+    var s = document.createElement('script');
+    s.src = 'https://xuc.disqus.com/embed.js';
+    s.async = 1;
+    s.setAttribute('data-timestamp', +new Date());
+    (document.head || document.body).appendChild(s);
+}
