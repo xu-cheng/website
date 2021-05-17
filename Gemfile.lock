@@ -14,7 +14,7 @@ GEM
     concurrent-ruby (1.1.8)
     csl (1.5.2)
       namae (~> 1.0)
-    csl-styles (1.0.1.10)
+    csl-styles (1.0.1.11)
       csl (~> 1.0)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
