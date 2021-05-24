@@ -6,7 +6,7 @@
     "katex": "^0.13.11"
   },
   "devDependencies": {
-    "css-loader": "^5.2.4",
+    "css-loader": "^5.2.5",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
     "node-sass": "^6.0.0",
