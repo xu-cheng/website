@@ -11,6 +11,9 @@
 {%- if entry.eprint_url -%}
     &#32;<span>[<a href="{{ entry.eprint_url | strip_site_url }}">eprint</a>]</span>
 {%- endif -%}
+{%- if entry.techreport_url -%}
+    &#32;<span>[<a href="{{ entry.techreport_url | strip_site_url }}">tech. report</a>]</span>
+{%- endif -%}
 {%- if entry.slides_url -%}
     &#32;<span>[<a href="{{ entry.slides_url | strip_site_url }}">slides</a>]</span>
 {%- endif -%}

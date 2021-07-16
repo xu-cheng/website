@@ -72,6 +72,7 @@ scholar:
     - month_numeric
     - poster_url
     - slides_url
+    - techreport_url
     - url
     - video_url
 # jekyll-seo-tag config
