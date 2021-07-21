@@ -42,6 +42,7 @@ var config = {
                 {
                     loader: 'css-loader',
                     options: {
+                        esModule: false,
                         sourceMap: !is_prod,
                     },
                 },
