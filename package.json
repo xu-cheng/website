@@ -3,7 +3,7 @@
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.0.2",
     "font-awesome": "^4.7.0",
-    "katex": "^0.13.11"
+    "katex": "^0.13.13"
   },
   "devDependencies": {
     "css-loader": "^6.1.0",
