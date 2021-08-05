@@ -6,6 +6,7 @@ require "json"
 require "pathname"
 require "rake"
 require "shellwords"
+require "tempfile"
 require "yaml"
 
 task default: "build"
@@ -44,9 +45,13 @@ end
 
 desc "Run html-proofer test"
 task :test do
+  cookies_file = Tempfile.new("htmlproofer-cookies-")
+
   typhoeus_config = {
     connecttimeout: 300,
     timeout: 0,
+    cookiefile: cookies_file.path,
+    cookiejar: cookies_file.path,
   }
   site_url = YAML.safe_load(File.read("#{__dir__}/_config.yml"))["url"]
   raw_site_url = site_url.sub(/^https?:\/\//, "").sub(/\/$/, "")
@@ -61,4 +66,7 @@ task :test do
      "--http-status-ignore=0,429,999",
      "--typhoeus-config=#{JSON.dump(typhoeus_config)}",
      "./_site"
+ensure
+  cookies_file.close
+  cookies_file.unlink
 end
