@@ -53,6 +53,6 @@ end
 I found using `HOMEBREW_LIBRARY_PATH` to locate Homebrew library path is a better idea.
 This can be useful if you have multi Homebrew in your system.
 
- [pry]: http://pry.github.io
+ [pry]: https://pry.github.io
  [pry-top-5]: https://www.bignerdranch.com/blog/my-top-5-pry-features/
  [pry-plugin]: https://github.com/pry/pry/wiki/Available-plugins
