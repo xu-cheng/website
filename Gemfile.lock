@@ -99,7 +99,7 @@ GEM
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
-    pandoc-ruby (2.1.4)
+    pandoc-ruby (2.1.5)
     parallel (1.20.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
