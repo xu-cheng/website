@@ -9,8 +9,8 @@
     "css-loader": "^6.5.1",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
-    "node-sass": "^6.0.1",
     "resolve-url-loader": "^4.0.0",
+    "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "webpack": "^5.64.2",
     "webpack-cli": "^4.9.1"
