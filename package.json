@@ -9,7 +9,7 @@
     "css-loader": "^6.5.1",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
-    "resolve-url-loader": "^4.0.0",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
     "webpack": "^5.67.0",
