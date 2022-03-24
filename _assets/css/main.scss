@@ -21,7 +21,9 @@ $min-contrast-ratio: 3;
 @import "~bootstrap/scss/bootstrap";
 @import "fonts";
 @import "~katex/dist/katex";
-@import "~font-awesome/scss/font-awesome";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
 
 html {
     position: relative;
@@ -212,7 +214,7 @@ html {
                     text-decoration: none;
                 }
 
-                .fa {
+                .fa-fw {
                     font-size: 16px;
                     width: 32px;
                     line-height: 32px;
