@@ -335,7 +335,7 @@ body {
 
 @for $i from 1 to 10 {
     .font-size-0#{$i} {
-        font-size: 0em + $i / 10;
+        font-size: 0em + calc($i / 10);
     }
 }
 
