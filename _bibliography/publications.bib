@@ -390,3 +390,17 @@
     abstract = {Blockchain has recently gained massive attention thanks to the success of cryptocurrencies and decentralized applications. With immutability and tamper-resistance features, it can be seen as a promising secure database solution. To address the need of searches over blockchain databases, prior work vChain proposed a novel verifiable processing framework that ensures query integrity without maintaining a full copy of the blockchain database. It however suffers from several limitations, including linear-scan search performance in the worst case and impractical public key management. In this paper, we propose a new searchable blockchain system, vChain+, that supports efficient verifiable boolean range queries with additional features. Specifically, we propose a sliding window accumulator index to achieve efficient query processing even for the worst case. We also design an object registration index to enable practical public key management without compromising the security guarantee. To support richer queries, we employ optimal tree-based indexes to index both keywords and numerical attributes of the data objects. Several optimizations are also proposed to further improve the query performance. Security analysis and empirical study validate the robustness and performance improvement of the proposed system. Compared with vChain, vChain+ improves the query performance by up to 913X.},
     keywords = {selected},
 }
+
+@article{PVLDB:shapley-value-under-independent-utility,
+    author = {Luo, Xuan
+              and Pei, Jian
+              and Cong, Zicun
+              and Xu, Cheng},
+    author+an = {4=highlight},
+    title = {On Shapley Value in Data Assemblage Under Independent Utility},
+    journal = {Proceedings of the VLDB Endowment (\textbf{PVLDB})},
+    year = {2022},
+    volume = {15},
+    addendum = {Full Paper},
+    abstract = {The thriving success of data science and machine learning applications heavily relies on the availability of huge amounts of data. In many applications, an organization may want to acquire data from many data owners. Facilities like data marketplaces allow data owners to produce data assemblage needed by data buyers through coalition. To encourage coalitions to produce data, it is critical to allocate revenue to data owners according to their contributions in a fair manner. Although in literature Shapley fairness and alternatives have been well explored to facilitate revenue allocation in data assemblage, computing exact Shapley value for many data owners and large assembled data sets through coalition remains challenging due to the combinatoric nature of Shapley value. In this paper, we explore the decomposability of utility in data assemblage by formulating the independent utility assumption. We argue that independent utility enjoys many applications. Moreover, we identify interesting properties of independent utility and develop fast computation techniques for exact Shapley value under independent utility. Our experimental results on benchmark data sets show that our new approach not only guarantees the exactness of Shapley value, but also achieves faster computation by orders of magnitudes.},
+}
