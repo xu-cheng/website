@@ -13,15 +13,18 @@ jobs:
       - id: check
         run: |
           from semver import VersionInfo
+          import os
           import re
 
-          title = "${{ github.event.pull_request.title }}"
+          title = os.environ["PR_TITLE"]
           match = re.match(r"^.* from ([\w\.]+) to ([\w\.]+)$", title)
           from_version = VersionInfo.parse(match.group(1))
           to_version = VersionInfo.parse(match.group(2))
           print(f"version info: {from_version} -> {to_version}")
           if from_version.major == to_version.major and (from_version.major > 0 or from_version.minor == to_version.minor):
               print("::set-output name=result::pass")
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
         shell: python
 
   auto-merge:
@@ -32,10 +35,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: check
     steps:
-      - if: needs.check.outputs.result == 'pass'
-        run: |
-          gh pr review --approve "$PR_URL"
-          gh pr merge --auto --rebase --delete-branch "$PR_URL"
+      - run: |
+          if [[ "$CHECK_RESULT" = "pass" ]]; then
+            gh pr review --approve "$PR_URL"
+            gh pr merge --auto --rebase --delete-branch "$PR_URL"
+          else
+            gh pr comment "$PR_URL" -b "@xu-cheng, this PR requires manual approval."
+          fi
         env:
+          CHECK_RESULT: ${{ needs.check.outputs.result }}
           PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
