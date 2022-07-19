@@ -40,7 +40,10 @@ jobs:
             gh pr review --approve "$PR_URL"
             gh pr merge --auto --rebase --delete-branch "$PR_URL"
           else
-            gh pr comment "$PR_URL" -b "@xu-cheng, this PR requires manual approval."
+            COMMENTS="$(gh pr view "$PR_URL" --json comments)"
+            if ! jq -e 'any(.comments[].body; test("@xu-cheng"))' >/dev/null <<<"$COMMENTS"; then
+              gh pr comment "$PR_URL" -b "@xu-cheng, this PR requires manual approval."
+            fi
           fi
         env:
           CHECK_RESULT: ${{ needs.check.outputs.result }}
