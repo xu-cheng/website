@@ -268,7 +268,7 @@
               and Xu, Jianliang},
     author+an = {5=highlight},
     title = {Cost-Effective Data Feeds to Blockchains via Workload-Adaptive Data Replication},
-    booktitle = {Proceedings of the 21st International Middleware Conference (\textbf{Middleware '20})},
+    booktitle = {Proceedings of the 21st ACM/IFIP International Middleware Conference (\textbf{Middleware '20})},
     year = {2020},
     month = {12},
     address = {Delft, Netherlands},
@@ -393,4 +393,19 @@
     code_url = {https://github.com/IDEAL-Lab/shapley-value-independent-utility},
     addendum = {Full Paper},
     abstract = {In many applications, an organization may want to acquire data from many data owners. Facilities like data marketplaces allow data owners to produce data assemblage needed by data buyers through coalition. To encourage coalitions to produce data, it is critical to allocate revenue to data owners in a fair manner according to their contributions. Although in literature Shapley fairness and alternatives have been well explored to facilitate revenue allocation in data assemblage, computing exact Shapley value for many data owners and large assembled data sets through coalition remains challenging due to the combinatoric nature of Shapley value. In this paper, we explore the decomposability of utility in data assemblage by formulating the independent utility assumption. We argue that independent utility enjoys many applications. Moreover, we identify interesting properties of independent utility and develop fast computation techniques for exact Shapley value under independent utility. Our experimental results on a series of benchmark data sets show that our new approach not only guarantees the exactness of Shapley value, but also achieves faster computation by orders of magnitudes.},
+}
+
+@inproceedings{Middleware22:DCert,
+    author = {Ji, Yang
+              and Xu, Cheng
+              and Zhang, Ce
+              and Xu, Jianliang},
+    author+an = {2=highlight},
+    title = {DCert: Towards Secure, Efficient and Versatile Blockchain Light Clients},
+    booktitle = {Proceedings of the 23rd ACM/IFIP International Middleware Conference (\textbf{Middleware '22})},
+    year = {2022},
+    month = {11},
+    address = {Québec City, Québec, Canada},
+    addendum = {Full Paper},
+    abstract = {Light clients have been widely used in blockchain systems to support lightweight nodes by synchronizing and verifying block headers only. However, there are two major limitations with the current light client design. First, with the ever increasing blockchain size, the cost for light clients to process and store all the block headers would soon become prohibitively high. Second, only simple queries can be supported by light clients due to the limited functionality of block headers. To address these issues, in this paper, we propose DCert, a novel decentralized certification framework, to enable \emph{superlight} clients with \emph{constant} storage and state validation costs. The main idea is to leverage a trusted enclave (e.g., Intel SGX) to recursively certify the entire history of the blockchain. With DCert, the blockchain integrity can be easily validated by superlight clients with a secure certificate. Furthermore, to support rich verifiable queries on light clients, DCert can be extended to certify authenticated indexes for different types of queries on an as-needed basis. While DCert is compatible with existing blockchain systems, its security is guaranteed by the trusted enclave. Our benchmark-based empirical study shows that DCert incurs a small certification overhead, yet it is capable of supporting efficient verifiable queries with a constant storage size of 2.97 KB and a constant bootstrapping time of 0.14 ms.},
 }
