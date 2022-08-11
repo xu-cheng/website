@@ -401,11 +401,11 @@
               and Zhang, Ce
               and Xu, Jianliang},
     author+an = {2=highlight},
-    title = {DCert: Towards Secure, Efficient and Versatile Blockchain Light Clients},
+    title = {{DCert}: Towards Secure, Efficient and Versatile Blockchain Light Clients},
     booktitle = {Proceedings of the 23rd ACM/IFIP International Middleware Conference (\textbf{Middleware '22})},
     year = {2022},
     month = {11},
-    address = {Québec City, Québec, Canada},
+    address = {Québec City, QC, Canada},
     addendum = {Full Paper},
     abstract = {Light clients have been widely used in blockchain systems to support lightweight nodes by synchronizing and verifying block headers only. However, there are two major limitations with the current light client design. First, with the ever increasing blockchain size, the cost for light clients to process and store all the block headers would soon become prohibitively high. Second, only simple queries can be supported by light clients due to the limited functionality of block headers. To address these issues, in this paper, we propose DCert, a novel decentralized certification framework, to enable \emph{superlight} clients with \emph{constant} storage and state validation costs. The main idea is to leverage a trusted enclave (e.g., Intel SGX) to recursively certify the entire history of the blockchain. With DCert, the blockchain integrity can be easily validated by superlight clients with a secure certificate. Furthermore, to support rich verifiable queries on light clients, DCert can be extended to certify authenticated indexes for different types of queries on an as-needed basis. While DCert is compatible with existing blockchain systems, its security is guaranteed by the trusted enclave. Our benchmark-based empirical study shows that DCert incurs a small certification overhead, yet it is capable of supporting efficient verifiable queries with a constant storage size of 2.97 KB and a constant bootstrapping time of 0.14 ms.},
 }
