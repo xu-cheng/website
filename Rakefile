@@ -57,7 +57,7 @@ task :test do
   raw_site_url = site_url.sub(/^https?:\/\//, "").sub(/\/$/, "")
   sh "bundle", "exec", "htmlproofer",
      "--checks=Links,Images,Scripts,OpenGraph",
-     "--enforce-https=false",
+     "--no-enforce-https",
      "--swap-urls=https?\\://#{Regexp.escape raw_site_url}/:/",
      "--ignore-urls=/hust\\.edu\\.cn/",
      "--ignore-status-codes=0,429,999",
