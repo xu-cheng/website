@@ -9,7 +9,6 @@ var config = {
             './node_modules/bootstrap/dist/js/bootstrap.js',
             './_assets/js/katex.js',
             './_assets/js/publication.js',
-            './_assets/js/google_analytics.js',
             './_assets/js/disqus.js',
         ],
         'style': [

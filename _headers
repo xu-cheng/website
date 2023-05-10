@@ -1,6 +1,6 @@
 # global headers
 /*
-    Content-Security-Policy: base-uri 'none'; default-src 'none'; script-src 'self' https://www.google-analytics.com https://disqus.com https://xuc.disqus.com https://*.disquscdn.com https://gist.github.com; style-src 'self' 'unsafe-inline' https://*.disquscdn.com https://github.githubassets.com; child-src 'self' https://disqus.com; font-src 'self'; img-src *; connect-src *; object-src 'self'; frame-ancestors 'none'; form-action 'self';
+    Content-Security-Policy: base-uri 'none'; default-src 'none'; script-src 'self' https://disqus.com https://xuc.disqus.com https://*.disquscdn.com https://gist.github.com; style-src 'self' 'unsafe-inline' https://*.disquscdn.com https://github.githubassets.com; child-src 'self' https://disqus.com; font-src 'self'; img-src *; connect-src *; object-src 'self'; frame-ancestors 'none'; form-action 'self';
     Referrer-Policy: same-origin
     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
     X-Content-Type-Options: nosniff
