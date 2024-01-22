@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const is_prod = process.env.JEKYLL_ENV === "production";
 
-var config = {
+const config = {
     mode: is_prod ? "production" : "development",
     plugins: [new MiniCssExtractPlugin()],
     entry: {

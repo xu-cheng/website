@@ -4,7 +4,7 @@ if (document.querySelector("#disqus_thread")) {
         this.page.identifier = document.querySelector('meta[name="DISQUS_PAGE_ID"]').content;
     };
 
-    var s = document.createElement('script');
+    const s = document.createElement('script');
     s.src = 'https://xuc.disqus.com/embed.js';
     s.async = 1;
     s.setAttribute('data-timestamp', +new Date());
