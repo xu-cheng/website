@@ -436,26 +436,6 @@
     keywords = {selected},
 }
 
-@inproceedings{SIGMOD24:fedknn,
-    author = {Zhang, Xinyi
-              and Wang, Qichen
-              and Xu, Cheng
-              and Peng, Yun
-              and Xu, Jianliang},
-    author+an = {3=highlight},
-    title = {{FedKNN}: Secure Federated k-Nearest Neighbor Search},
-    booktitle = {Proceedings of the 2024 ACM SIGMOD International Conference on Management of Data (\textbf{SIGMOD '24})},
-    year = {2024},
-    month = {6},
-    address = {Santiago, Chile},
-    doi = {10.1145/3639266},
-    eprint_url = {https://xuc.me/file/paper/SIGMOD24a.pdf},
-    techreport_url = {https://xuc.me/file/techreport/SIGMOD24a.pdf},
-    addendum = {Full Paper},
-    abstract = {Nearest neighbor search is a fundamental task in various domains, such as federated learning, data mining, information retrieval, and biomedicine. With the increasing need to utilize data from different organizations while respecting privacy regulations, private data federation has emerged as a promising solution. However, it is costly to directly apply existing approaches to federated k-nearest neighbor (kNN) search with difficult-to-compute distance functions, like graph or sequence similarity. To address this challenge, we propose FedKNN, a system that supports secure federated kNN search queries with a wide range of similarity measurements. Our system is equipped with a new Distribution-Aware kNN (DANN) algorithm to minimize unnecessary local computations while protecting data privacy. We further develop DANN*, a secure version of DANN that satisfies differential obliviousness. Extensive evaluations show that FedKNN outperforms state-of-the-art solutions, achieving up to 4.8$\times$ improvement on federated graph kNN search and up to 2.7$\times$ improvement on federated sequence kNN search. Additionally, our approach offers a trade-off between privacy and efficiency, providing strong privacy guarantees with minimal overhead.},
-    keywords = {selected},
-}
-
 @inproceedings{ICDE24:v2fs,
     author = {Wang, Haixin
               and Xu, Cheng
@@ -473,6 +453,26 @@
     address = {Utrecht, Netherlands},
     addendum = {Full Paper},
     abstract = {The rise of decentralized finance (DeFi), Web 3.0, and other blockchain-based applications has led to an increased demand for on-chain data analysis across multiple blockchains. Conducting advanced queries, such as data aggregation and correlation analysis, is essential for gaining valuable insights in this context. However, multi-chain queries pose several challenges for the querying system, including compatibility with existing blockchains, supporting diverse query types, and ensuring the integrity of query results. To tackle these challenges, we propose a novel paradigm called \emph{verifiable virtual filesystem} (V\textsuperscript{2}FS). V\textsuperscript{2}FS extends the POSIX I/O interface, shifting the focus from verifying computation to verifying data. This innovative approach empowers query clients to leverage an off-the-shelf database engine to evaluate queries using verifiable data retrieved from an indexing service provider (ISP). Our solution ensures strong integrity guarantees and can be smoothly integrated with existing database engines to support various query types. To achieve blockchain compatibility, we utilize the DCert framework to certify blocks from different blockchains, making our system applicable to various blockchain systems. Furthermore, we propose cache-based algorithms and a bloom filter-integrated algorithm to optimize query performance and minimize network communication costs. Security analysis and empirical study validate the effectiveness and efficiency of the proposed system.},
+    keywords = {selected},
+}
+
+@inproceedings{SIGMOD24:fedknn,
+    author = {Zhang, Xinyi
+              and Wang, Qichen
+              and Xu, Cheng
+              and Peng, Yun
+              and Xu, Jianliang},
+    author+an = {3=highlight},
+    title = {{FedKNN}: Secure Federated k-Nearest Neighbor Search},
+    booktitle = {Proceedings of the 2024 ACM SIGMOD International Conference on Management of Data (\textbf{SIGMOD '24})},
+    year = {2024},
+    month = {6},
+    address = {Santiago, Chile},
+    doi = {10.1145/3639266},
+    eprint_url = {https://xuc.me/file/paper/SIGMOD24a.pdf},
+    techreport_url = {https://xuc.me/file/techreport/SIGMOD24a.pdf},
+    addendum = {Full Paper},
+    abstract = {Nearest neighbor search is a fundamental task in various domains, such as federated learning, data mining, information retrieval, and biomedicine. With the increasing need to utilize data from different organizations while respecting privacy regulations, private data federation has emerged as a promising solution. However, it is costly to directly apply existing approaches to federated k-nearest neighbor (kNN) search with difficult-to-compute distance functions, like graph or sequence similarity. To address this challenge, we propose FedKNN, a system that supports secure federated kNN search queries with a wide range of similarity measurements. Our system is equipped with a new Distribution-Aware kNN (DANN) algorithm to minimize unnecessary local computations while protecting data privacy. We further develop DANN*, a secure version of DANN that satisfies differential obliviousness. Extensive evaluations show that FedKNN outperforms state-of-the-art solutions, achieving up to 4.8$\times$ improvement on federated graph kNN search and up to 2.7$\times$ improvement on federated sequence kNN search. Additionally, our approach offers a trade-off between privacy and efficiency, providing strong privacy guarantees with minimal overhead.},
     keywords = {selected},
 }
 
