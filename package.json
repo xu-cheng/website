@@ -6,7 +6,7 @@
     "katex": "^0.16.10"
   },
   "devDependencies": {
-    "css-loader": "^6.10.0",
+    "css-loader": "^7.0.0",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.8.1",
     "resolve-url-loader": "^5.0.0",
