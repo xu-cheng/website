@@ -17,7 +17,7 @@ jobs:
           import re
 
           title = os.environ["PR_TITLE"]
-          match = re.match(r"^.* from ([\w\.]+) to ([\w\.]+)$", title)
+          match = re.match(r"from ([\d\.]+) to ([\d\.]+)", title)
           from_version = VersionInfo.parse(match.group(1))
           to_version = VersionInfo.parse(match.group(2))
           print(f"version info: {from_version} -> {to_version}")
