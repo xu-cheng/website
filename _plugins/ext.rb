@@ -22,6 +22,7 @@ module ExtraTextFilters
 
   def regex_matching(input, regex)
     return false if regex.nil? || regex.to_s.empty?
+
     input.to_s.match?(Regexp.new(regex.to_s))
   end
 
@@ -29,8 +30,8 @@ module ExtraTextFilters
     url = input.to_s
     site_url = @context.registers[:site].config["url"]
     if site_url
-      site_url = site_url.sub(%r{^https?://}, "").sub(%r{/$}, "")
-      url.sub!(%r{^https?://#{Regexp.escape(site_url)}/}, "/")
+      site_url = site_url.sub(/^https?:\/\//, "").sub(/\/$/, "")
+      url.sub!(/^https?:\/\/#{Regexp.escape(site_url)}\//, "/")
     end
     url
   end
@@ -40,8 +41,8 @@ Liquid::Template.register_filter(ExtraTextFilters)
 
 class SRIHash < Liquid::Tag
   def initialize(tag_name, path, tokens)
-      super
-      @path = path.strip
+    super
+    @path = path.strip
   end
 
   def render(context)

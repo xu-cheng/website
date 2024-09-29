@@ -31,7 +31,7 @@ module KaTeX
     end
     html.css(".kdmath").each do |node|
       tex = node.content
-      display_mode = tex.start_with? '$$'
+      display_mode = tex.start_with? "$$"
       if display_mode
         tex.gsub!(/^\$\$/, "")
         tex.gsub!(/\$\$$/, "")
