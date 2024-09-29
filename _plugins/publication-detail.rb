@@ -3,6 +3,7 @@
 require "date"
 require "jekyll"
 require "jekyll/scholar"
+require "nokogiri"
 
 def publication_detail_permalink(entry)
   "/publication/#{entry.key.sub(":", "/")}/".downcase
@@ -25,11 +26,10 @@ class PublicationDetail < Jekyll::Page
   end
 
   def strip_html(input)
-    input.to_s
-         .gsub(/<script[^>]*>.*<\/script>/m, "")
-         .gsub(/<!--|--!?>/, "")
-         .gsub(/<style.*?<\/style>/m, "")
-         .gsub(/<.*?>/m, "")
+    doc = Nokogiri::HTML(input.to_s)
+    doc.css("script").remove
+    doc.css("style").remove
+    doc.text.strip
   end
 end
 
