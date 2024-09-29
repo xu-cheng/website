@@ -15,18 +15,19 @@ class PublicationDetail < Jekyll::Page
     @dir = dir
     @name = "index.html"
 
-    self.process(@name)
-    self.read_yaml(File.join(base, "_layouts"), "publication_detail.html")
+    process(@name)
+    read_yaml(File.join(base, "_layouts"), "publication_detail.html")
 
-    self.data.merge!(entry_data)
-    self.data["permalink"] = dir
-    self.data["title"] = strip_html(self.data["entry"]["title"]) if self.data["entry"]["title"]
-    self.data["id"] = self.data["entry"]["key"]
+    data.merge!(entry_data)
+    data["permalink"] = dir
+    data["title"] = strip_html(data["entry"]["title"]) if data["entry"]["title"]
+    data["id"] = data["entry"]["key"]
   end
 
   def strip_html(input)
-    input.to_s.gsub(/<script.*?<\/script>/m, "")
-         .gsub(/<!--.*?-->/m, "")
+    input.to_s
+         .gsub(/<script[^>]*>.*<\/script>/m, "")
+         .gsub(/<!--|--!?>/, "")
          .gsub(/<style.*?<\/style>/m, "")
          .gsub(/<.*?>/m, "")
   end
