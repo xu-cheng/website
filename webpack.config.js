@@ -49,7 +49,6 @@ const config = {
                     {
                         loader: "sass-loader",
                         options: {
-                            api: "legacy", // https://github.com/webpack-contrib/sass-loader/issues/1217
                             sourceMap: true,
                         },
                     },
