@@ -46,7 +46,7 @@ contact:
   gpg: /.well-known/pgp_keys.asc
   github: https://github.com/xu-cheng
   linkedin: https://linkedin.com/in/xu-cheng
-  mastodon: https://mas.to/@xuc
+  bluesky: https://bsky.app/profile/xuc.me
 
 kramdown:
   math_engine: no
@@ -79,7 +79,7 @@ scholar:
 social:
   name: Cheng Xu
   links:
-    - https://mas.to/@xuc
+    - https://bsky.app/profile/xuc.me
     - https://www.linkedin.com/in/xu-cheng
     - https://github.com/xu-cheng
     - https://keybase.io/xucheng
