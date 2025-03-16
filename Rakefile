@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "date"
+require "etc"
 require "fileutils"
 require "json"
 require "pathname"
@@ -48,20 +49,25 @@ task :test do
   cookies_file = Tempfile.new("htmlproofer-cookies-")
 
   typhoeus_config = {
-    connecttimeout: 300,
-    timeout: 0,
+    followlocation: true,
+    connecttimeout: 60,
+    timeout: 60,
     cookiefile: cookies_file.path,
     cookiejar: cookies_file.path,
   }
-  site_url = YAML.safe_load(File.read("#{__dir__}/_config.yml"))["url"]
+  hydra_config = {
+    max_concurrency: Etc.nprocessors,
+  }
+  site_url = YAML.safe_load_file("#{__dir__}/_config.yml")["url"]
   raw_site_url = site_url.sub(/^https?:\/\//, "").sub(/\/$/, "")
   sh "bundle", "exec", "htmlproofer",
      "--checks=Links,Images,Scripts,OpenGraph",
      "--no-enforce-https",
-     "--swap-urls=https?\\://#{Regexp.escape raw_site_url}/:/",
-     "--ignore-urls=/hust\\.edu\\.cn/",
+     "--swap-urls=https\\://#{Regexp.escape raw_site_url}/:/",
+     "--ignore-urls=/hust\\.edu\\.cn/,/doi\\.org/",
      "--ignore-status-codes=0,429,999",
      "--typhoeus=#{JSON.dump(typhoeus_config)}",
+     "--hydra=#{JSON.dump(hydra_config)}",
      "./_site"
 ensure
   cookies_file.close
