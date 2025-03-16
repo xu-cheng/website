@@ -3,9 +3,9 @@ command = "rake build && rake test"
 publish = "_site/"
 
 [build.environment]
-NODE_VERSION = "20"
-RUBY_VERSION = "3.3.0"
-YARN_VERSION = "1.22.21"
+NODE_VERSION = "22"
+RUBY_VERSION = "3.4.2"
+YARN_VERSION = "1.22.22"
 
 [context.production]
 environment = { JEKYLL_ENV = "production" }
