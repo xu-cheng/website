@@ -64,7 +64,7 @@ task :test do
      "--checks=Links,Images,Scripts,OpenGraph",
      "--no-enforce-https",
      "--swap-urls=https\\://#{Regexp.escape raw_site_url}/:/",
-     "--ignore-urls=/hust\\.edu\\.cn/,/doi\\.org/",
+     "--ignore-urls=/hust\\.edu\\.cn/,/doi\\.org/,/scholar\\.google\\.com/",
      "--ignore-status-codes=0,429,999",
      "--typhoeus=#{JSON.dump(typhoeus_config)}",
      "--hydra=#{JSON.dump(hydra_config)}",
