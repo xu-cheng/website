@@ -16,10 +16,10 @@ exclude:
   - Rakefile
   - netlify.toml
   - node_modules
+  - package-lock.json
   - package.json
   - vendor
   - webpack.config.js
-  - yarn.lock
 
 name: CHENG XU
 url: https://xuc.me

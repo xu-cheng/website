@@ -30,17 +30,17 @@ end
 
 namespace :deps do
   desc "Install all dependencies"
-  task all: %w[bundle yarn]
+  task all: %w[bundle npm]
 
   desc "Install ruby dependencies"
   task :bundle do
     sh "bundle"
   end
 
-  desc "Install yarn dependencies"
-  task :yarn do
-    sh "yarn"
-    sh "yarn", "build"
+  desc "Install npm dependencies"
+  task :npm  do
+    sh "npm", "ci", "--include=dev"
+    sh "npm", "run", "build"
   end
 end
 
