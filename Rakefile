@@ -34,11 +34,11 @@ namespace :deps do
 
   desc "Install ruby dependencies"
   task :bundle do
-    sh "bundle"
+    sh "bundle", "install"
   end
 
   desc "Install npm dependencies"
-  task :npm  do
+  task :npm do
     sh "npm", "ci", "--include=dev"
     sh "npm", "run", "build"
   end
