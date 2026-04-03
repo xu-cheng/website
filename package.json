@@ -8,7 +8,7 @@
   "devDependencies": {
     "css-loader": "^7.1.4",
     "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^2.10.1",
+    "mini-css-extract-plugin": "^2.10.2",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.98.0",
     "sass-loader": "^16.0.7",
