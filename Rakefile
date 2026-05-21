@@ -58,13 +58,19 @@ task :test do
   hydra_config = {
     max_concurrency: Etc.nprocessors,
   }
+  ignore_urls = [
+    "blockchain.comp.hkbu.edu.hk",
+    "doi.org",
+    "hust.edu.cn",
+    "scholar.google.com",
+  ].map { |url| "/#{Regexp.escape url}/" }
   site_url = YAML.safe_load_file("#{__dir__}/_config.yml")["url"]
   raw_site_url = site_url.sub(/^https?:\/\//, "").sub(/\/$/, "")
   sh "bundle", "exec", "htmlproofer",
      "--checks=Links,Images,Scripts,OpenGraph",
      "--no-enforce-https",
      "--swap-urls=https\\://#{Regexp.escape raw_site_url}/:/",
-     "--ignore-urls=/hust\\.edu\\.cn/,/doi\\.org/,/scholar\\.google\\.com/",
+     "--ignore-urls=#{ignore_urls.join(",")}",
      "--ignore-status-codes=0,429,999",
      "--typhoeus=#{JSON.dump(typhoeus_config)}",
      "--hydra=#{JSON.dump(hydra_config)}",
