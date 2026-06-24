@@ -43,4 +43,4 @@ $$ P(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma ^2}} $$
  [mathjax-with-jekyll]: https://www.gastonsanchez.com/visually-enforced/opinion/2014/02/16/Mathjax-with-jekyll/
  [katex]: https://khan.github.io/KaTeX/
  [jekyll-and-katex-willdrevo]: https://web.archive.org/web/20170117172154/http://willdrevo.com/latex-equation-rendering-in-javascript-with-jekyll-and-katex/
- [katex-a-new-way]: https://www.intmath.com/blog/mathematics/katex-a-new-way-to-display-math-on-the-web-9445
+ [katex-a-new-way]: https://web.archive.org/web/20260605085330/https://www.intmath.com/blog/mathematics/katex-a-new-way-to-display-math-on-the-web-9445
