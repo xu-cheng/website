@@ -18,12 +18,29 @@ $navbar-footer-color: #ffffff;
 $primary: $link-color;
 $min-contrast-ratio: 3;
 
-@import "~bootstrap/scss/bootstrap";
-@import "fonts";
-@import "~katex/dist/katex";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
+@use "bootstrap/scss/bootstrap" as bs with (
+    $font-family-sans-serif: $font-family-sans-serif,
+    $font-family-monospace: $font-family-monospace,
+    $h1-font-size: $h1-font-size,
+    $h2-font-size: $h2-font-size,
+    $h3-font-size: $h3-font-size,
+    $h4-font-size: $h4-font-size,
+    $h5-font-size: $h5-font-size,
+    $h6-font-size: $h6-font-size,
+    $headings-font-weight: $headings-font-weight,
+    $link-color: $link-color,
+    $link-decoration: $link-decoration,
+    $link-hover-color: $link-hover-color,
+    $link-hover-decoration: $link-hover-decoration,
+    $primary: $primary,
+    $min-contrast-ratio: $min-contrast-ratio,
+);
+@use "@fortawesome/fontawesome-free/scss/fontawesome" as *;
+@use "@fortawesome/fontawesome-free/scss/solid" as *;
+@use "@fortawesome/fontawesome-free/scss/brands" as *;
+@use "katex/dist/katex";
+@use "fonts";
+@use "syntax";
 
 html {
     position: relative;
@@ -70,7 +87,7 @@ html {
     }
 }
 
-@include media-breakpoint-up(md) {
+@include bs.media-breakpoint-up(md) {
     .navbar {
         position: fixed;
         top: 0;
@@ -114,7 +131,7 @@ html {
             font-size: 1.5em;
         }
 
-        @include media-breakpoint-down(sm) {
+        @include bs.media-breakpoint-down(sm) {
             margin-top: 1.5rem;
             text-align: center;
         }
@@ -176,16 +193,16 @@ html {
     }
 
     .copyright {
-        @include make-col-ready;
-        @include make-col(6);
+        @include bs.make-col-ready;
+        @include bs.make-col(6);
 
         position: relative;
         order: 1;
     }
 
     .contact {
-        @include make-col-ready;
-        @include make-col(6);
+        @include bs.make-col-ready;
+        @include bs.make-col(6);
 
         position: relative;
         order: 2;
@@ -224,11 +241,11 @@ html {
         }
     }
 
-    @include media-breakpoint-down(sm) {
+    @include bs.media-breakpoint-down(sm) {
         text-align: center;
 
         .copyright {
-            @include make-col(12);
+            @include bs.make-col(12);
 
             order: 2;
             text-align: center;
@@ -239,7 +256,7 @@ html {
         }
 
         .contact {
-            @include make-col(12);
+            @include bs.make-col(12);
 
             order: 1;
             text-align: center;
@@ -251,7 +268,7 @@ body {
     margin-bottom: 200px;
 }
 
-@include media-breakpoint-down(sm) {
+@include bs.media-breakpoint-down(sm) {
     body {
         margin-bottom: 250px;
     }
@@ -339,5 +356,3 @@ body {
         font-size: 0em + calc($i / 10);
     }
 }
-
-@import "syntax";
