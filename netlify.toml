@@ -3,7 +3,7 @@ command = "rake build && rake test"
 publish = "_site/"
 
 [build.environment]
-NODE_VERSION = "24"
+NODE_VERSION = "26"
 RUBY_VERSION = "4.0.0"
 
 [context.production]
