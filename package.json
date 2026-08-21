@@ -3,7 +3,7 @@
     "@fortawesome/fontawesome-free": "^7.3.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
-    "katex": "^0.18.1"
+    "katex": "^0.18.4"
   },
   "devDependencies": {
     "css-loader": "^7.1.4",
